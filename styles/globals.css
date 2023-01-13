@@ -1,3 +1,90 @@
+/* BODY HTML SCROLLBAR */
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #C8E4FE;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(0, 0, 0);
+}
+
+/*FIN BODY HTML SCROLLBAR */
+
+
+/* NAVBAR */
+.nav-link {
+  font-family: helvetica;
+  font-size: 2rem;
+  margin: 0px 3rem 0px 3rem;
+}
+
+.navbar img {
+  margin-right: 2rem;
+}
+
+.navbar {
+  height: 5rem;
+  background-color: transparent;
+  border-bottom: 1px solid black;
+  background-color: #ffffff;
+  font-weight: bold;
+}
+
+/* FIN NAVBAR */
+
+
+
+/* SECCION HEADER */
+
+.sectionHeader {
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 10%;
+  background-image: url('../public/monitor.jpg');
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+
+.header {
+  width: unset !important;
+  height: unset !important;
+  color: black;
+  padding: 1%;
+  box-shadow: #05B8FF -4px 4px 0px;
+  border-radius: 20px;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.242);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header:hover {
+  box-shadow: #fff 0px 0px 20px;
+
+}
+
 .typewriter h1 {
   color: #fff;
   font-size: 1rem;
@@ -43,24 +130,9 @@
   }
 }
 
-.nav-link {
-  font-family: helvetica;
-  font-size: 2rem;
-  margin: 0px 3rem 0px 3rem;
-}
+/*FIN SECCION HEADER */
 
-.navbar img {
-  margin-right: 2rem;
-}
-
-.navbar {
-  height: 5rem;
-  background-color: transparent;
-  border-bottom: 1px solid black;
-  background-color: #ffffff;
-  font-weight: bold;
-}
-
+/*     SOBRE NOSOTROS    */
 .nosotrosSection {
   background-image: url('../public/koy10.jpg');
   background-repeat: no-repeat;
@@ -72,7 +144,6 @@
   background-size: cover;
   height: unset;
   padding: 5rem;
-  border-top: 2px solid white;
 
 }
 
@@ -85,23 +156,10 @@
   transform: scale(1.05);
 }
 
-.header {
-  width: unset !important;
-  height: unset !important;
-  color: black;
-  padding: 1%;
-  box-shadow: #05B8FF -4px 4px 0px;
-  border-radius: 20px;
-  display: flex;
-  background-color: rgba(255, 255, 255, 0.242);
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.header:hover {
-  box-shadow: #fff 0px 0px 20px;
+/* FIN SOBRE NOSOTROS */
 
-}
+
+/* MEDIA */
 @media (max-width:380px) {
   .header {
     margin: 0%;
@@ -115,7 +173,7 @@
   .div1 {
     display: flex;
     flex-direction: column;
-    flex:content;
+    flex: content;
   }
 
   .typewriter h1 {
@@ -125,40 +183,14 @@
 }
 
 
-.sectionHeader {
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: 10%;
-  background-image: url('../public/monitor.jpg');
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center
+/* SECCION TECNOLOGIAS */
+.tecnologias {
+  background-color: black;
 }
 
-* {
-  padding: 0;
-  margin: 0;
+.tecnologias img {
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, .8));
+
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-  position: relative;
-}
-
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background-color: #C8E4FE;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: rgb(0, 0, 0);
-}
+/* FIN SECCION TECNOLOGIAS */
