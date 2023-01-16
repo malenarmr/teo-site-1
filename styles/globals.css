@@ -144,6 +144,8 @@ body {
 .card {
   transition: transform .4s;
   border-radius: 2rem;
+  width: 20rem;
+  margin: 1rem;
 }
 
 .card:hover {
@@ -201,7 +203,7 @@ body {
 }
 
 .backgroundAmplio {
-  background-image: url('../public/fondoNosotros.jpg');
+  background-image: url('../public/fondo3.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;

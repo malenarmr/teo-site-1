@@ -1,9 +1,6 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 import { Header } from '../components/Header'
 import Nosotros from '../components/cards/Nosotros'
-import { Tecnologias } from '../components/Tecnologias'
-import { Separador } from '../components/Separador'
 import { Servicios } from '../components/Servicios'
 
 
@@ -22,7 +19,6 @@ export default function Home() {
       <Header/>
       <div className='backgroundAmplio'>
       <Nosotros/>
-      <Tecnologias/>
      <Servicios/>
      </div>
     </>

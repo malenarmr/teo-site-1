@@ -13,8 +13,7 @@ export const Header = () => {
             <section className='sectionHeader container-fluid'>
                 <Button
                     variant="outline-light" size='lg'
-                    style={{ zIndex: '10', fontWeight: 'bold', height: '3rem', width: '8rem', margin: '3rem', bottom: '0rem', right: '0', position: 'fixed', background: '-webkit-linear-gradient(#fff,red)',
-                    webkitBackgroundClip: 'text',webkitTextFillColor: 'transparent',color: 'tomato',  }}
+                    style={{ zIndex: '10', fontWeight: 'bold', height: '3rem', width: '8rem', margin: '3rem', bottom: '0rem', right: '0', position: 'fixed', background:'#00000080' }}
                 > Contactar</Button>
                 <div className='header' >
                     <Image src={teoCoop.src}
