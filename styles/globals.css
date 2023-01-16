@@ -154,26 +154,54 @@ body {
 
 
 /* MEDIA */
-@media (max-width:380px) {
-
-  .nosotrosSection {
-    display: block;
-    margin: 0;
+@media (max-width:400px) {
+  .div1 {
+    display: inline-block !important;
+    padding: 0px !important;
   }
 
-  .div1 {
+  .container {
     display: flex;
-    flex-direction: column;
-    flex: content;
+    justify-content: center;
+  }
+
+  .tecnologias {
+    display: block !important;
+    justify-content: center !important;
+
+  }
+
+  .tecnologias img {
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+  }
+
+  .cardHeader {
+    width: 20rem !important;
+    height: unset !important;
   }
 
   .typewriter h1 {
     margin: 0%;
     font-size: 1rem;
   }
+
+  .sectionServicios {
+    contain: content;
+    display: inline-flex !important;
+    flex-direction: column;
+    justify-content: center !important;
+  }
+
+  .sectionServicios .card {
+    margin: 1rem;
+    margin-left: 3rem;
+  }
 }
-.backgroundAmplio{
-  background-image: url('../public/koy11.jpg');
+
+.backgroundAmplio {
+  background-image: url('../public/fondoNosotros.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -189,6 +217,7 @@ body {
   border-radius: 50%;
   box-shadow: inset 0 0 10px rgba(255, 255, 255, 1);
 }
+
 /* tecnologias */
 
 /* SECCION SERVICIOS */
@@ -204,11 +233,12 @@ body {
 .sectionServicios .card {
   box-shadow: #c8e4fe63 0px 0px 20px;
   width: 18rem;
-  font-family: Arial, Helvetica, sans-serif;
   padding: 0px;
   border: none;
 }
+
 .CardHeader {
   background-color: #ffffff60;
 }
+
 /* FIN SECCION SERVICIOS */

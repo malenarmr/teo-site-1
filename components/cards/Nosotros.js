@@ -36,8 +36,9 @@ function ContextAwareToggle({ children, eventKey, callback }) {
 export default function Nosotros() {
   return (
     <section className='nosotrosSection'>
-      <Container >
-        <Accordion defaultActiveKey="0" style={{ padding: '1rem' }}>
+      <Container className='container' >
+        <Accordion className='accordionClase'
+        defaultActiveKey="0" style={{ padding: '1rem' }}>
           <div className='div1' style={{ flexDirection: 'row', display: 'flex',}}>
              <Card style={{ backdropFilter: 'blur(2px)', backgroundColor: 'rgba(0,0,0,0.5)', margin: '1rem', width: '20rem', height: 'fit-content', boxShadow: 'rgba(255, 255, 255, 0.519) 5px 5px 15px', border: 'none' }}>
               <Card.Header >

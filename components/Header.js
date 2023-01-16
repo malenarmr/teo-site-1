@@ -20,13 +20,13 @@ export const Header = () => {
                     <Image src={teoCoop.src}
                         height={200}
                     />
+                    
                     <div class="typewriter">
                         <h1>Cooperativa de soluciones TI, Diseño Web, Diseño UX/UI, Desarrollo de E-Commerce</h1>
                     </div>
                 </div>
-
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }} >
-                    <Card style={{
+                    <Card className='cardHeader' style={{
                         backdropFilter: 'blur(0)', backgroundColor: 'rgba(0,0,0,.8)',
                         margin: '1rem', width: '36em', height: 'fit-content', padding: '10px'
                     }}>

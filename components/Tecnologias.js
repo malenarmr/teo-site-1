@@ -12,7 +12,7 @@ import fondo from '../public/fondoCuadrado.jpg'
 export const Tecnologias = () => {
     return (
         <>
-            <section  className='tecnologias' style={{ 
+            <section className='tecnologias' style={{ 
                 backgroundColor:'black',
                 display: 'flex', padding:'4% 0px 4% 0px' , justifyContent: 'space-around', alignItems: 'end', margin:'0px 10px', }}>
                 <Image src={jsLogo.src}
