@@ -2,17 +2,17 @@ import React from 'react'
 export const Separador = () => {
     return (
         <>
-            <div style={{ display: 'flex', background: 'blue' }}>
+        <div style={{background:'white'}}>
                 <div style={{
-                    backgroundColor: '#fff',
+                    background:'white',
                     margin: 'auto',
                     transform: ' rotate(-45deg)',
                     width: '40px',
                     height: '40px',
                     zIndex: 0,
-                    marginTop: '-20px'
+                    marginTop:'-20px',
                 }}>
-                </div>
+            </div>
             </div>
         </>
     )

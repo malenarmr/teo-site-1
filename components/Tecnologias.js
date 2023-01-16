@@ -13,21 +13,26 @@ export const Tecnologias = () => {
     return (
         <>
             <section  className='tecnologias' style={{ 
-                display: 'flex', height: '12rem', justifyContent: 'space-around', alignItems: 'center' }}>
+                backgroundColor:'black',
+                display: 'flex', padding:'4% 0px 4% 0px' , justifyContent: 'space-around', alignItems: 'end', margin:'0px 10px', }}>
                 <Image src={jsLogo.src}
-                    height={100} />
+                    height={120}
+                    width={120} />
                 <Image src={htmlLogo.src}
-                    height={100} />
+                    height={120}
+                    width={120} />
                 <Image src={cssLogo.src}
-                    height={100} />
+                    height={120}
+                    width={120} />
                 <Image src={nodeLogo.src}
-                    height={100} />
+                    height={120} />
                 <Image src={phpLogo.src}
-                    height={100} />
+                    height={120} />
                 <Image src={pythonLogo.src}
-                    height={100} />
+                    height={120} />
             </section>
-           
+         
+       
         </>
     )
 }

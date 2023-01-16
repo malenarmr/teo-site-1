@@ -38,41 +38,11 @@ export default function Nosotros() {
     <section className='nosotrosSection'>
       <Container >
         <Accordion defaultActiveKey="0" style={{ padding: '1rem' }}>
-          <Card style={{
-            backdropFilter: 'blur(0)', backgroundColor: 'rgba(0,0,0,.5)',
-            margin: '1rem', width: '36em', height: 'fit-content', boxShadow: ' #8ad8f7 5px 5px 15px', border: 'none'
-          }}>
-            <Card.Header style={{
-              height: 'unset', color: 'white',
-            }} >
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <h1 style={{
-                  fontWeight: 'bold', background: '-webkit-linear-gradient(#05B8FF, #8ad8f7)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'
-                }}>Sobre nosotros</h1>
-                <Image
-                  src={teoLogo.src}
-                  width={70} height={50} />
-              </div>
-
-              <ContextAwareToggle eventKey="0">Ver más</ContextAwareToggle>
-
-            </Card.Header>
-            <Accordion.Collapse eventKey="0">
-              <Card.Body style={{ color: '#fff' }}>Somos una cooperativa de trabajo con el objetivo brindar un producto atractivo y acorde a tus necesidades. Diseñamos y desarrollamos sitios web y aplicaciones para el proyecto que tengas en mente, tanto para grandes instituciones o empresas, hasta pequeñas páginas personales o profesionales.</Card.Body>
-            </Accordion.Collapse>
-          </Card>
-
-          <div className='div1' style={{ flexDirection: 'row', display: 'flex' }}>
-
-
-            <Card style={{ backdropFilter: 'blur(0)', backgroundColor: 'rgba(0,0,0,.5)', margin: '1rem', width: '20rem', height: 'fit-content', boxShadow: '#d1ade3 5px 5px 15px', border: 'none' }}>
-              <Card.Header style={{
-                height: 'unset'
-              }} >
+          <div className='div1' style={{ flexDirection: 'row', display: 'flex',}}>
+             <Card style={{ backdropFilter: 'blur(2px)', backgroundColor: 'rgba(0,0,0,0.5)', margin: '1rem', width: '20rem', height: 'fit-content', boxShadow: 'rgba(255, 255, 255, 0.519) 5px 5px 15px', border: 'none' }}>
+              <Card.Header >
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                  <h1 style={{
-                    fontWeight: 'bold', background: '-webkit-linear-gradient(#AE4EDE,#d1ade3)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'
-                  }}>Misión</h1>
+                <h1>Misión</h1>
                   <Image
                     src={mision.src}
                     width={30} height={30} />
@@ -84,14 +54,10 @@ export default function Nosotros() {
               </Accordion.Collapse>
             </Card>
 
-            <Card style={{ backdropFilter: 'blur(0)', backgroundColor: 'rgba(0,0,0,.5)', margin: '1rem', width: '20rem', height: 'fit-content', boxShadow: '#fad9cc 5px 5px 15px', border: 'none' }}>
-              <Card.Header style={{
-                height: 'unset',
-              }} >
+            <Card style={{ backdropFilter: 'blur(2px)', backgroundColor: 'rgba(0,0,0,.5)', margin: '1rem', width: '20rem', height: 'fit-content', boxShadow: 'rgba(255, 255, 255, 0.519) 5px 5px 15px', border: 'none' }}>
+              <Card.Header >
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                  <h1 style={{
-                    fontWeight: 'bold', background: '-webkit-linear-gradient(#F58C62, #fad9cc)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'
-                  }}>Visión</h1>
+                  <h1>Visión</h1>
                   <Image
                     src={vision.src}
                     width={30} height={30} />
@@ -103,14 +69,10 @@ export default function Nosotros() {
               </Accordion.Collapse>
             </Card>
 
-            <Card style={{ backdropFilter: 'blur(0)', backgroundColor: 'rgba(0,0,0,.5)', margin: '1rem', width: '20rem', height: 'fit-content', boxShadow: '#f1ecb2 5px 5px 15px', border: 'none' }}>
-              <Card.Header style={{
-                height: 'unset', color: 'white'
-              }} >
+            <Card style={{ backdropFilter: 'blur(2px)', backgroundColor: 'rgba(0,0,0,.5)', margin: '1rem', width: '20rem', height: 'fit-content', boxShadow: 'rgba(255, 255, 255, 0.519) 5px 5px 15px', border: 'none' }}>
+              <Card.Header  >
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                  <h1 style={{
-                    fontWeight: 'bold', background: '-webkit-linear-gradient(#FFEF3D,#f1ecb2)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'
-                  }}>Valores</h1>
+                  <h1>Valores</h1>
                   <Image
                     src={valores.src}
                     width={30} height={30} />
@@ -122,14 +84,10 @@ export default function Nosotros() {
               </Accordion.Collapse>
             </Card>
 
-            <Card style={{ backdropFilter: 'blur(0)', backgroundColor: 'rgba(0,0,0,.5)', margin: '1rem', width: '20rem', height: 'fit-content', boxShadow: '#b8e9d0 5px 5px 15px', border: 'none' }}>
-              <Card.Header style={{
-                height: 'unset', color: 'white'
-              }} >
+            <Card style={{ backdropFilter: 'blur(2px)', backgroundColor: 'rgba(0,0,0,.5)', margin: '1rem', width: '20rem', height: 'fit-content', boxShadow: 'rgba(255, 255, 255, 0.519) 5px 5px 15px', border: 'none' }}>
+              <Card.Header >
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                  <h1 style={{
-                    fontWeight: 'bold', background: '-webkit-linear-gradient(#56F6A2, #b8e9d0)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'
-                  }}>Seguridad</h1>
+                <h1 >Seguridad</h1>
                   <Image
                     src={seguridad.src}
                     width={30} height={30} />
@@ -141,7 +99,6 @@ export default function Nosotros() {
               </Accordion.Collapse>
             </Card>
 
-            
           </div>
         </Accordion>
       </Container>
