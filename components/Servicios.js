@@ -1,19 +1,17 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
 import diseñoWeb from '../public/desingWeb1.jpg'
-import diseñoUX from '../public/diseñoux3.jpg'
+import diseñoUX from '../public/ux2.jpg'
 import eCommerce from '../public/shopping5.jpg'
 import mantenimiento from '../public/mant11.jpg'
 
 export const Servicios = () => {
     return (
-        <>
-        <div style={{display:'flex', justifyContent:'center', marginTop:'3rem'}}>
-            <h1 style={{color:'white', borderBottom:'2px solid white'}}>Servicios</h1>
-            </div>
-            <section className='sectionServicios'>
+        <div>
+        <h1 style={{padding:'1rem', borderTop:'1px solid white', color:'white'}}> Servicios</h1>
+            <div className='sectionServicios'>
                 <Card className='cardTransition'>
-                    <Card.Img src={diseñoWeb.src} />
+                    <Card.Img src={diseñoWeb.src} style={{opacity:'.8'}}/>
                     <Card.ImgOverlay>
                         <Card.Header style={{ background: ' #ffffff60' }}>
                             <Card.Title style={{ fontWeight: 'bold', justifyContent: 'center', display: 'flex' }}>Diseño WEB</Card.Title>
@@ -37,7 +35,7 @@ export const Servicios = () => {
                 </Card>
 
                 <Card className='cardTransition'>
-                    <Card.Img src={diseñoUX.src} />
+                    <Card.Img src={diseñoUX.src} style={{filter:'saturate(90%)'}}/>
                     <Card.ImgOverlay>
                         <Card.Header style={{ background: ' #ffffff60' }}>
                             <Card.Title style={{ fontWeight: 'bold', justifyContent: 'center', display: 'flex' }}>Diseño UX/UI</Card.Title>
@@ -49,7 +47,7 @@ export const Servicios = () => {
                 </Card>
 
                 <Card className='cardTransition'>
-                    <Card.Img src={mantenimiento.src} />
+                    <Card.Img src={mantenimiento.src} style={{opacity:'.7'}}/>
                     <Card.ImgOverlay>
                         <Card.Header style={{ background: ' #ffffff60' }}>
                             <Card.Title style={{ fontWeight: 'bold', justifyContent: 'center', display: 'flex' }}>Mantenimiento</Card.Title>
@@ -59,7 +57,7 @@ export const Servicios = () => {
                         </Card.Body>
                     </Card.ImgOverlay>
                 </Card>
-            </section>
-        </>
+            </div>
+        </div>
     )
 }

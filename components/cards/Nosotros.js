@@ -35,15 +35,16 @@ function ContextAwareToggle({ children, eventKey, callback }) {
 
 export default function Nosotros() {
   return (
+    <>
     <section className='nosotrosSection'>
       <Container className='container' >
         <Accordion className='accordionClase'
-        defaultActiveKey="0" style={{ padding: '1rem' }}>
-          <div className='div1' style={{ flexDirection: 'row', display: 'flex',}}>
-             <Card className='cardTransition' style={{ backdropFilter: 'blur(2px)', backgroundColor: 'rgba(0,0,0,0.5)', height: 'fit-content', boxShadow: 'rgba(255, 255, 255, 0.519) 5px 5px 15px', border: 'none' }}>
+          defaultActiveKey="0" style={{ padding: '1rem' }}>
+          <div className='div1' style={{ flexDirection: 'row', display: 'flex', }}>
+            <Card className='cardTransition' style={{ backdropFilter: 'blur(2px)', backgroundColor: 'rgba(0,0,0,0.5)', height: 'fit-content', boxShadow: 'rgba(255, 255, 255, 0.519) 5px 5px 15px', border: 'none' }}>
               <Card.Header >
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <h1>Misión</h1>
+                  <h1>Misión</h1>
                   <Image
                     src={mision.src}
                     width={30} height={30} />
@@ -55,7 +56,7 @@ export default function Nosotros() {
               </Accordion.Collapse>
             </Card>
 
-            <Card className='cardTransition' style={{ backdropFilter: 'blur(2px)', backgroundColor: 'rgba(0,0,0,.5)',height: 'fit-content', boxShadow: 'rgba(255, 255, 255, 0.519) 5px 5px 15px', border: 'none' }}>
+            <Card className='cardTransition' style={{ backdropFilter: 'blur(2px)', backgroundColor: 'rgba(0,0,0,.5)', height: 'fit-content', boxShadow: 'rgba(255, 255, 255, 0.519) 5px 5px 15px', border: 'none' }}>
               <Card.Header >
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                   <h1>Visión</h1>
@@ -85,10 +86,10 @@ export default function Nosotros() {
               </Accordion.Collapse>
             </Card>
 
-            <Card className='cardTransition' style={{ backdropFilter: 'blur(2px)', backgroundColor: 'rgba(0,0,0,.5)',height: 'fit-content', boxShadow: 'rgba(255, 255, 255, 0.519) 5px 5px 15px', border: 'none' }}>
+            <Card className='cardTransition' style={{ backdropFilter: 'blur(2px)', backgroundColor: 'rgba(0,0,0,.5)', height: 'fit-content', boxShadow: 'rgba(255, 255, 255, 0.519) 5px 5px 15px', border: 'none' }}>
               <Card.Header >
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <h1 >Seguridad</h1>
+                  <h1 >Seguridad</h1>
                   <Image
                     src={seguridad.src}
                     width={30} height={30} />
@@ -99,12 +100,11 @@ export default function Nosotros() {
                 <Card.Body style={{ color: 'white' }}>Hoy en día la seguridad informática es primordial, integrando la seguridad en el ciclo de desarrollo producimos aplicaciones robustas y a menor costo.</Card.Body>
               </Accordion.Collapse>
             </Card>
-
           </div>
         </Accordion>
       </Container>
-
     </section>
+    </>
   );
 }
 

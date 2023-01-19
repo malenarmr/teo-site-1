@@ -16,9 +16,9 @@ export const Header = () => {
                         height={200}
                     />
 
-                    <div class="typewriter">
+                    {/* <div class="typewriter">
                         <h1>Cooperativa de soluciones TI, Diseño Web, Diseño UX/UI, Desarrollo de E-Commerce</h1>
-                    </div>
+                    </div> */}
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }} >
                     <Card className='cardHeader' style={{

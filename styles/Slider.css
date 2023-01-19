@@ -5,15 +5,14 @@
     height: 100%;
     align-items: center;
     display: flex;
-    background-color: black;
+    background-color: transparent;
   }
   
   .swiper-slide {
     padding: 5%;
     text-align: center;
     font-size: 18px;
-    background-color:black;
-    border: 1px solid white;
+    background-color:transparent;
     /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
@@ -43,41 +42,47 @@
   }
   
 .swiper-slide:nth-child(1n) {
-  background-color:black;
+  background-color:transparent;
 }
 
 .swiper-slide:nth-child(2n) {
-  background-color:black;
+  background-color:transparent;
 }
 
 .swiper-slide:nth-child(3n) {
-  background-color: black;
+  background-color: transparent;
 }
 
 .swiper-slide:nth-child(4n) {
-  background-color:black;
+  background-color:transparent;
 }
 
 .swiper-slide:nth-child(5n) {
-  background-color: black;
+  background-color:transparent;
 }
 
 .swiper-slide:nth-child(6n) {
-  background-color:black;
+  background-color:transparent;
 }
 
 .swiper-slide:nth-child(7n) {
-  background-color: black;
+  background-color:transparent;
 }
 
 .swiper-slide:nth-child(8n) {
-  background-color: black;
+  background-color:transparent;
 }
 
 .swiper-slide:nth-child(9n) {
-  background-color: black;
+  background-color:transparent;
 }
 
 .swiper-slide:nth-child(10n) {
-  background-color:black;
+  background-color:transparent;
+}
+@media (max-width: 650px){
+  .swiperFondo{
+    position:relative;
+    left: 0;
+  }
 }
