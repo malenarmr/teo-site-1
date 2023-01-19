@@ -4,6 +4,7 @@ import Nosotros from '../components/cards/Nosotros'
 import { Servicios } from '../components/Servicios'
 import Portfolio from '../components/Portfolio'
 import { Layout } from '../components/Layout'
+import ContactForm from '../components/Contact'
 
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
             <Nosotros />
             <Servicios />
           </div>
+          <ContactForm />
         </Layout>
       </div>
     </>
