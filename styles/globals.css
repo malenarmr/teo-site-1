@@ -5,7 +5,7 @@ body {
   overflow-x: hidden;
   position: relative;
   font-family: 'Montserrat';
-
+  overflow: overlay;
 }
 
 * {
@@ -15,17 +15,17 @@ body {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background-color: #C8E4FE;
+  background-color: transparent;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(0, 0, 0);
+  background: #C3F8FF;
 }
 
 /*FIN BODY HTML SCROLLBAR */
@@ -58,13 +58,15 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-position: 10%;
-  background-image: url('../public/monitor.jpg');
+  background-image: url("../public/monitor.jpg");
+  background-color: rgba(0, 0, 0, .4);
   height: fit-content;
   flex-direction: column;
   display: flex;
   padding-bottom: 2%;
+  position: relative;
+  background-blend-mode: darken;
 }
-
 
 .header {
   margin-top: 10rem;
@@ -141,14 +143,18 @@ body {
   color: White;
 }
 
-.card {
+.cardTransition {
   transition: transform .4s;
+
+}
+
+.card {
   border-radius: 2rem;
   width: 20rem;
   margin: 1rem;
 }
 
-.card:hover {
+.cardTransition:hover {
   transform: scale(1.05);
 }
 
@@ -156,7 +162,7 @@ body {
 
 
 /* MEDIA */
-@media (max-width:400px) {
+@media (max-width:500px) {
   .div1 {
     display: inline-block !important;
     padding: 0px !important;
@@ -167,17 +173,6 @@ body {
     justify-content: center;
   }
 
-  .tecnologias {
-    display: block !important;
-    justify-content: center !important;
-
-  }
-
-  .tecnologias img {
-    height: 100px;
-    width: 100px;
-    margin: 10px;
-  }
 
   .cardHeader {
     width: 20rem !important;
@@ -191,7 +186,7 @@ body {
 
   .sectionServicios {
     contain: content;
-    display: inline-flex !important;
+    display: flex !important;
     flex-direction: column;
     justify-content: center !important;
   }
@@ -203,7 +198,7 @@ body {
 }
 
 .backgroundAmplio {
-  background-image: url('../public/fondo3.jpg');
+  background-image: url('../public/koy10.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -244,3 +239,35 @@ body {
 }
 
 /* FIN SECCION SERVICIOS */
+
+
+/* SECCION PORTFOLIO */
+.portfolio {
+  background-color: white;
+  border: 3px solid #ABD9FF;
+  height: fit-content;
+  margin: 2%;  
+}
+
+/* FIN SECCION PORTFOLIO */
+
+/* SECCION FOOTER */
+.footer{
+  border-top: 2px solid white;
+  position: absolute;
+  bottom:0;
+  height: 8em;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: center;
+  display: flex;
+  align-items: center; 
+  position: relative;
+  
+}
+
+.content-wrap{
+  padding-bottom: 0em;
+}
+/* SECCION FOOTER */

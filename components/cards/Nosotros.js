@@ -40,7 +40,7 @@ export default function Nosotros() {
         <Accordion className='accordionClase'
         defaultActiveKey="0" style={{ padding: '1rem' }}>
           <div className='div1' style={{ flexDirection: 'row', display: 'flex',}}>
-             <Card style={{ backdropFilter: 'blur(2px)', backgroundColor: 'rgba(0,0,0,0.5)', height: 'fit-content', boxShadow: 'rgba(255, 255, 255, 0.519) 5px 5px 15px', border: 'none' }}>
+             <Card className='cardTransition' style={{ backdropFilter: 'blur(2px)', backgroundColor: 'rgba(0,0,0,0.5)', height: 'fit-content', boxShadow: 'rgba(255, 255, 255, 0.519) 5px 5px 15px', border: 'none' }}>
               <Card.Header >
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <h1>Misión</h1>
@@ -55,7 +55,7 @@ export default function Nosotros() {
               </Accordion.Collapse>
             </Card>
 
-            <Card style={{ backdropFilter: 'blur(2px)', backgroundColor: 'rgba(0,0,0,.5)',height: 'fit-content', boxShadow: 'rgba(255, 255, 255, 0.519) 5px 5px 15px', border: 'none' }}>
+            <Card className='cardTransition' style={{ backdropFilter: 'blur(2px)', backgroundColor: 'rgba(0,0,0,.5)',height: 'fit-content', boxShadow: 'rgba(255, 255, 255, 0.519) 5px 5px 15px', border: 'none' }}>
               <Card.Header >
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                   <h1>Visión</h1>
@@ -70,7 +70,7 @@ export default function Nosotros() {
               </Accordion.Collapse>
             </Card>
 
-            <Card style={{ backdropFilter: 'blur(2px)', backgroundColor: 'rgba(0,0,0,.5)', height: 'fit-content', boxShadow: 'rgba(255, 255, 255, 0.519) 5px 5px 15px', border: 'none' }}>
+            <Card className='cardTransition' style={{ backdropFilter: 'blur(2px)', backgroundColor: 'rgba(0,0,0,.5)', height: 'fit-content', boxShadow: 'rgba(255, 255, 255, 0.519) 5px 5px 15px', border: 'none' }}>
               <Card.Header  >
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                   <h1>Valores</h1>
@@ -85,7 +85,7 @@ export default function Nosotros() {
               </Accordion.Collapse>
             </Card>
 
-            <Card style={{ backdropFilter: 'blur(2px)', backgroundColor: 'rgba(0,0,0,.5)',height: 'fit-content', boxShadow: 'rgba(255, 255, 255, 0.519) 5px 5px 15px', border: 'none' }}>
+            <Card className='cardTransition' style={{ backdropFilter: 'blur(2px)', backgroundColor: 'rgba(0,0,0,.5)',height: 'fit-content', boxShadow: 'rgba(255, 255, 255, 0.519) 5px 5px 15px', border: 'none' }}>
               <Card.Header >
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <h1 >Seguridad</h1>

@@ -1,25 +1,21 @@
 import { Button } from 'react-bootstrap';
 import teoCoop from '../public/teo-coop.png'
 import { AccordionContext, Row, Col, Container, Image, Card } from 'react-bootstrap';
-import Accordion from 'react-bootstrap/Accordion';
 import teoLogo from '../public/teo-logo.png'
-import { useContext } from 'react';
-import { useAccordionButton } from 'react-bootstrap/AccordionButton';
-
 
 export const Header = () => {
     return (
         <>
-            <section className='sectionHeader container-fluid'>
+            <section className='sectionHeader container-fluid gradient'>
                 <Button
                     variant="outline-light" size='lg'
-                    style={{ zIndex: '10', fontWeight: 'bold', height: '3rem', width: '8rem', margin: '3rem', bottom: '0rem', right: '0', position: 'fixed', background:'#00000080' }}
+                    style={{ zIndex: '10', fontWeight: 'bold', height: '3rem', width: '8rem', margin: '3rem', bottom: '0rem', right: '0', position: 'fixed', background: '#00000080' }}
                 > Contactar</Button>
                 <div className='header' >
                     <Image src={teoCoop.src}
                         height={200}
                     />
-                    
+
                     <div class="typewriter">
                         <h1>Cooperativa de soluciones TI, Diseño Web, Diseño UX/UI, Desarrollo de E-Commerce</h1>
                     </div>
@@ -37,8 +33,9 @@ export const Header = () => {
                         <Card.Body style={{ color: '#fff', textAlign: 'justify', fontFamily: 'Montserrat' }}>Somos una cooperativa de trabajo con el objetivo brindar un producto atractivo y acorde a tus necesidades. Diseñamos y desarrollamos sitios web y aplicaciones para el proyecto que tengas en mente, tanto para grandes instituciones o empresas, hasta pequeñas páginas personales o profesionales.</Card.Body>
                     </Card>
                 </div>
+             
             </section>
-
+           
         </>
     )
 }

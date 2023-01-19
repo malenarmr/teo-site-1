@@ -12,7 +12,7 @@ export const Servicios = () => {
             <h1 style={{color:'white', borderBottom:'2px solid white'}}>Servicios</h1>
             </div>
             <section className='sectionServicios'>
-                <Card>
+                <Card className='cardTransition'>
                     <Card.Img src={diseñoWeb.src} />
                     <Card.ImgOverlay>
                         <Card.Header style={{ background: ' #ffffff60' }}>
@@ -24,7 +24,7 @@ export const Servicios = () => {
                     </Card.ImgOverlay>
                 </Card>
 
-                <Card>
+                <Card className='cardTransition'>
                     <Card.Img src={eCommerce.src} />
                     <Card.ImgOverlay>
                         <Card.Header style={{ background: ' #ffffff60' }}>
@@ -36,7 +36,7 @@ export const Servicios = () => {
                     </Card.ImgOverlay>
                 </Card>
 
-                <Card>
+                <Card className='cardTransition'>
                     <Card.Img src={diseñoUX.src} />
                     <Card.ImgOverlay>
                         <Card.Header style={{ background: ' #ffffff60' }}>
@@ -48,7 +48,7 @@ export const Servicios = () => {
                     </Card.ImgOverlay>
                 </Card>
 
-                <Card>
+                <Card className='cardTransition'>
                     <Card.Img src={mantenimiento.src} />
                     <Card.ImgOverlay>
                         <Card.Header style={{ background: ' #ffffff60' }}>
