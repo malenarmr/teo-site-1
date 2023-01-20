@@ -57,7 +57,7 @@ body, html {
   background-position: 10%;
   background-image: url("../public/monitor.jpg");
   background-color: rgba(0, 0, 0, .4);
-  height: fit-content;
+  height: 100vh;
   flex-direction: column;
   display: flex;
   padding-bottom: 2%;
@@ -132,14 +132,19 @@ body, html {
 /*     SOBRE NOSOTROS    */
 .nosotrosSection {
   height: fit-content;
-  align-items: flex-start;
-  padding: 2rem;
   display: flex;
+  padding: 2% 0% 2% 0%;
   font-family: Montserrat;
-  font-weight: 400;
   color: White;
 }
-
+.nosotrosSection .card {
+  background-color: #fff;
+  color:black; 
+  border: none;
+  box-shadow: rgba(255, 255, 255, 0.519);
+  height: fit-content;
+  backdrop-filter: blur(2px);
+}
 .cardTransition {
   transition: transform .4s;
 
@@ -208,16 +213,8 @@ body, html {
   -o-background-size: cover;
   background-size: cover;
   margin: .7rem;
-  border: 1px solid white;
   padding: 10px;
   border-radius: 15px;
-}
-
-/* Tecnologias */
-.tecnologias img {
-  border: 1px solid white;
-  border-radius: 50%;
-  box-shadow: inset 0 0 10px rgba(255, 255, 255, 1);
 }
 
 /* tecnologias */
@@ -226,21 +223,22 @@ body, html {
 
 .sectionServicios {
   height: fit-content;
-  padding: 4% 0px 4% 0px;
   display: flex;
   justify-content: space-around;
-
+  width: unset;
 }
 
+/* #e66465 */
 .sectionServicios .card {
-  box-shadow: #c8e4fe63 0px 0px 20px;
   width: 18rem;
   padding: 0px;
   border: none;
+  box-shadow: rgba(255, 255, 255, 0.519) 5px 5px 15px;
 }
 
 .CardHeader {
   background-color: #ffffff60;
+  box-shadow: none;
 }
 
 /* FIN SECCION SERVICIOS */
@@ -260,15 +258,18 @@ body, html {
 .footer {
   position: absolute;
   bottom: 0;
-  height: 8em;
+  height: 5em;
   width: 100%;
   background: rgba(0, 0, 0, 0.8);
   color: #fff;
-  text-align: center;
+  text-align: end;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   position: relative;
+}
 
+.footer p {
+  margin-top: 1.5rem;
 }
 
 .content-wrap {

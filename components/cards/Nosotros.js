@@ -36,12 +36,11 @@ function ContextAwareToggle({ children, eventKey, callback }) {
 export default function Nosotros() {
   return (
     <>
-    <section className='nosotrosSection'>
-      <Container className='container' >
+    <section id='nosotros' className='nosotrosSection' >
         <Accordion className='accordionClase'
-          defaultActiveKey="0" style={{ padding: '1rem' }}>
-          <div className='div1' style={{ flexDirection: 'row', display: 'flex', }}>
-            <Card className='cardTransition' style={{ backdropFilter: 'blur(2px)', backgroundColor: 'rgba(0,0,0,0.5)', height: 'fit-content', boxShadow: 'rgba(255, 255, 255, 0.519) 5px 5px 15px', border: 'none' }}>
+          defaultActiveKey="0">
+          <div className='sectionServicios'  style={{ gap:'2rem'}}>
+            <Card className='cardTransition'>
               <Card.Header >
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                   <h1>Misión</h1>
@@ -52,11 +51,11 @@ export default function Nosotros() {
                 <ContextAwareToggle eventKey="1">Ver más</ContextAwareToggle>
               </Card.Header>
               <Accordion.Collapse eventKey="1">
-                <Card.Body style={{ color: 'white' }}>Somos una cooperativa de trabajo con el objetivo brindar un producto atractivo y acorde a tus necesidades. Diseñamos y desarrollamos sitios web y aplicaciones para el proyecto que tengas en mente, tanto para grandes instituciones o empresas, hasta pequeñas páginas personales o profesionales.</Card.Body>
+                <Card.Body>Somos una cooperativa de trabajo con el objetivo brindar un producto atractivo y acorde a tus necesidades. Diseñamos y desarrollamos sitios web y aplicaciones para el proyecto que tengas en mente, tanto para grandes instituciones o empresas, hasta pequeñas páginas personales o profesionales.</Card.Body>
               </Accordion.Collapse>
             </Card>
 
-            <Card className='cardTransition' style={{ backdropFilter: 'blur(2px)', backgroundColor: 'rgba(0,0,0,.5)', height: 'fit-content', boxShadow: 'rgba(255, 255, 255, 0.519) 5px 5px 15px', border: 'none' }}>
+            <Card className='cardTransition'>
               <Card.Header >
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                   <h1>Visión</h1>
@@ -67,11 +66,11 @@ export default function Nosotros() {
                 <ContextAwareToggle eventKey="2">Ver más</ContextAwareToggle>
               </Card.Header>
               <Accordion.Collapse eventKey="2">
-                <Card.Body style={{ color: 'white' }}>Teo-Coop será una cooperativa que brindará servicios a medida y escalables sin importar el lugar en donde se encuentre el cliente, siempre basándose en sus valores éticos.</Card.Body>
+                <Card.Body>Teo-Coop será una cooperativa que brindará servicios a medida y escalables sin importar el lugar en donde se encuentre el cliente, siempre basándose en sus valores éticos.</Card.Body>
               </Accordion.Collapse>
             </Card>
 
-            <Card className='cardTransition' style={{ backdropFilter: 'blur(2px)', backgroundColor: 'rgba(0,0,0,.5)', height: 'fit-content', boxShadow: 'rgba(255, 255, 255, 0.519) 5px 5px 15px', border: 'none' }}>
+            <Card className='cardTransition'>
               <Card.Header  >
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                   <h1>Valores</h1>
@@ -82,11 +81,11 @@ export default function Nosotros() {
                 <ContextAwareToggle eventKey="3">Ver más</ContextAwareToggle>
               </Card.Header>
               <Accordion.Collapse eventKey="3">
-                <Card.Body style={{ color: 'white' }}>Respeto, responsabilidad, compromiso, empatía, amor, pasión, amistad, perseverancia, confianza, motivación, diversidad, inclusión, solidaridad y compromiso social.</Card.Body>
+                <Card.Body>Respeto, responsabilidad, compromiso, empatía, amor, pasión, amistad, perseverancia, confianza, motivación, diversidad, inclusión, solidaridad y compromiso social.</Card.Body>
               </Accordion.Collapse>
             </Card>
 
-            <Card className='cardTransition' style={{ backdropFilter: 'blur(2px)', backgroundColor: 'rgba(0,0,0,.5)', height: 'fit-content', boxShadow: 'rgba(255, 255, 255, 0.519) 5px 5px 15px', border: 'none' }}>
+            <Card className='cardTransition'>
               <Card.Header >
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                   <h1 >Seguridad</h1>
@@ -97,12 +96,11 @@ export default function Nosotros() {
                 <ContextAwareToggle eventKey="4">Ver más</ContextAwareToggle>
               </Card.Header>
               <Accordion.Collapse eventKey="4">
-                <Card.Body style={{ color: 'white' }}>Hoy en día la seguridad informática es primordial, integrando la seguridad en el ciclo de desarrollo producimos aplicaciones robustas y a menor costo.</Card.Body>
+                <Card.Body>Hoy en día la seguridad informática es primordial, integrando la seguridad en el ciclo de desarrollo producimos aplicaciones robustas y a menor costo.</Card.Body>
               </Accordion.Collapse>
             </Card>
           </div>
         </Accordion>
-      </Container>
     </section>
     </>
   );
