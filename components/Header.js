@@ -16,17 +16,17 @@ export const Header = () => {
                         height={200}
                     />
 
-                    {/* <div class="typewriter">
+                    {/* <div className="typewriter">
                         <h1>Cooperativa de soluciones TI, Diseño Web, Diseño UX/UI, Desarrollo de E-Commerce</h1>
                     </div> */}
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }} >
                     <Card className='cardHeader' style={{
                         backdropFilter: 'blur(0)', backgroundColor: 'rgba(0,0,0,.8)',
-                        margin: '1rem', width: '36em', height: 'fit-content', padding: '10px'
+                        margin: '1rem', width: '36em', height: 'fit-content', padding: '0px'
                     }}>
                         <Card.Header style={{ borderBottom: '1px solid #ffffff90', display: 'flex', justifyContent: 'center', padding: '20px' }}>
-                            <Image
+                            <Image className='headerImage'
                                 src={teoLogo.src}
                                 width={70} height={50} />
                         </Card.Header>

@@ -146,7 +146,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@popperjs/core@npm:^2.11.5":
+"@popperjs/core@npm:^2.11.5, @popperjs/core@npm:^2.11.6":
   version: 2.11.6
   resolution: "@popperjs/core@npm:2.11.6"
   checksum: 47fb328cec1924559d759b48235c78574f2d71a8a6c4c03edb6de5d7074078371633b91e39bbf3f901b32aa8af9b9d8f82834856d2f5737a23475036b16817f0
@@ -1564,8 +1564,10 @@ __metadata:
   resolution: "teo-site-1@workspace:."
   dependencies:
     "@next/font": 13.1.1
+    "@popperjs/core": ^2.11.6
     bootstrap: ^5.2.3
     next: 13.1.1
+    prop-types: ^15.8.1
     react: 18.2.0
     react-bootstrap: ^2.7.0
     react-dom: 18.2.0
