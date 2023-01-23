@@ -173,14 +173,16 @@ body, html {
     backdrop-filter: blur(1px) !important;
   }
 
-  #contacto .container {
+  #contacto .contactContainer {
     width: 16rem !important;
   }
-#contacto img{
-  height: 2rem;
-  margin-top: 1rem;
-}
-  .container input {
+
+  #contacto img {
+    height: 2rem;
+    margin-top: 1rem;
+  }
+
+  .contactContainer input {
     width: 14rem;
   }
 
@@ -194,7 +196,7 @@ body, html {
 }
 
 @media (max-width:550px) {
-  .container {
+  .contactContainer {
     justify-content: center;
     width: 20rem !important;
     padding: 1rem !important;
@@ -210,6 +212,7 @@ body, html {
     margin: 0 !important;
     padding: 0 !important;
   }
+
   .sectionServicios {
     display: flex !important;
     flex-direction: column;
@@ -273,8 +276,26 @@ body, html {
   box-shadow: rgba(255, 255, 255, 0.519) 5px 5px 15px;
 }
 
-/* FIN SECCION SERVICIOS */
-
+/* BLOG NOTICIAS  */
+.noticias{
+  display: flex;
+}
+.noticias .card{
+  border: 1px solid #00000050;
+  width: 35rem;
+  border-radius: 2px;
+  height: 15rem;
+  margin: 10px;
+  background-color:transparent
+}
+.noticias h3{
+  background-color: rgb(255, 255, 255);
+  border-radius: 2px;
+  padding: 0 10px;
+}
+.noticias h6{
+  color:#00000090
+}
 /* SECCION FOOTER */
 .footer {
   position: absolute;

@@ -5,6 +5,7 @@ import { Servicios } from '../components/Servicios'
 import Portfolio from '../components/Portfolio'
 import { Layout } from '../components/Layout'
 import ContactForm from '../components/Contact'
+import { Noticias } from '../components/Noticias'
 
 
 export default function Home() {
@@ -27,6 +28,7 @@ export default function Home() {
             <Nosotros />
             <Servicios />
           </div>
+          <Noticias/>
           <ContactForm />
         </Layout>
       </div>
