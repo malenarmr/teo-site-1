@@ -37,7 +37,8 @@ export default function Nosotros() {
   return (
     <>
     <div id='nosotros'>
-    <h1 style={{ padding: '1rem', borderTop: '1px solid white', color: 'white' }}> Servicios</h1>
+    <h1 style={{ padding: '1rem', borderTop: '1px solid white', color: 'white' }}>
+      Sobre nosotrxs</h1>
     </div>
     <section className='nosotrosSection' >
         <Accordion className='accordionClase'

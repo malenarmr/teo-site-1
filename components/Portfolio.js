@@ -2,11 +2,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Pagination, Navigation, EffectCreative } from "swiper";
-import teoLogo from '../public/teo-logo.png'
+import {EffectCreative } from "swiper";
 import { Card } from "react-bootstrap";
-import compu from '../public/compu.jpg'
-import teoSite from '../public/teosite.jpg'
+import teoSite from '../public/teoSite.jpg'
 import Link from "next/link";
 
 export default function Portfolio() {

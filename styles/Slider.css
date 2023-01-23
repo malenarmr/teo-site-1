@@ -1,13 +1,13 @@
 
 
 .swiper {
-    width: 65%;
+    width: 80%;
     height: 100%;
     align-items: center;
     display: flex;
     background-color: transparent;
   }
-  
+
   .swiper-slide {
     padding: 5%;
     text-align: center;
