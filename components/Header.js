@@ -6,22 +6,20 @@ import teoLogo from '../public/teo-logo.png'
 export const Header = () => {
     return (
         <>
-            <section className='sectionHeader container-fluid gradient'>
-                <Button
+            <section className='sectionHeader container-fluid'>
+            <a className="nav-link" href="#contacto">
+                <Button className='btnHeader'
                     variant="outline-light" size='lg'
                     style={{ zIndex: '10', fontWeight: 'bold', height: '3rem', width: '8rem', margin: '3rem', bottom: '0rem', right: '0', position: 'fixed', background: '#00000080' }}
                 > Contactar</Button>
+                </a>
                 <div className='header' >
                     <Image src={teoCoop.src}
                         height={200}
                     />
-
-                    {/* <div className="typewriter">
-                        <h1>Cooperativa de soluciones TI, Diseño Web, Diseño UX/UI, Desarrollo de E-Commerce</h1>
-                    </div> */}
                 </div>
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }} >
-                    <Card className='cardHeader' style={{
+                <div className='cardHeader' style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }} >
+                    <Card  style={{
                         backdropFilter: 'blur(0)', backgroundColor: 'rgba(0,0,0,.8)',
                         margin: '1rem', width: '36em', height: 'fit-content', padding: '0px'
                     }}>
@@ -33,9 +31,7 @@ export const Header = () => {
                         <Card.Body style={{ color: '#fff', textAlign: 'justify', fontFamily: 'Montserrat' }}>Somos una cooperativa de trabajo con el objetivo brindar un producto atractivo y acorde a tus necesidades. Diseñamos y desarrollamos sitios web y aplicaciones para el proyecto que tengas en mente, tanto para grandes instituciones o empresas, hasta pequeñas páginas personales o profesionales.</Card.Body>
                     </Card>
                 </div>
-             
             </section>
-           
         </>
     )
 }

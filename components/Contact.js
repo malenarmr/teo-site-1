@@ -22,8 +22,7 @@ const ContactForm = () => {
     return (
 
         <div id="contacto" style={{ display: 'flex', flexDirection: 'column', padding:'1%',margin: '0',   backgroundImage: `url(${phone.src})`,border:'10px, solid white', backgroundAttachment: 'scroll', backgroundPosition: '0', backgroundSize: 'cover',}}>
-    
-            <div className="container mt-0" style={{ borderRadius: '3px', color: 'black', width: '30rem', background: '#ffffff50', boxShadow: '#00000090 0px 0px 20px', padding: '1%' }}>
+            <div className="container mt-0" style={{ borderRadius: '3px', color: 'black', width: '30rem', background: '#ffffff50', boxShadow: '#00000090 0px 0px 20px', padding: '1%'}}>
                 <h2 className="mb-3" style={{display:'flex', justifyContent:'center'}}>Contacto</h2>
                 <form onSubmit={onSubmit}>
                     <div className="mb-3">
@@ -38,7 +37,7 @@ const ContactForm = () => {
                         </label>
                         <input className="form-control" type="email" id="email" required />
                     </div>
-                    <div className="mb-3">
+                    <div className="message mb-3 ">
                         <label className="form-label" htmlFor="message">
                             Mensaje
                         </label>

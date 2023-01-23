@@ -47,22 +47,18 @@ body, html {
 
 /* FIN NAVBAR */
 
-
-
 /* SECCION HEADER */
-
 .sectionHeader {
   background-size: cover;
   background-attachment: fixed;
   background-position: 10%;
   background-image: url("../public/compu.jpg");
-  background-color: rgb(0, 0, 0, .4);
-  height: 100vh;
+  background-color: #05b8ff43;
   flex-direction: column;
   display: flex;
   padding-bottom: 2%;
   position: relative;
-  background-blend-mode:darken;
+  background-blend-mode: color-dodge;
 }
 
 .header {
@@ -75,82 +71,49 @@ body, html {
   align-items: center;
   flex-direction: column;
 }
-.headerImage{
+
+.headerImage {
   animation-name: headerImg;
   animation-duration: 4s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
   margin-top: -2px;
+  filter: drop-shadow(0px 0px 10px #ffffff90)
 }
+
 @keyframes headerImg {
-  0% { transform: translate(0, 0px); }
-  50%  { transform: translate(0, 10px); }
-  100%   { transform: translate(0, -0px); }   
-}
-/* 
-.header:hover {
-  box-shadow: rgba(255, 255, 255, 0.568) 0px 0px 30px;
-} */
-
-.typewriter h1 {
-  color: #fff;
-  font-size: 1rem;
-  font-weight: bold;
-  display: flex;
-  background-color: #000000a2;
-  border-radius: 3px;
-  padding: 1rem;
-  margin-top: 2rem;
-  font-family: Montserrat;
-  font-weight: 500;
-  overflow: hidden;
-  /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange;
-  /* The typwriter cursor */
-  white-space: nowrap;
-  /* Keeps the content on a single line */
-  letter-spacing: .15em;
-  /* Adjust as needed */
-  animation:
-    typing 3.5s steps(30, end),
-    blink-caret .5s step-end infinite;
-}
-
-/* The typing effect */
-@keyframes typing {
-  from {
-    width: 0
-  }
-
-  to {
-    width: 100%
-  }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to {
-    border-color: transparent
+  0% {
+    transform: translate(0, 0px);
   }
 
   50% {
-    border-color: orange
+    transform: translate(0, 10px);
+  }
+
+  100% {
+    transform: translate(0, -0px);
   }
 }
 
-/*FIN SECCION HEADER */
+/* SECCION PORTFOLIO */
+.portfolio {
+  background-color: white;
+  border: 3px solid #ABD9FF;
+  height: fit-content;
+  margin: 2%;
+}
 
 /*     SOBRE NOSOTROS    */
-
 .nosotrosSection .card {
   background-color: rgba(255, 255, 255, 0.81);
-  color:black; 
+  color: black;
   border: none;
   box-shadow: rgba(255, 255, 255, 0.5);
   height: fit-content;
   backdrop-filter: blur(2px);
   margin-bottom: 3rem;
 }
+
 .cardTransition {
   transition: transform .4s;
 }
@@ -167,30 +130,86 @@ body, html {
 
 /* FIN SOBRE NOSOTROS */
 
-
 /* MEDIA */
-@media (max-width:550px) {
-  .div1 {
-    display: inline-block !important;
-    padding: 0px !important;
+@media (max-width:280px) {
+  .header {
+    padding: 1rem !important;
   }
 
-  .container {
-    display: flex;
-    justify-content: center;
+  .header img {
+    width: 10rem !important;
+    height: unset;
   }
 
+  .btnHeader {
+    width: 5.2rem !important;
+    height: 2.5rem !important;
+    font-size: .9rem !important;
+    padding: 0 !important;
+    margin: 1rem !important;
+  }
 
   .cardHeader {
+    align-items: flex-start !important;
+  }
+
+  .cardHeader .card {
+    width: 16rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .nosotrosSection {
+    margin: 1 rem;
+  }
+
+  .sectionServicios .card {
+    width: 15rem !important;
+  }
+
+  .cardBody {
+    margin-top: 3.5rem !important;
+    height: max-content !important;
+    backdrop-filter: blur(1px) !important;
+  }
+
+  #contacto .container {
+    width: 16rem !important;
+  }
+#contacto img{
+  height: 2rem;
+  margin-top: 1rem;
+}
+  .container input {
+    width: 14rem;
+  }
+
+  .message {
+    width: 14rem;
+  }
+
+  #contacto {
+    padding: 1rem !important;
+  }
+}
+
+@media (max-width:550px) {
+  .container {
+    justify-content: center;
     width: 20rem !important;
-    height: unset !important;
+    padding: 1rem !important;
+    margin-top: 1rem !important;
   }
 
-  .typewriter h1 {
-    margin: 0%;
-    font-size: 1rem;
+  #contacto {
+    padding-top: 2rem !important;
   }
 
+  .cardHeader .card {
+    width: 20rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
   .sectionServicios {
     display: flex !important;
     flex-direction: column;
@@ -205,7 +224,23 @@ body, html {
     margin-top: 0em !important;
     padding: 0%;
   }
+}
 
+@media (max-width:900px) {
+  .sectionServicios {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer {
+    padding-bottom: 0rem;
+  }
+
+  .footerDiv {
+    margin-top: 0em !important;
+    padding: 0%;
+  }
 }
 
 .backgroundAmplio {
@@ -222,10 +257,7 @@ body, html {
   border-radius: 15px;
 }
 
-/* tecnologias */
-
 /* SECCION SERVICIOS */
-
 .sectionServicios {
   height: fit-content;
   display: flex;
@@ -241,23 +273,7 @@ body, html {
   box-shadow: rgba(255, 255, 255, 0.519) 5px 5px 15px;
 }
 
-.CardHeader {
-  background-color: #ffffff60;
-  box-shadow: none;
-}
-
 /* FIN SECCION SERVICIOS */
-
-
-/* SECCION PORTFOLIO */
-.portfolio {
-  background-color: white;
-  border: 3px solid #ABD9FF;
-  height: fit-content;
-  margin: 2%;
-}
-
-/* FIN SECCION PORTFOLIO */
 
 /* SECCION FOOTER */
 .footer {
