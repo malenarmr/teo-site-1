@@ -1,5 +1,5 @@
 import { useState } from "react"
-import phone from '../public/phone4.jpg'
+import phone from '../public/compucolores1.jpg'
 import igLogo from '../public/igLogo.png';
 import fbLogo from '../public/fbLogo.png';
 import inLogo from '../public/inLogo.png'
@@ -21,8 +21,9 @@ const ContactForm = () => {
     }
     return (
 
-        <div id="contacto" style={{ display: 'flex', flexDirection: 'column', backgroundImage: `url(${phone.src})`, backgroundAttachment: 'scroll', backgroundPosition: 'center', backgroundSize: 'cover', padding: '2%', margin: '0' }}>
-            <div className="container mt-0" style={{ borderRadius: '10px', color: 'black', width: '50rem', background: '#ffffff50', boxShadow: '#00000090 0px 0px 20px', padding: '1%' }}>
+        <div id="contacto" style={{ display: 'flex', flexDirection: 'column', padding:'1%',margin: '0',   backgroundImage: `url(${phone.src})`,border:'10px, solid white', backgroundAttachment: 'scroll', backgroundPosition: '0', backgroundSize: 'cover',}}>
+    
+            <div className="container mt-0" style={{ borderRadius: '3px', color: 'black', width: '30rem', background: '#ffffff50', boxShadow: '#00000090 0px 0px 20px', padding: '1%' }}>
                 <h2 className="mb-3" style={{display:'flex', justifyContent:'center'}}>Contacto</h2>
                 <form onSubmit={onSubmit}>
                     <div className="mb-3">

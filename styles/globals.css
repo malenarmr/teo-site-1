@@ -55,7 +55,7 @@ body, html {
   background-size: cover;
   background-attachment: fixed;
   background-position: 10%;
-  background-image: url("../public/monitor.jpg");
+  background-image: url("../public/compu.jpg");
   background-color: rgba(0, 0, 0, .4);
   height: 100vh;
   flex-direction: column;
@@ -130,24 +130,18 @@ body, html {
 /*FIN SECCION HEADER */
 
 /*     SOBRE NOSOTROS    */
-.nosotrosSection {
-  height: fit-content;
-  display: flex;
-  padding: 2% 0% 2% 0%;
-  font-family: Montserrat;
-  color: White;
-}
+
 .nosotrosSection .card {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.81);
   color:black; 
   border: none;
-  box-shadow: rgba(255, 255, 255, 0.519);
+  box-shadow: rgba(255, 255, 255, 0.5);
   height: fit-content;
   backdrop-filter: blur(2px);
+  margin-bottom: 3rem;
 }
 .cardTransition {
   transition: transform .4s;
-
 }
 
 .card {

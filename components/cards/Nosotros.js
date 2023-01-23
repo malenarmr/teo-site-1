@@ -36,10 +36,13 @@ function ContextAwareToggle({ children, eventKey, callback }) {
 export default function Nosotros() {
   return (
     <>
-    <section id='nosotros' className='nosotrosSection' >
+    <div id='nosotros'>
+    <h1 style={{ padding: '1rem', borderTop: '1px solid white', color: 'white' }}> Servicios</h1>
+    </div>
+    <section className='nosotrosSection' >
         <Accordion className='accordionClase'
           defaultActiveKey="0">
-          <div className='sectionServicios'  style={{ gap:'2rem'}}>
+          <div className='sectionServicios'>
             <Card className='cardTransition'>
               <Card.Header >
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
