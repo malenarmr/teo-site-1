@@ -335,14 +335,11 @@ body, html {
   width: 100%;
   background: rgba(0, 0, 0, 0.8);
   color: #fff;
-  text-align: end;
   display: flex;
-  align-items: center;
   position: relative;
 }
-
 .footer p {
-  margin-top: 1.5rem;
+padding-top: 2rem;
 }
 
 .content-wrap {
