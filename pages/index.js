@@ -24,8 +24,8 @@ export default function Home() {
           <div className='backgroundAmplio'>
             <Nosotros />
             <Servicios />
+            <Noticias/>
           </div>
-          <Noticias/>
           <ContactForm />
         </Layout>
       </div>

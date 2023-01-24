@@ -30,15 +30,46 @@ body, html {
 
 
 /* NAVBAR */
+.dropdown-menu.show {
+  background-color: black;
+  padding: 1.5rem 0rem;
+  box-shadow: #ffffff90 0px 0px 15px;
+}
+
+.navbar-nav .nav-link {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.dropdown-toggle {
+  margin-top: .5rem;
+  color: white !important;
+  font-size: 1.3rem !important
+}
+
+.dropdown-menu {
+  margin-top: 1.5rem !important;
+}
+
+.dropdown-item {
+  color: white !important;
+  font-size: 1.5rem;
+}
+
+.dropdown-item:hover {
+  color: black !important
+}
 
 @media (max-width:987px) {
   .collapse {
-    background: rgb(0, 0, 0, .7);
+    background: rgb(0, 0, 0, .9);
     backdrop-Filter: blur(2px);
     padding: 2rem 3rem;
     margin-Top: 1.09rem;
   }
-  .Brand{
+
+  .Brand {
     padding-right: 0%;
   }
 }
@@ -51,7 +82,7 @@ body, html {
   background-attachment: fixed;
   background-position: 10%;
   background-image: url("../public/compu.jpg");
-  background-color: #05b8ff43;
+  background-color: #fea1b841;
   flex-direction: column;
   display: flex;
   padding-bottom: 2%;
@@ -207,6 +238,9 @@ body, html {
     flex-direction: column;
     align-items: center;
   }
+.noticias{
+  display: block !important;
+}
 
   .footer {
     padding-bottom: 0rem;
@@ -218,11 +252,15 @@ body, html {
   }
 }
 
-@media (max-width:900px) {
+@media (max-width:970px) {
   .sectionServicios {
-    display: flex !important;
+    display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .noticias{
+    display: inline-block !important;
+    
   }
 
   .footer {
@@ -236,7 +274,7 @@ body, html {
 }
 
 .backgroundAmplio {
-  background-image: url('../public/koy10.jpg');
+  background-image: url('../public/gradient.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -268,15 +306,16 @@ body, html {
 /* BLOG NOTICIAS  */
 .noticias {
   display: flex;
+  gap:3rem
 }
 
 .noticias .card {
   border: 1px solid #00000050;
   width: 40rem;
-  border-radius: 2px;
+  border-radius: .5rem;
   height: 15rem;
   margin: 10px;
-  background-color: transparent
+  background-color: white
 }
 
 .noticias h3 {
