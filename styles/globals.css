@@ -241,7 +241,9 @@ body, html {
 .noticias{
   display: block !important;
 }
-
+.noticias .card{
+  width: 22rem !important;
+}
   .footer {
     padding-bottom: 0rem;
   }
@@ -310,7 +312,7 @@ body, html {
 
 .noticias .card {
   border: 1px solid #00000050;
-  width: 40rem;
+  width: 30rem;
   border-radius: .5rem;
   height: 15rem;
   margin: 2rem;
@@ -337,6 +339,7 @@ body, html {
   color: #fff;
   display: flex;
   position: relative;
+  padding-bottom:5%
 }
 .footer p {
 padding-top: 2rem;
