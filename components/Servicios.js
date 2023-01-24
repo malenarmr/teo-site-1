@@ -8,7 +8,7 @@ import mantenimiento from '../public/mant11.jpg'
 export const Servicios = () => {
     return (
         <div id='servicios' >
-            <h1 style={{ padding: '1rem', borderBottom: '1px solid white', color: 'white' }}> Servicios</h1>
+            <h1 style={{ padding: '1rem', borderBottom: '1px solid black', color: 'black' }}> Servicios</h1>
             <div className='sectionServicios'>
                 <Card className='cardTransition'>
                     <Card.Img src={diseñoWeb.src} style={{ opacity: '.8' }} />

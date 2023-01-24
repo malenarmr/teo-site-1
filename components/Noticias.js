@@ -6,9 +6,9 @@ export const Noticias = () => {
   return (
     <section id='noticias' style={{ borderRadius: '10px', background: '#000', boxShadow: '#ffffff58 0 0 20px', marginTop: '3rem', padding: '10px' }}>
       <h1 style={{ padding: '1rem', borderBottom: '1px solid #fff', color: '#fff' }}> Noticias</h1>
-      <Container style={{ justifyContent: 'center', display: 'flex' }}>
+      <Container style={{ justifyContent: 'center', display: 'flex'}}>
         <div className='noticias'>
-          <Col xs={12} md={6} style={{ width: 'fit-content', padding: '0' }}>
+          <Col xs={12} md={6} xl={6}>
             <Card style={{height:'18rem', overflow: 'hidden', display: 'flex', flexDirection: 'row' }}>
               <div style={{width: '50%', backgroundImage: `url(${imagenFondo.src})`, backgroundPosition: 'center', backgroundSize: 'cover' }}></div>
               <div style={{ margin: '.5rem' }}>
@@ -26,7 +26,7 @@ export const Noticias = () => {
               </div>
             </Card>
           </Col>
-          <Col xs={12} md={6}>
+          <Col xs={12} md={6} xl={6} >
             <Card style={{height:'18rem', overflow: 'hidden', display: 'flex', flexDirection: 'row' }}>
               <div style={{ width: '50%', backgroundImage: `url(${imagenFondo.src})`, backgroundPosition: 'center', backgroundSize: 'cover' }}></div>
               <div style={{ margin: '.5rem' }}>

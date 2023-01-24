@@ -306,7 +306,6 @@ body, html {
 /* BLOG NOTICIAS  */
 .noticias {
   display: flex;
-  gap:3rem
 }
 
 .noticias .card {
@@ -314,7 +313,7 @@ body, html {
   width: 40rem;
   border-radius: .5rem;
   height: 15rem;
-  margin: 10px;
+  margin: 2rem;
   background-color: white
 }
 

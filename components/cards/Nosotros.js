@@ -37,7 +37,7 @@ export default function Nosotros() {
   return (
     <>
     <div id='nosotros'>
-    <h1 style={{ padding: '1rem', borderBottom: '1px solid white', color: 'white' }}>
+    <h1 style={{ padding: '1rem', borderBottom: '1px solid black', color: 'black'}}>
       Sobre nosotrxs</h1>
     </div>
     <section className='nosotrosSection' >

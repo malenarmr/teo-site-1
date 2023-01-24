@@ -20,8 +20,8 @@ export default function Home() {
       <div style={{ background: 'black' }}>
         <Layout>
           <Header />
-          <Portfolio />
           <div className='backgroundAmplio'>
+          <Portfolio />
             <Nosotros />
             <Servicios />
             <Noticias/>
