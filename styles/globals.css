@@ -30,9 +30,7 @@ body, html {
 
 
 /* NAVBAR */
-.Brand{
-  padding-right: 15rem; 
-}
+
 @media (max-width:987px) {
   .collapse {
     background: rgb(0, 0, 0, .7);
