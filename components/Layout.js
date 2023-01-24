@@ -1,16 +1,16 @@
 import React from 'react'
-import {Navbar} from './Navbar'
-import {Footer} from './Footer'
+import { Footer } from './Footer'
+import { NavbarApp } from './NavbarApp'
 
 
 export const Layout = ({ children }) => {
   return (
-   <div>
+    <div>
       <div className="content-wrap">
-      <Navbar />
-      {children}
+        <NavbarApp />
+        {children}
+      </div>
+      <Footer />
     </div>
-    <Footer />
-   </div>
   )
 }

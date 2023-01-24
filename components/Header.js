@@ -10,7 +10,7 @@ export const Header = () => {
             <a className="nav-link" href="#contacto">
                 <Button className='btnHeader'
                     variant="outline-light" size='lg'
-                    style={{ zIndex: '10', fontWeight: 'bold', height: '3rem', width: '8rem', margin: '3rem', bottom: '0rem', right: '0', position: 'fixed', background: '#00000080' }}
+                    style={{ zIndex: '10', fontWeight: 'bold', height: '3rem', width: '8rem', margin: '1rem', bottom: '0rem', right: '0', position: 'fixed', background: '#00000080' }}
                 > Contactar</Button>
                 </a>
                 <div className='header' >
