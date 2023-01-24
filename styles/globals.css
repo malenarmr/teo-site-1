@@ -241,7 +241,9 @@ body, html {
 .noticias{
   display: block !important;
 }
-
+.noticias .card{
+  width: 22rem !important;
+}
   .footer {
     padding-bottom: 0rem;
   }
