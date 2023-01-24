@@ -1,9 +1,11 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 import { Header } from '../components/Header'
 import Nosotros from '../components/cards/Nosotros'
-import { Tecnologias } from '../components/Tecnologias'
-import { Separador } from '../components/Separador'
+import { Servicios } from '../components/Servicios'
+import Portfolio from '../components/Portfolio'
+import { Layout } from '../components/Layout'
+import ContactForm from '../components/Contact'
+import { Noticias } from '../components/Noticias'
 
 
 export default function Home() {
@@ -15,10 +17,18 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header/>
-      <Nosotros/>
-      <Tecnologias/>
-      <Separador/>
+      <div style={{ background: 'black' }}>
+        <Layout>
+          <Header />
+          <div className='backgroundAmplio'>
+          <Portfolio />
+            <Nosotros />
+            <Servicios />
+            <Noticias/>
+          </div>
+          <ContactForm />
+        </Layout>
+      </div>
     </>
   )
 }

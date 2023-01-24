@@ -1,9 +1,9 @@
 /* BODY HTML SCROLLBAR */
 html,
-body {
-  max-width: 100vw;
+body, html {
   overflow-x: hidden;
-  position: relative;
+  height: unset;
+  font-family: monospace;
 }
 
 * {
@@ -13,184 +13,337 @@ body {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background-color: #C8E4FE;
+  background-color: transparent;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(0, 0, 0);
+  background: #C3F8FF;
 }
 
 /*FIN BODY HTML SCROLLBAR */
 
 
 /* NAVBAR */
-.nav-link {
-  font-family: helvetica;
-  font-size: 2rem;
-  margin: 0px 3rem 0px 3rem;
+.dropdown-menu.show {
+  background-color: black;
+  padding: 1.5rem 0rem;
+  box-shadow: #ffffff90 0px 0px 15px;
 }
 
-.navbar img {
-  margin-right: 2rem;
+.navbar-nav .nav-link {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 500;
 }
 
-.navbar {
-  height: 5rem;
-  background-color: transparent;
-  border-bottom: 1px solid black;
-  background-color: #ffffff;
-  font-weight: bold;
+.dropdown-toggle {
+  margin-top: .5rem;
+  color: white !important;
+  font-size: 1.3rem !important
+}
+
+.dropdown-menu {
+  margin-top: 1.5rem !important;
+}
+
+.dropdown-item {
+  color: white !important;
+  font-size: 1.5rem;
+}
+
+.dropdown-item:hover {
+  color: black !important
+}
+
+@media (max-width:987px) {
+  .collapse {
+    background: rgb(0, 0, 0, .9);
+    backdrop-Filter: blur(2px);
+    padding: 2rem 3rem;
+    margin-Top: 1.09rem;
+  }
+
+  .Brand {
+    padding-right: 0%;
+  }
 }
 
 /* FIN NAVBAR */
 
-
-
 /* SECCION HEADER */
-
 .sectionHeader {
   background-size: cover;
   background-attachment: fixed;
   background-position: 10%;
-  background-image: url('../public/monitor.jpg');
-  height: 100vh;
+  background-image: url("../public/compu.jpg");
+  background-color: #fea1b841;
+  flex-direction: column;
   display: flex;
-  align-items: center;
-  justify-content: center
+  padding-bottom: 2%;
+  position: relative;
+  background-blend-mode: color-dodge;
 }
 
-
 .header {
-  width: unset !important;
-  height: unset !important;
+  margin-top: 10rem;
   color: black;
   padding: 1%;
-  box-shadow: #05B8FF -4px 4px 0px;
   border-radius: 20px;
   display: flex;
-  background-color: rgba(255, 255, 255, 0.242);
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.header:hover {
-  box-shadow: #fff 0px 0px 20px;
-
+.headerImage {
+  animation-name: headerImg;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-top: -2px;
+  filter: drop-shadow(0px 0px 10px #ffffff90)
 }
 
-.typewriter h1 {
-  color: #fff;
-  font-size: 1rem;
-  font-weight: bold;
-  display: flex;
-  background-color: #000000a2;
-  border-radius: 5px;
-  padding: 1rem;
-  margin-top: 2rem;
-  font-family: Arial, Helvetica, sans-serif;
-  overflow: hidden;
-  /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange;
-  /* The typwriter cursor */
-  white-space: nowrap;
-  /* Keeps the content on a single line */
-  letter-spacing: .15em;
-  /* Adjust as needed */
-  animation:
-    typing 3.5s steps(30, end),
-    blink-caret .5s step-end infinite;
-}
-
-/* The typing effect */
-@keyframes typing {
-  from {
-    width: 0
-  }
-
-  to {
-    width: 100%
-  }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to {
-    border-color: transparent
+@keyframes headerImg {
+  0% {
+    transform: translate(0, 0px);
   }
 
   50% {
-    border-color: orange
+    transform: translate(0, 10px);
+  }
+
+  100% {
+    transform: translate(0, -0px);
   }
 }
 
-/*FIN SECCION HEADER */
-
 /*     SOBRE NOSOTROS    */
-.nosotrosSection {
-  background-image: url('../public/koy10.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: black;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: unset;
-  padding: 5rem;
+.nosotrosSection .card {
+  background-color: rgba(255, 255, 255, 1);
+  color: black;
+  border: none;
+  box-shadow: rgba(255, 255, 255, 0.5);
+  height: fit-content;
+  margin: 3rem;
+}
 
+.cardTransition {
+  transition: transform .4s;
 }
 
 .card {
-  transition: transform .4s;
   border-radius: 2rem;
+  width: 20rem;
+  margin: 1rem;
 }
 
-.card:hover {
+.cardTransition:hover {
   transform: scale(1.05);
 }
 
 /* FIN SOBRE NOSOTROS */
 
-
 /* MEDIA */
-@media (max-width:380px) {
+@media (max-width:280px) {
   .header {
-    margin: 0%;
+    padding: 1rem !important;
+  }
+
+  .header img {
+    width: 10rem !important;
+    height: unset;
+  }
+
+  .btnHeader {
+    width: 5.2rem !important;
+    height: 2.5rem !important;
+    font-size: .9rem !important;
+    padding: 0 !important;
+    margin: 1rem !important;
+  }
+
+  .cardHeader {
+    align-items: flex-start !important;
+  }
+
+  .cardHeader .card {
+    width: 16rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   .nosotrosSection {
-    display: block;
-    margin: 0;
+    margin: 1 rem;
   }
 
-  .div1 {
+  .sectionServicios .card {
+    width: 15rem !important;
+  }
+
+  .cardBody {
+    margin-top: 3.5rem !important;
+    height: max-content !important;
+    backdrop-filter: blur(1px) !important;
+  }
+
+  #contacto .contactContainer {
+    width: 16rem !important;
+  }
+
+  #contacto img {
+    height: 2rem;
+    margin-top: 1rem;
+  }
+
+  .contactContainer input {
+    width: 14rem;
+  }
+
+  .message {
+    width: 14rem;
+  }
+
+  #contacto {
+    padding: 1rem !important;
+  }
+}
+
+@media (max-width:550px) {
+  .contactContainer {
+    justify-content: center;
+    width: 20rem !important;
+    padding: 1rem !important;
+    margin-top: 1rem !important;
+  }
+
+  #contacto {
+    padding-top: 2rem !important;
+  }
+
+  .cardHeader .card {
+    width: 20rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .sectionServicios {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+  }
+.noticias{
+  display: block !important;
+}
+
+  .footer {
+    padding-bottom: 0rem;
+  }
+
+  .footerDiv {
+    margin-top: 0em !important;
+    padding: 0%;
+  }
+}
+
+@media (max-width:970px) {
+  .sectionServicios {
     display: flex;
     flex-direction: column;
-    flex: content;
+    align-items: center;
+  }
+  .noticias{
+    display: inline-block !important;
+    
   }
 
-  .typewriter h1 {
-    margin: 0%;
-    font-size: 1rem;
+  .footer {
+    padding-bottom: 0rem;
+  }
+
+  .footerDiv {
+    margin-top: 0em !important;
+    padding: 0%;
   }
 }
 
-
-/* SECCION TECNOLOGIAS */
-.tecnologias {
-  background-color: black;
+.backgroundAmplio {
+  background-image: url('../public/gradient.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: .7rem;
+  padding: 10px;
+  border-radius: 15px;
 }
 
-.tecnologias img {
-  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, .8));
-
+/* SECCION SERVICIOS */
+.sectionServicios {
+  height: fit-content;
+  display: flex;
+  justify-content: space-around;
+  width: unset;
 }
 
-/* FIN SECCION TECNOLOGIAS */
+/* #e66465 */
+.sectionServicios .card {
+  width: 18rem;
+  padding: 0px;
+  border: none;
+  box-shadow: rgba(255, 255, 255, .5) 0px 0px 20px;
+}
+
+/* BLOG NOTICIAS  */
+.noticias {
+  display: flex;
+}
+
+.noticias .card {
+  border: 1px solid #00000050;
+  width: 40rem;
+  border-radius: .5rem;
+  height: 15rem;
+  margin: 2rem;
+  background-color: white
+}
+
+.noticias h3 {
+  background-color: rgb(255, 255, 255);
+  border-radius: 2px;
+  padding: 0 10px;
+}
+
+.noticias h6 {
+  color: #00000090
+}
+
+/* SECCION FOOTER */
+.footer {
+  position: absolute;
+  bottom: 0;
+  height: 5em;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  display: flex;
+  position: relative;
+}
+.footer p {
+padding-top: 2rem;
+}
+
+.content-wrap {
+  padding-bottom: 0em;
+}
+
+/* SECCION FOOTER */
