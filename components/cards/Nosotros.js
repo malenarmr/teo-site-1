@@ -35,7 +35,7 @@ function ContextAwareToggle({ children, eventKey, callback }) {
 
 export default function Nosotros() {
   return (
-    <>
+    <div style={{margin:'1rem'}}>
     <div id='nosotros'>
     <h1 style={{ padding: '1rem', borderBottom: '1px solid black', color: 'black'}}>
       Sobre nosotrxs</h1>
@@ -106,7 +106,7 @@ export default function Nosotros() {
           </div>
         </Accordion>
     </section>
-    </>
+    </div>
   );
 }
 

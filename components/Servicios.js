@@ -7,7 +7,7 @@ import mantenimiento from '../public/mant11.jpg'
 
 export const Servicios = () => {
     return (
-        <div id='servicios' >
+        <div id='servicios' style={{margin:'1rem'}}>
             <h1 style={{ padding: '1rem', borderBottom: '1px solid black', color: 'black' }}> Servicios</h1>
             <div className='sectionServicios'>
                 <Card className='cardTransition'>
