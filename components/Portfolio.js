@@ -10,7 +10,7 @@ import Link from "next/link";
 export default function Portfolio() {
   return (
     <>
-      <div id="portfolio" className="swiperFondo" style={{borderRadius:'15px', background: '#000',boxShadow:'#ffffff50 0 0 20px', margin:'.7rem', padding:'10px'}}>
+      <div id="portfolio" className="swiperFondo" style={{borderRadius:'15px', background: '#000',boxShadow:'#ffffff50 0 0 20px', padding:'10px'}}>
           <h1 style={{padding:'1rem', borderBottom:'1px solid #FFF', color:'#FFF'}}> Portfolio</h1>
         <Swiper
           slidesPerView={1}
