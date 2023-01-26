@@ -1,52 +1,44 @@
+.swiper {
+  width: 80%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  background-color: transparent;
+}
+
+.swiper-slide {
+  padding: 5%;
+  text-align: center;
+  font-size: 18px;
+  background-color: transparent;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  color: white
+}
 
 
 .swiper {
-    width: 80%;
-    height: 100%;
-    align-items: center;
-    display: flex;
-    background-color: transparent;
-  }
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  .swiper-slide {
-    padding: 5%;
-    text-align: center;
-    font-size: 18px;
-    background-color:transparent;
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    color:white
-  }
-  
-  .swiper-slide img {
-    display: block;
-    width: 50%;
-    height: 50%;
-    object-fit: cover;
-  }
-  
-  .swiper {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
 .swiper-slide:nth-child(1n) {
-  background-color:transparent;
+  background-color: transparent;
 }
 
 .swiper-slide:nth-child(2n) {
-  background-color:transparent;
+  background-color: transparent;
 }
 
 .swiper-slide:nth-child(3n) {
@@ -54,35 +46,55 @@
 }
 
 .swiper-slide:nth-child(4n) {
-  background-color:transparent;
+  background-color: transparent;
 }
 
 .swiper-slide:nth-child(5n) {
-  background-color:transparent;
+  background-color: transparent;
 }
 
 .swiper-slide:nth-child(6n) {
-  background-color:transparent;
+  background-color: transparent;
 }
 
 .swiper-slide:nth-child(7n) {
-  background-color:transparent;
+  background-color: transparent;
 }
 
 .swiper-slide:nth-child(8n) {
-  background-color:transparent;
+  background-color: transparent;
 }
 
 .swiper-slide:nth-child(9n) {
-  background-color:transparent;
+  background-color: transparent;
 }
 
 .swiper-slide:nth-child(10n) {
-  background-color:transparent;
+  background-color: transparent;
 }
-@media (max-width: 650px){
-  .swiperFondo{
-    position:relative;
+
+@media (max-width: 650px) {
+  .swiperFondo {
+    position: relative;
     left: 0;
+  }
+}
+
+@media (max-width:730px) {
+  .swipercard {
+    background-image: url(../public/slider/captura916-01.jpg) !important;
+    height: 32rem !important;
+    width: 18rem !important;
+  }
+
+  .swipercard1 {
+    background-image: url(../public/slider/pantala912.jpg) !important;
+    height: 32rem !important;
+    width: 18rem !important;
+  }
+
+.swiper-slide .card {
+
+    border: 4px solid black
   }
 }
