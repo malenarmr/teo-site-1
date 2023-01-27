@@ -4,7 +4,7 @@ import Nosotros from '../components/cards/Nosotros'
 import { Servicios } from '../components/Servicios'
 import Portfolio from '../components/Portfolio'
 import { Layout } from '../components/Layout'
-import ContactForm from '../components/Contact'
+import ContactForm from '../components/ContactForm.js'
 import { Noticias } from '../components/Noticias'
 
 

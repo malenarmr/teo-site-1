@@ -27,7 +27,9 @@ body, html {
 }
 
 /*FIN BODY HTML SCROLLBAR */
-
+.collapse{
+  background-color: transparent !important;
+    }
 
 /* NAVBAR */
 .dropdown-menu.show {
@@ -61,11 +63,11 @@ body, html {
   color: black !important
 }
 
-@media (max-width:987px) {
+@media (max-width:990px) {
   .collapse {
-    background: rgb(0, 0, 0, .9);
+    background: rgb(0, 0, 0, .9) !important;
     backdrop-Filter: blur(2px);
-    padding: 2rem 3rem;
+    padding: 20rem 3rem;
     margin-Top: 1.09rem;
   }
 

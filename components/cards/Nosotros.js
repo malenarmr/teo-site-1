@@ -89,7 +89,7 @@ export default function Nosotros() {
             <Container fluid>
             <Row>
             {data.map(({ name, description, image }) => (
-              <Col style={{justifyContent:'center', display:'flex'}}>
+              <Col key={name} style={{justifyContent:'center', display:'flex'}}>
                 <Card className='cardTransition'>
                   <Card.Header >
                     <div style={{ display: 'flex', justifyContent: 'space-between' }}>

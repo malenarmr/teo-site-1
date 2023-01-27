@@ -51,7 +51,7 @@ export const Noticias = () => {
       <Container fluid className='noticias' >
         <Row xl={3}>
           {data.map(({ date, description, image, name }) => (
-             <Col style={{justifyContent:'center', display:'flex'}}>
+             <Col style={{justifyContent:'center', display:'flex'}} key={name}>
             <Card className='cardNoticias' style={{ height: '18rem', overflow: 'hidden', display: 'flex', flexDirection: 'row' }}>
               <img src={image} style={{ width: '100%', height:'100%'}}></img>
               <div style={{ margin: '.5rem' }}>

@@ -19,7 +19,7 @@ export const NavbarApp = () => {
           </Navbar.Brand>
           <Navbar.Brand className='Brand' style={{ color: 'white', fontSize: '1.8rem' }} href="/">Inicio</Navbar.Brand>
         </div>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" style={{ background: 'white' }} />
+        <Navbar.Toggle className='navbarColor' aria-controls="basic-navbar-nav" style={{ background: 'white' }} />
         <Navbar.Collapse className='collapse' id="basic-navbar-nav">
           <div style={{ display: 'flex', flex: 6 }}>
             <Nav className="me-auto" style={{ gap: '2rem' }}>

@@ -46,8 +46,8 @@ export const Servicios = () => {
                 <Container fluid>
                     <Row>
                         {data.map(({ name, description, image }) => (
-                            <Col style={{ justifyContent: 'center', display: 'flex' }}>
-                                <Card className='cardTransition'>
+                            <Col key={name} style={{ justifyContent: 'center', display: 'flex' }}>
+                                <Card className='cardTransition' >
                                     <Card.Img src={image} style={{ opacity: '.8' }} />
                                     <Card.ImgOverlay>
                                         <Card.Header style={{ background: ' #ffffff60' }}>
