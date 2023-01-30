@@ -3,12 +3,10 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, EffectCreative, Navigation, Pagination } from "swiper";
-import { Card } from "react-bootstrap";
 import cap2 from '../public/slider/captura2.jpg'
 import gif from '../public/slider/capturagif.gif'
 import negro from '../public/slider/fondonegro.jpg'
-import image2 from '../public/slider/captura916-01.jpg'
-import Link from "next/link";
+import sandbox from '../public/slider/sandbox.jpg'
 
 export default function Portfolio() {
   const dataImages = [
@@ -18,36 +16,39 @@ export default function Portfolio() {
     },
     {
       "image": `${gif.src}`,
-      'id': '2',
+      'id': '1',
     },
     {
       "image": `${negro.src}`,
-      'id2':'3',
+      'id':'2',
     },
-   
+    {
+      "image": `${sandbox.src}`,
+      'id':'3',
+    }, 
   ]
   return (
     <>
-      <div id="portfolio" className="swiperFondo" style={{ borderRadius: '15px', background: '#000', boxShadow: '#ffffff50 0 0 20px', padding: '10px' }}>
-        <h1 style={{ padding: '1rem', borderBottom: '1px solid #FFF', color: '#FFF' }}>
+      <div id="portfolio" className="portfolio" style={{ borderRadius: '15px', background: '#000', boxShadow: '#ffffff50 0 0 20px', padding: '5% 0%' }}>
+        <h1 style={{ borderBottom: '1px solid #FFF', color: '#FFF',margin:'-1% 2% 5% 2%' }}>
           Portfolio</h1>
-        <div>
-          <Swiper
-           
-            spaceBetween={10}
-            loop={true}
-            centeredSlides={true}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-            }}
-            pagination={{
-              clickable: true,
-            }}
-            navigation={true}
-            modules={[Autoplay, Pagination, Navigation]}
-            className="mySwiper"
-          >
+        <Swiper
+        slidesPerView={1.5}
+        spaceBetween={30}
+        freeMode={true}
+        loop={true}
+        centeredSlides={true}
+        autoplay={{
+          delay: 6000,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Pagination, Navigation, Autoplay]}
+        className="mySwiper "
+      >
             {dataImages.map(({ image, id }) => (
               <SwiperSlide key={id}>
                 <img key={id} src={image} width={'100%'}/>
@@ -55,7 +56,6 @@ export default function Portfolio() {
             ))}
           </Swiper>
         </div>
-      </div>
     </>
   )
 }

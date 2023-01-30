@@ -6,6 +6,7 @@ import Portfolio from '../components/Portfolio'
 import { Layout } from '../components/Layout'
 import ContactForm from '../components/ContactForm.js'
 import { Noticias } from '../components/Noticias'
+import phone from '../public/compucolores1.jpg'
 
 
 export default function Home() {
@@ -26,7 +27,9 @@ export default function Home() {
             <Servicios />
             <Noticias/>
           </div>
+          <div  style={{ display: 'flex', flexDirection: 'column', padding: '2%', backgroundImage: `url(${phone.src})`, border: '10px, solid white', backgroundAttachment: 'scroll', backgroundPosition: '0', backgroundSize: 'cover', }}>
           <ContactForm />
+          </div>
         </Layout>
       </div>
     </>

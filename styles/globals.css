@@ -84,8 +84,8 @@ body, html {
   background-attachment: fixed;
   background-position: 10%;
   background-image: url("../public/compu.jpg");
-  background-color: #f4d1d95b;
-  height: 100vh;
+  background-color: #0000006d;
+  height: fit-content;
   flex-direction: column;
   display: flex;
   padding-bottom: 2%;
@@ -95,7 +95,6 @@ body, html {
 
 .header {
   margin-top: 10rem;
-  color: black;
   padding: 1%;
   border-radius: 20px;
   display: flex;
@@ -126,7 +125,9 @@ body, html {
     transform: translate(0, -0px);
   }
 }
-
+.modal-content{
+  background-color: transparent !important;
+}
 /*     SOBRE NOSOTROS    */
 .nosotrosSection .card {
   background-color: rgba(255, 255, 255, 1);
@@ -329,7 +330,9 @@ body, html {
 .noticias h6 {
   color: #00000090
 }
-
+#contacto img{
+  filter: drop-shadow( #fff 0px 0px 2px);
+}
 /* SECCION FOOTER */
 .footer {
   position: absolute;
