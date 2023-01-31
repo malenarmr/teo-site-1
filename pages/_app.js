@@ -1,13 +1,19 @@
 import '../styles/globals.css'
 import "bootstrap/dist/css/bootstrap.css"
 import '../styles/Slider.css'
+import { SSRProvider } from 'react-bootstrap'
+import { appWithTranslation } from "next-i18next";
+import { NavbarApp } from '../components/NavbarApp';
+import nextI18NextConfig from './next-i18next.config';
 
-
-export default function App({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   return (
     <>
-      <Component {...pageProps} />
+      <SSRProvider>
+        <NavbarApp />
+        <Component {...pageProps} />
+      </SSRProvider>
     </>
   )
-
 }
+export default appWithTranslation(App);

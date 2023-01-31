@@ -126,8 +126,10 @@ body, html {
   }
 }
 .modal-content{
-  background-color: transparent !important;
+  background-image: url('../public/gradient.jpg');
+  background-size: cover;
 }
+
 /*     SOBRE NOSOTROS    */
 .nosotrosSection .card {
   background-color: rgba(255, 255, 255, 1);
@@ -166,14 +168,6 @@ body, html {
   .header img {
     width: 10rem !important;
     height: unset;
-  }
-
-  .btnHeader {
-    width: 5.2rem !important;
-    height: 2.5rem !important;
-    font-size: .9rem !important;
-    padding: 0 !important;
-    margin: 1rem !important;
   }
 
   .cardHeader {

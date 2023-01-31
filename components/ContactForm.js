@@ -1,4 +1,4 @@
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect } from "react"
 import igLogo from '../public/igLogo.png';
 import fbLogo from '../public/fbLogo.png';
 import inLogo from '../public/inLogo.png'
@@ -7,52 +7,89 @@ import send from '../public/share.png';
 import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
-    const form = useRef();
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        message: "",
+    });
 
-    const sendEmail = (e) => {
+    const [buttonText, setButtonText] = useState("Enviar");
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = (e) => {
         e.preventDefault();
+        setButtonText("Enviando...");
         emailjs
             .sendForm(
                 "service_mqqrxfb",
-                "template_9al2ma9",
-                form.current,
+                "template_kviff59",
+                e.target,
                 "G7vAVR0LUQmtaC9lW"
             )
             .then(
                 (result) => {
                     console.log(result.text);
+                    setFormData({ name: "", email: "", message: "" });
+                    setButtonText("Sent");
                 },
                 (error) => {
-                    (console.log(error.text))
+                    console.log(error.text);
                 }
             );
     };
+
     return (
         <div id="contacto">
             <div className="container contactContainer mt-0" style={{ borderRadius: '7px', color: 'black', width: '30rem', background: '#ffffff90', boxShadow: '#00000090 0px 0px 20px', padding: '1%' }}>
                 <h2 className="mb-3" style={{ display: 'flex', justifyContent: 'center' }}>Contacto</h2>
-                <form ref={form} onSubmit={sendEmail}>
+                <form onSubmit={handleSubmit}>
                     <div className="mb-3">
                         <label className="form-label" htmlFor="name">
                             Nombre
                         </label>
-                        <input className="form-control" name="user_name" type="text" />
+                        <input
+                            style={{ textTransform: 'uppercase' }}
+                            required
+                            className="form-control"
+                            type="text"
+                            name="name"
+                            placeholder="Tu nombre"
+                            value={formData.name}
+                            onChange={handleChange}
+                        />
                     </div>
                     <div className="mb-3">
                         <label className="form-label" htmlFor="email" type="email">
                             Email
                         </label>
-                        <input className="form-control" type="email" name='user_email' required />
+                        <input
+                            style={{ textTransform: 'uppercase' }}
+                            required
+                            className="form-control"
+                            type="email"
+                            name="email"
+                            placeholder="tu email"
+                            value={formData.email}
+                            onChange={handleChange}
+                        />
                     </div>
-
                     <div className="message mb-3 ">
                         <label className="form-label"> Mensaje</label>
-                        <textarea className="form-control" name='message' type="text" />
+                        <textarea
+                            style={{ textTransform: 'uppercase' }}
+                            required
+                            name="message"
+                            placeholder="Tu mensaje"
+                            value={formData.message}
+                            onChange={handleChange}
+                            className="form-control" type="text" />
                     </div>
-
                     <button style={{ alignItems: 'center', display: 'flex' }}
-                        className="btn btn-outline-dark btn-lg" type="submit" value="Send">
-                        send
+                        className="btn btn-outline-dark btn-lg" type="submit" value="Send"                >
+                        {buttonText}
                         <img src={send.src}
                             style={{ marginLeft: '10px' }} height={20} width={20} />
                     </button>
@@ -68,5 +105,5 @@ const ContactForm = () => {
             </div>
         </div>
     )
-}
+};
 export default ContactForm

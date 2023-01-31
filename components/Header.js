@@ -1,28 +1,13 @@
 import teoCoop from '../public/teo-coop.png'
 import { Container, Image, Card, Button, Modal, ModalBody } from 'react-bootstrap';
 import teoLogo from '../public/teo-logo.png'
-import { useState } from 'react';
-import ContactForm from './ContactForm';
-
 export const Header = () => {
-    const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+
+       
     return (
         <>
             <Container fluid className='sectionHeader'>
-                <Button
-                    onClick={handleShow}
-                    className='btnHeader'
-                    variant="outline-light" size='lg'
-                    style={{ zIndex: '10', fontWeight: 'bold', height: '3rem', width: '8rem', margin: '1rem', bottom: '0rem', right: '0', position: 'fixed', background: '#00000080' }}
-                > Contactar</Button>
-                <Modal style={{background:'#00000090'}}
-                 show={show} onHide={handleClose}>
-                    <ModalBody>
-                    <ContactForm/>
-                    </ModalBody>
-                </Modal>
+                
 
                 <div className='header' >
                     <Image src={teoCoop.src}

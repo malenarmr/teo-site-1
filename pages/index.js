@@ -7,9 +7,13 @@ import { Layout } from '../components/Layout'
 import ContactForm from '../components/ContactForm.js'
 import { Noticias } from '../components/Noticias'
 import phone from '../public/compucolores1.jpg'
+import { ContactButton } from '../components/ContactButton'
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 
 export default function Home() {
+  const { t } = useTranslation("home");
+
   return (
     <>
       <Head>
@@ -22,14 +26,15 @@ export default function Home() {
         <Layout>
           <Header />
           <div className='backgroundAmplio'>
-          <Portfolio />
+            <Portfolio />
             <Nosotros />
             <Servicios />
-            <Noticias/>
+            <Noticias />
           </div>
-          <div  style={{ display: 'flex', flexDirection: 'column', padding: '2%', backgroundImage: `url(${phone.src})`, border: '10px, solid white', backgroundAttachment: 'scroll', backgroundPosition: '0', backgroundSize: 'cover', }}>
-          <ContactForm />
+          <div style={{ display: 'flex', flexDirection: 'column', padding: '2%', backgroundImage: `url(${phone.src})`, border: '10px, solid white', backgroundAttachment: 'scroll', backgroundPosition: '0', backgroundSize: 'cover', }}>
+            <ContactForm />
           </div>
+          <ContactButton />
         </Layout>
       </div>
     </>

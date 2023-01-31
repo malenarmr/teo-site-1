@@ -7,7 +7,6 @@ export const Layout = ({ children }) => {
   return (
     <div>
       <div className="content-wrap">
-        <NavbarApp />
         {children}
       </div>
       <Footer />

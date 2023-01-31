@@ -3,7 +3,20 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import teoLogo from '../public/teo-logo.png'
+import Link from "next/link";
+
+
+
 export const NavbarApp = () => {
+  // const router = useRouter();
+
+  // const handleLocaleChange = (event) => {
+  //   const value = event.target.value;
+
+  //   router.push(router.route, router.asPath, {
+  //     locale: value,
+  //   });}
+  
   return (
     <Navbar expand="lg" fixed="top" style={{ zIndex: '10', background: 'rgb(0, 0, 0, .7)', backdropFilter: 'blur(5px)', height: '6rem' }}>
       <Container>
@@ -29,10 +42,10 @@ export const NavbarApp = () => {
               <Nav.Link href="#noticias">Noticias</Nav.Link>
               <Nav.Link href="#contacto">Contacto</Nav.Link>
             </Nav>
-            <NavDropdown title="Lenguaje">
-              <NavDropdown.Item href="#action/3.1">Español</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">English</NavDropdown.Item>
-            </NavDropdown>
+            {/* <select title="Lenguaje" onChange={handleLocaleChange} value={router.locale}>
+              <option value="es"> Español</option>
+              <option value="en"> English</option>
+            </select> */}
           </div>
         </Navbar.Collapse>
       </Container>
