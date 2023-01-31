@@ -69,9 +69,6 @@ function AboutUs({t}) {
 
     ]
 
-
-
-
   return (
     <div style={{ margin: '1rem' }}>
       <div id='aboutUs'>
@@ -86,7 +83,7 @@ function AboutUs({t}) {
             <Container fluid>
             <Row>
             {data.map(({ name, description, image, id }) => (
-              <Col key={name} style={{justifyContent:'center', display:'flex'}}>
+              <Col key={name} style={{justifyContent:'center',}}>
                 <Card className='cardTransition'>
                   <Card.Header >
                     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -95,12 +92,12 @@ function AboutUs({t}) {
                         src={image}
                         width={30} height={30} />
                     </div>
-                    <ContextAwareToggle eventKey={id}>
+                    <ContextAwareToggle eventKey={name}>
                       <h6>{t('less')}</h6>
                       <h6>{t('more')}</h6>
                     </ContextAwareToggle>
                   </Card.Header>
-                  <Accordion.Collapse style={{ background: 'white' }} eventKey={id}>
+                  <Accordion.Collapse style={{ background: 'white' }} eventKey={name}>
                     <Card.Body>{description}</Card.Body>
                   </Accordion.Collapse>
                 </Card>
