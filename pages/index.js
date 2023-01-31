@@ -1,14 +1,19 @@
 import Head from 'next/head'
-import { Header } from '../components/Header'
-import Nosotros from '../components/cards/Nosotros'
-import { Servicios } from '../components/Servicios'
+import AboutUs from '../components/AboutUs'
 import Portfolio from '../components/Portfolio'
 import { Layout } from '../components/Layout'
-import ContactForm from '../components/Contact'
-import { Noticias } from '../components/Noticias'
+import ContactForm from '../components/ContactForm.js'
+import { News } from '../components/News'
+import phone from '../public/compucolores1.jpg'
+import { withTranslation } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useRouter } from 'next/router'
+import Header from '../components/Header'
+import Services from '../components/Services'
+import ContactButton from '../components/ContactButton'
 
-
-export default function Home() {
+function Home({ t }) {
+  const router = useRouter()
   return (
     <>
       <Head>
@@ -21,14 +26,34 @@ export default function Home() {
         <Layout>
           <Header />
           <div className='backgroundAmplio'>
-          <Portfolio />
-            <Nosotros />
-            <Servicios />
-            <Noticias/>
+            <Portfolio />
+            <AboutUs />
+            <Services />
+            <News />
           </div>
-          <ContactForm />
+          <div style={{ display: 'flex', flexDirection: 'column', padding: '2%', backgroundImage: `url(${phone.src})`, border: '10px, solid white', backgroundAttachment: 'scroll', backgroundPosition: '0', backgroundSize: 'cover', }}>
+            <ContactForm />
+          </div>
+          <ContactButton />
         </Layout>
       </div>
     </>
   )
 }
+
+
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...await serverSideTranslations(locale, [
+      'common',
+      'header',
+      'aboutUs',
+      'services',
+      'noticias',
+      'contact',
+      'navbar'
+    ]),
+  }
+})
+
+export default withTranslation('common')(Home)

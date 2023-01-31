@@ -1,15 +1,17 @@
 import '../styles/globals.css'
 import "bootstrap/dist/css/bootstrap.css"
 import '../styles/Slider.css'
-import {textStyle} from '../styles/textStyle.scss'
+import { SSRProvider } from 'react-bootstrap'
+import NavbarApp  from '../components/NavbarApp';
+import { appWithTranslation } from 'next-i18next'
 
-
-export default function App({ Component, pageProps }) {
-  return(
+function App({ Component, pageProps }) {
+  return (
     <>
-
-      <Component {...pageProps}/>
-  </>
+      <SSRProvider>
+        <Component {...pageProps} />
+      </SSRProvider>
+    </>
   )
-
 }
+export default appWithTranslation(App)

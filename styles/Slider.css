@@ -1,88 +1,48 @@
+.swiper-slide {
+  padding: 1.5%;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #ee7752, #ef7ba7, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 5s ease infinite;
+}
 
+@keyframes gradient {
+  0% {
+    background-position: 0% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 2px solid black;
+}
 
 .swiper {
-    width: 80%;
-    height: 100%;
-    align-items: center;
-    display: flex;
-    background-color: transparent;
-  }
-
-  .swiper-slide {
-    padding: 5%;
-    text-align: center;
-    font-size: 18px;
-    background-color:transparent;
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    color:white
-  }
-  
-  .swiper-slide img {
-    display: block;
-    width: 50%;
-    height: 50%;
-    object-fit: cover;
-  }
-  
-  .swiper {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-.swiper-slide:nth-child(1n) {
-  background-color:transparent;
-}
-
-.swiper-slide:nth-child(2n) {
-  background-color:transparent;
-}
-
-.swiper-slide:nth-child(3n) {
-  background-color: transparent;
-}
-
-.swiper-slide:nth-child(4n) {
-  background-color:transparent;
-}
-
-.swiper-slide:nth-child(5n) {
-  background-color:transparent;
-}
-
-.swiper-slide:nth-child(6n) {
-  background-color:transparent;
-}
-
-.swiper-slide:nth-child(7n) {
-  background-color:transparent;
-}
-
-.swiper-slide:nth-child(8n) {
-  background-color:transparent;
-}
-
-.swiper-slide:nth-child(9n) {
-  background-color:transparent;
-}
-
-.swiper-slide:nth-child(10n) {
-  background-color:transparent;
-}
-@media (max-width: 650px){
-  .swiperFondo{
-    position:relative;
-    left: 0;
-  }
+  margin-left: auto;
+  margin-right: auto;
 }
