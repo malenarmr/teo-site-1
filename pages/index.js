@@ -8,11 +8,13 @@ import ContactForm from '../components/ContactForm.js'
 import { Noticias } from '../components/Noticias'
 import phone from '../public/compucolores1.jpg'
 import { ContactButton } from '../components/ContactButton'
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { withTranslation } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
 
-
-export default function Home() {
-  const { t } = useTranslation("home");
+function Home({ t }) {
+  const router = useRouter()
 
   return (
     <>
@@ -22,6 +24,23 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div>
+          <Link
+            href='/'
+            locale={router.locale === 'en' ? 'de' : 'en'}
+          >
+            <button>
+              {t('change-locale')}
+            </button>
+          </Link>
+          <Link href='/second-page'>
+            <button
+              type='button'
+            >
+              {t('to-second-page')}
+            </button>
+          </Link>
+        </div>
       <div style={{ background: 'black' }}>
         <Layout>
           <Header />
@@ -40,3 +59,12 @@ export default function Home() {
     </>
   )
 }
+
+
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...await serverSideTranslations(locale, ['common', 'header']),
+  }
+})
+
+export default withTranslation('common')(Home)

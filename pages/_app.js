@@ -2,9 +2,8 @@ import '../styles/globals.css'
 import "bootstrap/dist/css/bootstrap.css"
 import '../styles/Slider.css'
 import { SSRProvider } from 'react-bootstrap'
-import { appWithTranslation } from "next-i18next";
 import { NavbarApp } from '../components/NavbarApp';
-import nextI18NextConfig from './next-i18next.config';
+import { appWithTranslation } from 'next-i18next'
 
 function App({ Component, pageProps }) {
   return (
@@ -16,4 +15,4 @@ function App({ Component, pageProps }) {
     </>
   )
 }
-export default appWithTranslation(App);
+export default appWithTranslation(App)
