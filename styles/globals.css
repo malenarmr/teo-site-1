@@ -34,8 +34,7 @@ body, html {
 /* NAVBAR */
 .dropdown-menu.show {
   background-color: black;
-  padding: 1.5rem 0rem;
-  box-shadow: #ffffff90 0px 0px 15px;
+  box-shadow: #ffffff30 0px 0px 15px;
 }
 
 .navbar-nav .nav-link {
@@ -51,12 +50,13 @@ body, html {
 }
 
 .dropdown-menu {
-  margin-top: 1.5rem !important;
+  margin-top: 3rem !important;
 }
 
 .dropdown-item {
   color: white !important;
   font-size: 1.5rem;
+  margin: .5rem;
 }
 
 .dropdown-item:hover {
@@ -131,14 +131,6 @@ body, html {
 }
 
 /*     SOBRE NOSOTROS    */
-.nosotrosSection .card {
-  background-color: rgba(255, 255, 255, 1);
-  color: black;
-  border: none;
-  box-shadow: rgba(255, 255, 255, 0.5);
-  height: fit-content;
-  margin: 3rem;
-}
 .collapse {
   background-color: white;
   padding: 0;
@@ -180,7 +172,7 @@ body, html {
     padding: 0 !important;
   }
 
-  .nosotrosSection {
+  .aboutUsSection {
     margin: 1 rem;
   }
 

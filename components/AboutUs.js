@@ -74,12 +74,12 @@ function AboutUs({t}) {
 
   return (
     <div style={{ margin: '1rem' }}>
-      <div id='nosotros'>
+      <div id='aboutUs'>
         <h1 style={{ padding: '1rem', borderBottom: '1px solid black', color: 'black' }}>
         {t('title')}
           </h1>
       </div>
-      <section className='nosotrosSection' >
+      <section className='aboutUsSection' >
         <Accordion
           defaultActiveKey="0">
           <div className='sectionServicios'>
