@@ -5,15 +5,17 @@ import inLogo from '../public/inLogo.png'
 import Link from "next/link";
 import send from '../public/share.png';
 import emailjs from '@emailjs/browser';
+import PropTypes from 'prop-types';
+import { withTranslation } from 'next-i18next';
 
-const ContactForm = () => {
+const ContactForm = ({t}) => {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
         message: "",
     });
 
-    const [buttonText, setButtonText] = useState("Enviar");
+    const [buttonText, setButtonText] = useState(`${t('send')}`);
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -21,7 +23,7 @@ const ContactForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setButtonText("Enviando...");
+        setButtonText(`${t('sending')}`);
         emailjs
             .sendForm(
                 "service_mqqrxfb",
@@ -33,7 +35,7 @@ const ContactForm = () => {
                 (result) => {
                     console.log(result.text);
                     setFormData({ name: "", email: "", message: "" });
-                    setButtonText("Sent");
+                    setButtonText(`${t('sent')}`);
                 },
                 (error) => {
                     console.log(error.text);
@@ -42,13 +44,13 @@ const ContactForm = () => {
     };
 
     return (
-        <div id="contacto">
+        <div id="contact">
             <div className="container contactContainer mt-0" style={{ borderRadius: '7px', color: 'black', width: '30rem', background: '#ffffff90', boxShadow: '#00000090 0px 0px 20px', padding: '1%' }}>
                 <h2 className="mb-3" style={{ display: 'flex', justifyContent: 'center' }}>Contacto</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-3">
                         <label className="form-label" htmlFor="name">
-                            Nombre
+                        {t('name')}
                         </label>
                         <input
                             style={{ textTransform: 'uppercase' }}
@@ -56,7 +58,7 @@ const ContactForm = () => {
                             className="form-control"
                             type="text"
                             name="name"
-                            placeholder="Tu nombre"
+                            placeholder= {t('your-name')}
                             value={formData.name}
                             onChange={handleChange}
                         />
@@ -71,18 +73,18 @@ const ContactForm = () => {
                             className="form-control"
                             type="email"
                             name="email"
-                            placeholder="tu email"
+                            placeholder= {t('your-email')}
                             value={formData.email}
                             onChange={handleChange}
                         />
                     </div>
                     <div className="message mb-3 ">
-                        <label className="form-label"> Mensaje</label>
+                        <label className="form-label">  {t('message')}</label>
                         <textarea
                             style={{ textTransform: 'uppercase' }}
                             required
                             name="message"
-                            placeholder="Tu mensaje"
+                            placeholder= {t('your-message')}
                             value={formData.message}
                             onChange={handleChange}
                             className="form-control" type="text" />
@@ -106,4 +108,7 @@ const ContactForm = () => {
         </div>
     )
 };
-export default ContactForm
+ContactForm.propTypes = {
+    t: PropTypes.func.isRequired,
+}
+export default  withTranslation('contacto')(ContactForm)

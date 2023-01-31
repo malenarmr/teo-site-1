@@ -4,35 +4,33 @@ import diseñoWeb from '../public/desingWeb1.jpg'
 import diseñoUX from '../public/ux2.jpg'
 import eCommerce from '../public/shopping5.jpg'
 import mantenimiento from '../public/mant11.jpg'
+import { withTranslation } from 'next-i18next';
+import PropTypes from 'prop-types';
 
-export const Servicios = () => {
+const Services = ({t}) => {
     const data = [
         {
-            "name": "Diseño Web",
+            "name": `${t('web-name')}`,
             "image": `${diseñoWeb.src}`,
-            "date": "1/1/2020",
-            "description": "Contanos qué es lo que necesitás, nosotrxs juntamos la funcionalidad y tu marca para conseguir experiencias digitales atractivas, fáciles e interesantes.s",
+            "description":`${t('web-description')}`,
             "id": 1
         },
         {
-            "name": "E-Commerce",
+            "name": `${t('eCommerce-name')}`,
             "image": `${eCommerce.src}`,
-            "date": "1/1/2023",
-            "description": "Desarrollamos la tienda online que estas buscando para tu negocio, con pago seguro y tus productos al alcance.",
+            "description":`${t('eCommerce-description')}`,
             "id": 2
         },
         {
-            "name": "Diseñp UX/UI",
+            "name": `${t('ux-name')}`,
             "image": `${diseñoUX.src}`,
-            "date": "1/1/2023",
-            "description": "Hacemos que tu sitio web sea atractivo, ordenado y funcional. El/la usuarix estará a gusto al navegar por él, en una interfaz gráfica correcta, atractiva y limpia.",
+            "description":`${t('ux-description')}`,
             "id": 3
         },
         {
-            "name": "Mantenimiento",
+            "name": `${t('maintenance-name')}`,
             "image": `${mantenimiento.src}`,
-            "date": "1/1/2023",
-            "description": "Si ya tenes tu sitio pero lo tenés abandonado o fuera de uso, nos encargamos de poner al día tu website sea el vivo reflejo de tu marca comercial o personal.",
+            "description":`${t('maintenance-description')}`,
             "id": 4
         },
 
@@ -40,7 +38,7 @@ export const Servicios = () => {
 
 
     return (
-        <div id='servicios' style={{ margin: '1rem' }}>
+        <div id='services' style={{ margin: '1rem' }}>
             <h1 style={{ padding: '1rem', borderBottom: '1px solid black', color: 'black' }}> Servicios</h1>
             <div className='sectionServicios'>
                 <Container fluid>
@@ -55,7 +53,8 @@ export const Servicios = () => {
                                                 {name}
                                             </Card.Title>
                                         </Card.Header>
-                                        <Card.Body className='cardBody' style={{ blackFilter: 'blur(0)', height: '11rem', marginTop: '10rem', backdropFilter: 'blur(3px)', backgroundColor: 'rgba(255,255, 255,.5)', boxShadow: '#00000070 0px 0px 10px', borderRadius: '2%', }}>
+                                        <Card.Body className='cardBody' style={{ blackFilter: 'blur(0)', height: '11rem', marginTop: '10rem', backdropFilter: 'blur(3px)', backgroundColor: 'rgba(255,255, 255,.5)', boxShadow: '#00000070 0px 0px 10px', borderRadius: '2%',
+                                    height:'fit-content' }}>
                                             {description}
                                         </Card.Body>
                                     </Card.ImgOverlay>
@@ -68,3 +67,7 @@ export const Servicios = () => {
         </div>
     )
 }
+Services.propTypes = {
+    t: PropTypes.func.isRequired,
+}
+export default withTranslation('services')(Services)

@@ -1,14 +1,13 @@
-import teoCoop from '../public/teo-coop.png'
-import { Container, Image, Card, Button, Modal, ModalBody } from 'react-bootstrap';
-import teoLogo from '../public/teo-logo.png'
-export const Header = () => {
+import teoCoop from '../public/teo-coop.png';
+import { Container, Image, Card } from 'react-bootstrap';
+import teoLogo from '../public/teo-logo.png';
+import PropTypes from 'prop-types';
+import { withTranslation } from 'next-i18next';
 
-       
+const Header = ({ t }) => {
     return (
         <>
             <Container fluid className='sectionHeader'>
-                
-
                 <div className='header' >
                     <Image src={teoCoop.src}
                         height={200}
@@ -24,10 +23,16 @@ export const Header = () => {
                                 src={teoLogo.src}
                                 width={70} height={50} />
                         </Card.Header>
-                        <Card.Body style={{ color: '#fff', textAlign: 'justify', fontFamily: 'Montserrat' }}>Somos una cooperativa de trabajo con el objetivo brindar un producto atractivo y acorde a tus necesidades. Diseñamos y desarrollamos sitios web y aplicaciones para el proyecto que tengas en mente, tanto para grandes instituciones o empresas, hasta pequeñas páginas personales o profesionales.</Card.Body>
+                        <Card.Body style={{ color: '#fff', textAlign: 'justify', fontFamily: 'Montserrat' }}>
+                            {t('description')}
+                        </Card.Body>
                     </Card>
                 </div>
             </Container>
         </>
     )
 }
+Header.propTypes = {
+    t: PropTypes.func.isRequired,
+}
+export default withTranslation('header')(Header)

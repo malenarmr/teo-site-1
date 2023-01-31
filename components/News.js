@@ -2,9 +2,7 @@ import React from 'react'
 import { Card, Col, Container, Row } from 'react-bootstrap'
 import imagenFondo from '../public/diseñoUX.jpg'
 
-
-
-export const Noticias = () => {
+export const News = () => {
   const data =
     [
       {
@@ -46,7 +44,7 @@ export const Noticias = () => {
 
 
   return (
-    <section id='noticias' style={{ borderRadius: '10px', background: '#000', boxShadow: '#ffffff58 0 0 20px', marginTop: '3rem', padding: '10px' }}>
+    <section id='news' style={{ borderRadius: '10px', background: '#000', boxShadow: '#ffffff58 0 0 20px', marginTop: '3rem', padding: '10px' }}>
       <h1 style={{ padding: '1rem', borderBottom: '1px solid #fff', color: '#fff' }}> Noticias</h1>
       <Container fluid className='noticias' >
         <Row xl={3}>

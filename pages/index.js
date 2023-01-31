@@ -1,21 +1,19 @@
 import Head from 'next/head'
-import { Header } from '../components/Header'
-import Nosotros from '../components/cards/Nosotros'
-import { Servicios } from '../components/Servicios'
+import AboutUs from '../components/AboutUs'
 import Portfolio from '../components/Portfolio'
 import { Layout } from '../components/Layout'
 import ContactForm from '../components/ContactForm.js'
-import { Noticias } from '../components/Noticias'
+import { News } from '../components/News'
 import phone from '../public/compucolores1.jpg'
-import { ContactButton } from '../components/ContactButton'
 import { withTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useRouter } from 'next/router'
-import Link from 'next/link'
+import Header from '../components/Header'
+import Services from '../components/Services'
+import ContactButton from '../components/ContactButton'
 
 function Home({ t }) {
   const router = useRouter()
-
   return (
     <>
       <Head>
@@ -24,31 +22,14 @@ function Home({ t }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>
-          <Link
-            href='/'
-            locale={router.locale === 'en' ? 'de' : 'en'}
-          >
-            <button>
-              {t('change-locale')}
-            </button>
-          </Link>
-          <Link href='/second-page'>
-            <button
-              type='button'
-            >
-              {t('to-second-page')}
-            </button>
-          </Link>
-        </div>
       <div style={{ background: 'black' }}>
         <Layout>
           <Header />
           <div className='backgroundAmplio'>
             <Portfolio />
-            <Nosotros />
-            <Servicios />
-            <Noticias />
+            <AboutUs />
+            <Services />
+            <News />
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', padding: '2%', backgroundImage: `url(${phone.src})`, border: '10px, solid white', backgroundAttachment: 'scroll', backgroundPosition: '0', backgroundSize: 'cover', }}>
             <ContactForm />
@@ -63,7 +44,15 @@ function Home({ t }) {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...await serverSideTranslations(locale, ['common', 'header']),
+    ...await serverSideTranslations(locale, [
+      'common',
+      'header',
+      'aboutUs',
+      'services',
+      'noticias',
+      'contact',
+      'navbar'
+    ]),
   }
 })
 

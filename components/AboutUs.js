@@ -1,13 +1,12 @@
-import Accordion from 'react-bootstrap/Accordion';
-import { useAccordionButton } from 'react-bootstrap/AccordionButton';
 import Card from 'react-bootstrap/Card';
-import { useContext, useState } from 'react';
-import { AccordionContext, Col, Container, Image, Row } from 'react-bootstrap';
-import vision from '../../public/vision.png'
-import mision from '../../public/mision.png'
-import valores from '../../public/valores.png'
-import seguridad from '../../public/seguridad.png'
-
+import { useContext} from 'react';
+import { AccordionContext,Accordion,useAccordionButton, Col, Container, Image, Row } from 'react-bootstrap';
+import vision from '../public/vision.png'
+import mision from '../public/mision.png'
+import valores from '../public/valores.png'
+import seguridad from '../public/seguridad.png'
+import PropTypes from 'prop-types';
+import { withTranslation } from 'next-i18next';
 
 function ContextAwareToggle({ children, eventKey, callback }) {
   const { activeEventKey } = useContext(AccordionContext);
@@ -39,35 +38,32 @@ function ContextAwareToggle({ children, eventKey, callback }) {
   );
 
 }
-export default function Nosotros() {
+function AboutUs({t}) {
+  console.log({t}, 'nostrosooooooos');
   const data =
     [
       {
-        "name": "Mision",
+        "name": `${t('mission-name')}`,
         "image": `${mision.src}`,
-        "date": "1/1/2020",
-        "description": "Somos una cooperativa de trabajo con el objetivo brindar un producto atractivo y acorde a tus necesidades. Diseñamos y desarrollamos sitios web y aplicaciones para el proyecto que tengas en mente, tanto para grandes instituciones o empresas, hasta pequeñas páginas personales o profesionales.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore  magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco",
+        "description":`${t('mission-description')}`,
         "id": 1
       },
       {
-        "name": "Vision",
+        "name": `${t('vision-name')}`,
         "image": `${vision.src}`,
-        "date": "1/1/2023",
-        "description": "Teo-Coop será una cooperativa que brindará servicios a medida y escalables sin importar el lugar en donde se encuentre el cliente, siempre basándose en sus valores éticos.",
+        "description": `${t('vision-description')}`,
         "id": 2
       },
       {
-        "name": "Valores",
+        "name":`${t('values-name')}`,
         "image": `${valores.src}`,
-        "date": "1/1/2023",
-        "description": "Respeto, responsabilidad, compromiso, empatía, amor, pasión, amistad, perseverancia, confianza, motivación, diversidad, inclusión, solidaridad y compromiso social",
+        "description": `${t('values-description')}`,
         "id": 3
       },
       {
-        "name": "Seguridad",
+        "name":`${t('segurity-name')}`,
         "image": `${seguridad.src}`,
-        "date": "1/1/2023",
-        "description": "Hoy en día la seguridad informática es primordial, integrando la seguridad en el ciclo de desarrollo producimos aplicaciones robustas y a menor costo.",
+        "description": `${t('segurity-description')}`,
         "id": 4
       },
 
@@ -80,7 +76,8 @@ export default function Nosotros() {
     <div style={{ margin: '1rem' }}>
       <div id='nosotros'>
         <h1 style={{ padding: '1rem', borderBottom: '1px solid black', color: 'black' }}>
-          Sobre nosotrxs</h1>
+        {t('title')}
+          </h1>
       </div>
       <section className='nosotrosSection' >
         <Accordion
@@ -88,7 +85,7 @@ export default function Nosotros() {
           <div className='sectionServicios'>
             <Container fluid>
             <Row>
-            {data.map(({ name, description, image }) => (
+            {data.map(({ name, description, image, id }) => (
               <Col key={name} style={{justifyContent:'center', display:'flex'}}>
                 <Card className='cardTransition'>
                   <Card.Header >
@@ -98,12 +95,12 @@ export default function Nosotros() {
                         src={image}
                         width={30} height={30} />
                     </div>
-                    <ContextAwareToggle eventKey="1">
-                      <h6>Ver menos</h6>
-                      <h6>Ver más</h6>
+                    <ContextAwareToggle eventKey={id}>
+                      <h6>{t('less')}</h6>
+                      <h6>{t('more')}</h6>
                     </ContextAwareToggle>
                   </Card.Header>
-                  <Accordion.Collapse style={{ background: 'white' }} eventKey="1">
+                  <Accordion.Collapse style={{ background: 'white' }} eventKey={id}>
                     <Card.Body>{description}</Card.Body>
                   </Accordion.Collapse>
                 </Card>
@@ -118,3 +115,7 @@ export default function Nosotros() {
   );
 }
 
+AboutUs.propTypes = {
+  t: PropTypes.func.isRequired,
+}
+export default withTranslation('aboutUs')(AboutUs)
