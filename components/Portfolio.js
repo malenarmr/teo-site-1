@@ -48,6 +48,9 @@ export default function Portfolio() {
         navigation={true}
         modules={[Pagination, Navigation, Autoplay]}
         className="mySwiper "
+        transition={{
+          duration: 900,
+        }}
       >
             {dataImages.map(({ image, id }) => (
               <SwiperSlide key={id}>

@@ -27,9 +27,9 @@ body, html {
 }
 
 /*FIN BODY HTML SCROLLBAR */
-.collapse{
+.collapse {
   background-color: transparent !important;
-    }
+}
 
 /* NAVBAR */
 .dropdown-menu.show {
@@ -42,10 +42,16 @@ body, html {
   font-size: 1.3rem;
   font-weight: 500;
 }
-
+.navbar-nav .nav-link:hover{
+  color:#df8e8e
+}
+.navbar-nav .nav-link.active{
+  color:#df8e8e !important;
+  border-bottom: 2px solid #fff ;
+  padding-bottom: 1rem !important
+ }
 .dropdown-toggle {
   margin-top: .5rem;
-  color: white !important;
   font-size: 1.3rem !important
 }
 
@@ -56,23 +62,25 @@ body, html {
 .dropdown-item {
   color: white !important;
   font-size: 1.5rem;
-  margin: .5rem;
+  margin:  1rem 0rem;
 }
 
 .dropdown-item:hover {
   color: black !important
 }
 
+.divNavbar {
+  flex: 6;
+  align-items: center;
+  display: flex;
+}
+
 @media (max-width:990px) {
   .collapse {
     background: rgb(0, 0, 0, .9) !important;
     backdrop-Filter: blur(2px);
-    padding: 20rem 3rem;
+    padding: 1rem 3rem !important;
     margin-Top: 1.09rem;
-  }
-
-  .Brand {
-    padding-right: 0%;
   }
 }
 
@@ -125,7 +133,8 @@ body, html {
     transform: translate(0, -0px);
   }
 }
-.modal-content{
+
+.modal-content {
   background-image: url('../public/gradient.jpg');
   background-size: cover;
 }
@@ -135,6 +144,7 @@ body, html {
   background-color: white;
   padding: 0;
 }
+
 .cardTransition {
   transition: transform .4s;
 }
@@ -231,12 +241,15 @@ body, html {
     flex-direction: column;
     align-items: center;
   }
-.noticias{
-  display: block !important;
-}
-.noticias .card{
-  width: 22rem !important;
-}
+
+  .noticias {
+    display: block !important;
+  }
+
+  .noticias .card {
+    width: 22rem !important;
+  }
+
   .footer {
     padding-bottom: 0rem;
   }
@@ -263,6 +276,7 @@ body, html {
     padding: 0%;
   }
 }
+
 .backgroundAmplio {
   background-image: url('../public/gradient.jpg');
   background-repeat: no-repeat;
@@ -280,7 +294,7 @@ body, html {
 /* SECCION SERVICIOS */
 
 
-/* #e66465 */
+/*  */
 .sectionServicios .card {
   width: 18rem;
   padding: 0px;
@@ -311,9 +325,11 @@ body, html {
 .noticias h6 {
   color: #00000090
 }
-#contacto img{
-  filter: drop-shadow( #fff 0px 0px 2px);
+
+#contacto img {
+  filter: drop-shadow(#fff 0px 0px 2px);
 }
+
 /* SECCION FOOTER */
 .footer {
   position: absolute;
@@ -324,10 +340,11 @@ body, html {
   color: #fff;
   display: flex;
   position: relative;
-  padding-bottom:5%
+  padding-bottom: 5%
 }
+
 .footer p {
-padding-top: 2rem;
+  padding-top: 2rem;
 }
 
 .content-wrap {

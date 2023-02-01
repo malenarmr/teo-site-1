@@ -8,7 +8,7 @@ import emailjs from '@emailjs/browser';
 import PropTypes from 'prop-types';
 import { withTranslation } from 'next-i18next';
 
-const ContactForm = ({t}) => {
+const ContactForm = ({ t }) => {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -46,11 +46,13 @@ const ContactForm = ({t}) => {
     return (
         <div id="contact">
             <div className="container contactContainer mt-0" style={{ borderRadius: '7px', color: 'black', width: '30rem', background: '#ffffff90', boxShadow: '#00000090 0px 0px 20px', padding: '1%' }}>
-                <h2 className="mb-3" style={{ display: 'flex', justifyContent: 'center' }}>Contacto</h2>
+                <h2 className="mb-3" style={{ display: 'flex', justifyContent: 'center' }}>
+                {t('contact')}
+                </h2>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-3">
                         <label className="form-label" htmlFor="name">
-                        {t('name')}
+                            {t('name')}
                         </label>
                         <input
                             style={{ textTransform: 'uppercase' }}
@@ -58,7 +60,7 @@ const ContactForm = ({t}) => {
                             className="form-control"
                             type="text"
                             name="name"
-                            placeholder= {t('your-name')}
+                            placeholder={t('your-name')}
                             value={formData.name}
                             onChange={handleChange}
                         />
@@ -73,7 +75,7 @@ const ContactForm = ({t}) => {
                             className="form-control"
                             type="email"
                             name="email"
-                            placeholder= {t('your-email')}
+                            placeholder={t('your-email')}
                             value={formData.email}
                             onChange={handleChange}
                         />
@@ -84,7 +86,7 @@ const ContactForm = ({t}) => {
                             style={{ textTransform: 'uppercase' }}
                             required
                             name="message"
-                            placeholder= {t('your-message')}
+                            placeholder={t('your-message')}
                             value={formData.message}
                             onChange={handleChange}
                             className="form-control" type="text" />
@@ -111,4 +113,4 @@ const ContactForm = ({t}) => {
 ContactForm.propTypes = {
     t: PropTypes.func.isRequired,
 }
-export default  withTranslation('contacto')(ContactForm)
+export default withTranslation('contact')(ContactForm)

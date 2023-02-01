@@ -6,18 +6,20 @@ import teoLogo from '../public/teo-logo.png'
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import { withTranslation } from 'next-i18next';
+import { useState } from 'react';
 
 const NavbarApp = ({ t }) => {
   const router = useRouter();
-
-  const handleLocaleChange = (locale) => {
+  const [selectedLanguage, setSelectedLanguage] = useState(router.locale);
+  const handleLocaleChange= (locale) => {
+    setSelectedLanguage(locale);
     router.push(`/${locale}`);
   };
-
+  const path = router.pathname;
   return (
     <Navbar expand="lg" fixed="top" style={{ zIndex: '10', background: 'rgb(0, 0, 0, .7)', backdropFilter: 'blur(5px)', height: '6rem' }}>
       <Container>
-        <div style={{ flex: 6, alignItems: 'center', display: 'flex' }}>
+        <div className='divNavbar'>
           <Navbar.Brand href="/">
             <img
               style={{ filter: 'drop-shadow(0px 0px 5px #ffffff60)' }}
@@ -33,31 +35,30 @@ const NavbarApp = ({ t }) => {
         </div>
         <Navbar.Toggle className='navbarColor' aria-controls="basic-navbar-nav" style={{ background: 'white' }} />
         <Navbar.Collapse className='collapse' id="basic-navbar-nav">
-          <div style={{ display: 'flex', flex: 6,alignItems:'center' }}>
+          <div style={{ display: 'flex', flex: 6, alignItems: 'center' }}>
             <Nav className="me-auto" style={{ gap: '2rem' }}>
               <Nav.Link href="#portfolio">Portfolio</Nav.Link>
-              <Nav.Link href="#nosotros">{t('about-us')}</Nav.Link>
+              <Nav.Link href="#aboutUs">{t('about-us')}</Nav.Link>
               <Nav.Link href="#services">{t('services')}</Nav.Link>
               <Nav.Link href="#news">{t('news')}</Nav.Link>
               <Nav.Link href="#contact">{t('contact')}</Nav.Link>
             </Nav>
-
-            <Dropdown drop='start' >
-              <Dropdown.Toggle 
-              style={{background:'transparent', border:'none', margin:'0', padding:'0'}}>
-                {router.locale === "es" ? "Español" : "English"}
-              </Dropdown.Toggle>
-              <Dropdown.Menu>
-                <Dropdown.Item onClick={() => handleLocaleChange("es")}>
-                  Español
-                </Dropdown.Item>
-                <Dropdown.Item onClick={() => handleLocaleChange("en")}>
-                  English
-                </Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
           </div>
         </Navbar.Collapse>
+        <Dropdown drop='start' style={{margin:'1rem'}}>
+          <Dropdown.Toggle
+            style={{ background: 'transparent', border: 'none', margin: '0', padding: '0' }}>
+           {selectedLanguage === "es" ? "Español" : "English"}
+          </Dropdown.Toggle>
+          <Dropdown.Menu>
+            <Dropdown.Item onClick={() => handleLocaleChange("es")}>
+              Español
+            </Dropdown.Item>
+            <Dropdown.Item onClick={() => handleLocaleChange("en")}>
+              English
+            </Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
       </Container>
     </Navbar>
   );
