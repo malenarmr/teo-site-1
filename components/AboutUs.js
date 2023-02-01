@@ -97,7 +97,7 @@ function AboutUs({t}) {
                     </ContextAwareToggle>
                   </Card.Header>
                   <Accordion.Collapse style={{ background: 'white' }} eventKey={name}>
-                    <Card.Body>{description}</Card.Body>
+                    <Card.Body style={{background:'white'}}>{description}</Card.Body>
                   </Accordion.Collapse>
                 </Card>
               </Col>
