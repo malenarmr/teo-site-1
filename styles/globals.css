@@ -278,12 +278,7 @@ body, html {
 }
 
 /* SECCION SERVICIOS */
-.sectionServicios {
-  height: fit-content;
-  display: flex;
-  justify-content: space-around;
-  width: unset;
-}
+
 
 /* #e66465 */
 .sectionServicios .card {

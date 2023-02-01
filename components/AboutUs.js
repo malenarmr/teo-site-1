@@ -79,12 +79,11 @@ function AboutUs({t}) {
       <section className='aboutUsSection' >
         <Accordion
           defaultActiveKey="0">
-          <div className='sectionServicios'>
             <Container fluid>
             <Row>
             {data.map(({ name, description, image, id }) => (
-              <Col key={name} style={{justifyContent:'center',}}>
-                <Card className='cardTransition'>
+              <Col key={name} style={{justifyContent:'center',display:'flex'}}>
+                <Card className='cardTransition' style={{height:'fit-content'}}>
                   <Card.Header >
                     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                       <h1>{name}</h1>
@@ -98,14 +97,13 @@ function AboutUs({t}) {
                     </ContextAwareToggle>
                   </Card.Header>
                   <Accordion.Collapse style={{ background: 'white' }} eventKey={name}>
-                    <Card.Body>{description}</Card.Body>
+                    <Card.Body style={{background:'white'}}>{description}</Card.Body>
                   </Accordion.Collapse>
                 </Card>
               </Col>
             ))}
             </Row>
             </Container>
-          </div>
         </Accordion>
       </section>
     </div>
