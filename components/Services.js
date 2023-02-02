@@ -4,10 +4,11 @@ import diseñoWeb from '../public/desingWeb1.jpg'
 import diseñoUX from '../public/ux2.jpg'
 import eCommerce from '../public/shopping5.jpg'
 import mantenimiento from '../public/mant11.jpg'
-import { withTranslation } from 'next-i18next';
-import PropTypes from 'prop-types';
+import { useTranslation } from 'next-i18next'
 
-const Services = ({ t }) => {
+
+export default function Services () {
+    const { t } = useTranslation('services')
     const data = [
         {
             "name": `${t('web-name')}`,
@@ -69,7 +70,3 @@ const Services = ({ t }) => {
         </div>
     )
 }
-Services.propTypes = {
-    t: PropTypes.func.isRequired,
-}
-export default withTranslation('services')(Services)

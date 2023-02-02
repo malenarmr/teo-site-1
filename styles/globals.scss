@@ -1,162 +1,52 @@
-$target: #fff;
-  // CARD HEADER EFECTO LETRAS
-  
-  @mixin fadeText($text-color, $direction : top, $offset : 2em, $transition: 0.5s ease-out) {  
-  // text-color : dark
-  $color: #fff;
-
-  // direction : top
-  $deg: 180deg;
-  $pos: bottom;
-  
-  @if($text-color == 'light') {
-    $color: #000;
-    mix-blend-mode: screen;
-  } @else {
-    mix-blend-mode: multiply;
-  }
-  
-  @if($direction == 'left') {
-    $deg: 90deg;
-    $pos: right;
-  } @elseif ($direction == 'right') {
-    $deg: -90deg;
-    $pos: left;
-  } @elseif ($direction == 'bottom') {
-    $deg: 0deg;
-    $pos: top;
-  }
-  
-  position: relative;
-
-  &::after {
-    background: linear-gradient($deg, transparent, $color $offset) no-repeat $pos center / 100% 100%;
-    
-    content: '';
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    pointer-events: none;
-    transition: $transition;
-  }
-  
-  &:hover::after {
-    @if($direction == 'left' or $direction == 'right') {
-      background-size: 0% 100%;  
-    } @else {
-      background-size: 100% 0%;
-    }
-  }
-  
-}
-
-// Your text color should have good contrast (either very light or very dark, with the appropriate option passed above) or the entire block will start turning transparent
-
-p {
-  color: #fff;
-  @supports(mix-blend-mode: screen){
-     @include fadeText(light, top, 3rem);
-  } 
-}
-
-/* Pen styling */
-// This was on <body> but then it mysteriously broke on Chrome
-.wrapper {
-  display: flex;
-  align-items: center;
-  font: 18px/1.5 ;
-  font-size: 2rem;
-  justify-content: center;
-  min-height: fit-content;
-  position: relative;
-  
-  &::before {
-      // background: #222;
-    content: '';
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    opacity: 0.5;
-  }
-}
-
-.content {
-  color: #fff;
-  max-width: 600px;
-  text-align: center;
-  position: relative;
-} 
-
-
- // CARD HEADER EFECTO LETRAS
-
 //  TITULO HEADER
-main {
-  width: 60vw;
-  top:0rem;
-  margin:8rem 1rem;
-  left:0rem;
+@import url('https://fonts.googleapis.com/css?family=Cairo');
+.title {
+  font-family: "Cairo";
+  text-align: center;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  top: 5rem;
+  left: 2rem;
   position: absolute;
-}
-
-.h1Title {
-  letter-spacing: 1rem;
-  position: relative;
-  color: #f25f4c;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  letter-spacing: 1px;
+  line-height:2;
   white-space: pre;
-  .line {
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 200%;
-    display: block;
-    background-color:#6eeaf2;
-    transition-delay: 1s;
-    bottom: calc(50% - 1px);
-    animation: line 5000ms infinite;
-    animation-fill-mode: forwards;
-    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-    transform-origin: left;
-    transform: translateX(0) scaleX(0);
-    // animation-iteration-count: infinite;
-  }
-
-  .char {
-    display: inline-block;
-    position: relative;
-    animation-duration: 2000ms;
-    animation-fill-mode: forwards;
-    animation-name: kern;
-    animation-delay: calc(var(--char-index) * 5ms);
-    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
-    opacity: 0;
-    // animation-iteration-count: infinite;
-  }
 }
 
-@keyframes line {
-  45% {
-    transform: translateX(0) scaleX(0);
-  }
-  70% {
-    transform: translateX(0) scaleX(0.8);
-  }
-  100% {
-    transform: translateX(100%) scaleX(0);
-  }
+.h1Title{
+  background-image: url('../public/smoke.gif');
+  background-size: cover;
+  background-position: center;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  font-size: 4rem;
+  transition: 1s ease-in-out;
+  font-weight: bold;
 }
-@keyframes kern {
-  0%,
-  70% {
-    transform: translateX(calc((var(--char-index)) * 40px));
-    opacity: 0;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-    animation-timing-function: none;
-  }
+/* styling my button */
+
+.white-mode {
+  text-decoration: none;
+  padding: 7px 10px;
+  background-color: #122;
+  border-radius: 3px;
+  color: #FFF;
+  transition: 1s ease-in-out;
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  font-family: "Montserrat";
+}
+
+.white-mode:hover {
+  background-color: #FFF;
+  color: #122;
 }
 //TITULO HEADER
 
@@ -407,11 +297,6 @@ body, html {
     padding-top: 2rem !important;
   }
 
-  .cardHeader .card {
-    width: 20rem !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
 
   .sectionServicios {
     display: flex !important;
@@ -422,7 +307,10 @@ body, html {
   .noticias {
     display: block !important;
   }
-
+.cardHeader{
+  width: 20rem !important;
+  height: fit-content !important;
+}
   .noticias .card {
     width: 22rem !important;
   }
@@ -503,7 +391,9 @@ body, html {
 .noticias h6 {
   color: #00000090
 }
-
+#contact{
+  margin-top: 2rem !important;
+}
 #contacto img {
   filter: drop-shadow(#fff 0px 0px 2px);
 }
@@ -530,3 +420,8 @@ body, html {
 }
 
 /* SECCION FOOTER */
+.contactButton:hover{
+  color:#6eeaf2 !important;
+  border-color: #6eeaf2 !important;
+  background-color: rgba(255, 255, 255, 0.136)!important;
+}

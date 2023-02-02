@@ -1,14 +1,14 @@
-import { useState, useRef, useEffect } from "react"
+import { useState} from "react"
 import igLogo from '../public/igLogo.png';
 import fbLogo from '../public/fbLogo.png';
 import inLogo from '../public/inLogo.png'
 import Link from "next/link";
 import send from '../public/share.png';
 import emailjs from '@emailjs/browser';
-import PropTypes from 'prop-types';
-import { withTranslation } from 'next-i18next';
+import { useTranslation } from 'next-i18next'
 
-const ContactForm = ({ t }) => {
+export default function ContactForm() {
+    const { t } = useTranslation('contact')
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -110,7 +110,3 @@ const ContactForm = ({ t }) => {
         </div>
     )
 };
-ContactForm.propTypes = {
-    t: PropTypes.func.isRequired,
-}
-export default withTranslation('contact')(ContactForm)

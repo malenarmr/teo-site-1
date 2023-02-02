@@ -4,21 +4,30 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import teoLogo from '../public/teo-logo.png'
 import { useRouter } from 'next/router';
-import PropTypes from 'prop-types';
-import { withTranslation } from 'next-i18next';
+import { useTranslation } from 'next-i18next'
 import { useState } from 'react';
 
-const NavbarApp = ({ t }) => {
-
+export default function NavbarApp() {
+  const { t } = useTranslation('navbar')
   const router = useRouter();
+
   const path = router.pathname.split("/")[0];
+
   const [selectedLanguage, setSelectedLanguage] = useState(router.locale);
   const handleLocaleChange = (locale) => {
     setSelectedLanguage(locale);
-    router.replace(`${path}/${locale}`);  };
+    router.push({
+      route: router.pathname,
+      query: router.query
+  }, router.asPath, { locale });
+    console.log(router, 'router');
+  };
 
   return (
-    <Navbar expand="lg" fixed="top" style={{ zIndex: '10', background: 'rgb(0, 0, 0, .7)', backdropFilter: 'blur(5px)', height: '6rem' }}>
+    <Navbar expand="lg" fixed="top"
+      style={{
+        zIndex: '10', background: 'rgb(0, 0, 0, .7)', backdropFilter: 'blur(5px)', height: '6rem'
+      }}>
       <Container>
         <div className='divNavbar'>
           <Navbar.Brand href="/">
@@ -34,10 +43,10 @@ const NavbarApp = ({ t }) => {
             {t('home')}
           </Navbar.Brand>
         </div>
-        <Dropdown drop='start' style={{margin:'1rem'}}>
+        <Dropdown drop='start' style={{ margin: '1rem' }}>
           <Dropdown.Toggle
             style={{ background: 'transparent', border: 'none', margin: '0', padding: '0' }}>
-           {selectedLanguage === "es" ? "Español" : "English"}
+            {selectedLanguage === "es" ? "Español" : "English"}
           </Dropdown.Toggle>
           <Dropdown.Menu>
             <Dropdown.Item onClick={() => handleLocaleChange("es")}>
@@ -60,12 +69,8 @@ const NavbarApp = ({ t }) => {
             </Nav>
           </div>
         </Navbar.Collapse>
-      
+
       </Container>
     </Navbar>
   );
 }
-NavbarApp.propTypes = {
-  t: PropTypes.func.isRequired,
-}
-export default withTranslation('navbar')(NavbarApp)

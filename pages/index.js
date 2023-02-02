@@ -1,16 +1,16 @@
 import Head from 'next/head'
-import AboutUs from '../components/AboutUs'
 import Portfolio from '../components/Portfolio'
 import { Layout } from '../components/Layout'
 import ContactForm from '../components/ContactForm.js'
 import { News } from '../components/News'
-import phone from '../public/contactUs2.jpg'
 import { withTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useRouter } from 'next/router'
 import Header from '../components/Header'
 import Services from '../components/Services'
+import AboutUs from '../components/AboutUs'
 import ContactButton from '../components/ContactButton'
+
 
 function Home({ t }) {
   const router = useRouter()
@@ -30,9 +30,9 @@ function Home({ t }) {
             <AboutUs/>
             <Services />
             <News />
+            <div style={{backdropFilter: 'blur(5px)', height:'100%', padding:'1rem', border:'2px solid #ffffff90', borderRadius:'10px', marginTop:'1rem', boxShadow:'#00000090 0px 0px 10px' }}>
+          <ContactForm />
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', padding: '2%', backgroundImage: `url(${phone.src})`, border: '10px, solid white', backgroundPosition: '0', backgroundSize:'cover', }}>
-            <ContactForm />
           </div>
           <ContactButton />
         </Layout>
@@ -42,18 +42,20 @@ function Home({ t }) {
 }
 
 
-export const getStaticProps = async ({ locale }) => ({
-  props: {
-    ...await serverSideTranslations(locale, [
-      'common',
-      'header',
-      'aboutUs',
-      'services',
-      'noticias',
-      'contact',
-      'navbar'
-    ]),
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, [
+        'common',
+        'header',
+        'aboutUs',
+        'services',
+        'noticias',
+        'contact',
+        'navbar'
+      ])),
+      // Will be passed to the page component as props
+    },
   }
-})
-
+}
 export default withTranslation('common')(Home)

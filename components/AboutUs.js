@@ -5,8 +5,7 @@ import vision from '../public/vision.png'
 import mision from '../public/mision.png'
 import valores from '../public/valores.png'
 import seguridad from '../public/seguridad.png'
-import PropTypes from 'prop-types';
-import { withTranslation } from 'next-i18next';
+import { useTranslation } from 'next-i18next'
 
 function ContextAwareToggle({ children, eventKey, callback }) {
   const { activeEventKey } = useContext(AccordionContext);
@@ -36,7 +35,9 @@ function ContextAwareToggle({ children, eventKey, callback }) {
     </>
   );
 }
-function AboutUs({t}) {    
+export default function AboutUs() {  
+  const { t } = useTranslation('aboutUs')
+  
   const data =[
       {
         "name": `${t('mission-name')}`,
@@ -104,8 +105,3 @@ function AboutUs({t}) {
     </div>
   );
 }
-
-AboutUs.propTypes = {
-  t: PropTypes.func.isRequired,
-}
-export default withTranslation('aboutUs')(AboutUs)
