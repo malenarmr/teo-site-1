@@ -1,5 +1,5 @@
 import Card from 'react-bootstrap/Card';
-import { useContext} from 'react';
+import {useContext, useState} from 'react';
 import { AccordionContext,Accordion,useAccordionButton, Col, Container, Image, Row } from 'react-bootstrap';
 import vision from '../public/vision.png'
 import mision from '../public/mision.png'
@@ -11,7 +11,6 @@ import { withTranslation } from 'next-i18next';
 function ContextAwareToggle({ children, eventKey, callback }) {
   const { activeEventKey } = useContext(AccordionContext);
   const decoratedOnClick = useAccordionButton(
-
     eventKey,
     () => callback && callback(eventKey),
   );
@@ -36,12 +35,9 @@ function ContextAwareToggle({ children, eventKey, callback }) {
       </button>
     </>
   );
-
 }
-function AboutUs({t}) {
-  console.log({t}, 'nostrosooooooos');
-  const data =
-    [
+function AboutUs({t}) {    
+  const data =[
       {
         "name": `${t('mission-name')}`,
         "image": `${mision.src}`,
@@ -71,19 +67,18 @@ function AboutUs({t}) {
 
   return (
     <div style={{ margin: '1rem' }}>
-      <div id='aboutUs'>
-        <h1 style={{ padding: '1rem', borderBottom: '1px solid black', color: 'black' }}>
+      <div  id='aboutUs'>
+        <h1 style={{ padding: '1rem', borderBottom: '1px solid black', color:'black'}}>
         {t('title')}
           </h1>
       </div>
       <section className='aboutUsSection' >
-        <Accordion
-          defaultActiveKey="0">
+        <Accordion defaultActiveKey={[{}]}>
             <Container fluid>
             <Row>
             {data.map(({ name, description, image, id }) => (
               <Col key={name} style={{justifyContent:'center',display:'flex'}}>
-                <Card className='cardTransition' style={{height:'fit-content'}}>
+                <Card className='cardTransition' style={{height:'fit-content', boxShadow:'#ffffff90 10px 10px 30px'}}>
                   <Card.Header >
                     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                       <h1>{name}</h1>
@@ -91,12 +86,12 @@ function AboutUs({t}) {
                         src={image}
                         width={30} height={30} />
                     </div>
-                    <ContextAwareToggle eventKey={name}>
+                    <ContextAwareToggle eventKey={id} >
                       <h6>{t('less')}</h6>
                       <h6>{t('more')}</h6>
                     </ContextAwareToggle>
                   </Card.Header>
-                  <Accordion.Collapse style={{ background: 'white' }} eventKey={name}>
+                  <Accordion.Collapse className='accordioCollapse' eventKey={id}>
                     <Card.Body style={{background:'white'}}>{description}</Card.Body>
                   </Accordion.Collapse>
                 </Card>

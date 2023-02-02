@@ -9,13 +9,14 @@ import { withTranslation } from 'next-i18next';
 import { useState } from 'react';
 
 const NavbarApp = ({ t }) => {
+
   const router = useRouter();
+  const path = router.pathname.split("/")[0];
   const [selectedLanguage, setSelectedLanguage] = useState(router.locale);
-  const handleLocaleChange= (locale) => {
+  const handleLocaleChange = (locale) => {
     setSelectedLanguage(locale);
-    router.push(`/${locale}`);
-  };
-  const path = router.pathname;
+    router.replace(`${path}/${locale}`);  };
+
   return (
     <Navbar expand="lg" fixed="top" style={{ zIndex: '10', background: 'rgb(0, 0, 0, .7)', backdropFilter: 'blur(5px)', height: '6rem' }}>
       <Container>
@@ -33,18 +34,6 @@ const NavbarApp = ({ t }) => {
             {t('home')}
           </Navbar.Brand>
         </div>
-        <Navbar.Toggle className='navbarColor' aria-controls="basic-navbar-nav" style={{ background: 'white' }} />
-        <Navbar.Collapse className='collapse' id="basic-navbar-nav">
-          <div style={{ display: 'flex', flex: 6, alignItems: 'center' }}>
-            <Nav className="me-auto" style={{ gap: '2rem' }}>
-              <Nav.Link href="#portfolio">Portfolio</Nav.Link>
-              <Nav.Link href="#aboutUs">{t('about-us')}</Nav.Link>
-              <Nav.Link href="#services">{t('services')}</Nav.Link>
-              <Nav.Link href="#news">{t('news')}</Nav.Link>
-              <Nav.Link href="#contact">{t('contact')}</Nav.Link>
-            </Nav>
-          </div>
-        </Navbar.Collapse>
         <Dropdown drop='start' style={{margin:'1rem'}}>
           <Dropdown.Toggle
             style={{ background: 'transparent', border: 'none', margin: '0', padding: '0' }}>
@@ -59,6 +48,19 @@ const NavbarApp = ({ t }) => {
             </Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
+        <Navbar.Toggle className='navbarColor' aria-controls="basic-navbar-nav" style={{ background: 'white' }} />
+        <Navbar.Collapse className='collapseLenguaje' id="basic-navbar-nav">
+          <div style={{ display: 'flex', flex: 6, alignItems: 'center' }}>
+            <Nav className="me-auto" style={{ gap: '2rem' }}>
+              <Nav.Link href="#portfolio">Portfolio</Nav.Link>
+              <Nav.Link href="#aboutUs">{t('about-us')}</Nav.Link>
+              <Nav.Link href="#services">{t('services')}</Nav.Link>
+              <Nav.Link href="#news">{t('news')}</Nav.Link>
+              <Nav.Link href="#contact">{t('contact')}</Nav.Link>
+            </Nav>
+          </div>
+        </Navbar.Collapse>
+      
       </Container>
     </Navbar>
   );

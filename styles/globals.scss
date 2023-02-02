@@ -1,0 +1,532 @@
+$target: #fff;
+  // CARD HEADER EFECTO LETRAS
+  
+  @mixin fadeText($text-color, $direction : top, $offset : 2em, $transition: 0.5s ease-out) {  
+  // text-color : dark
+  $color: #fff;
+
+  // direction : top
+  $deg: 180deg;
+  $pos: bottom;
+  
+  @if($text-color == 'light') {
+    $color: #000;
+    mix-blend-mode: screen;
+  } @else {
+    mix-blend-mode: multiply;
+  }
+  
+  @if($direction == 'left') {
+    $deg: 90deg;
+    $pos: right;
+  } @elseif ($direction == 'right') {
+    $deg: -90deg;
+    $pos: left;
+  } @elseif ($direction == 'bottom') {
+    $deg: 0deg;
+    $pos: top;
+  }
+  
+  position: relative;
+
+  &::after {
+    background: linear-gradient($deg, transparent, $color $offset) no-repeat $pos center / 100% 100%;
+    
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    pointer-events: none;
+    transition: $transition;
+  }
+  
+  &:hover::after {
+    @if($direction == 'left' or $direction == 'right') {
+      background-size: 0% 100%;  
+    } @else {
+      background-size: 100% 0%;
+    }
+  }
+  
+}
+
+// Your text color should have good contrast (either very light or very dark, with the appropriate option passed above) or the entire block will start turning transparent
+
+p {
+  color: #fff;
+  @supports(mix-blend-mode: screen){
+     @include fadeText(light, top, 3rem);
+  } 
+}
+
+/* Pen styling */
+// This was on <body> but then it mysteriously broke on Chrome
+.wrapper {
+  display: flex;
+  align-items: center;
+  font: 18px/1.5 ;
+  font-size: 2rem;
+  justify-content: center;
+  min-height: fit-content;
+  position: relative;
+  
+  &::before {
+      // background: #222;
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    opacity: 0.5;
+  }
+}
+
+.content {
+  color: #fff;
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+} 
+
+
+ // CARD HEADER EFECTO LETRAS
+
+//  TITULO HEADER
+main {
+  width: 60vw;
+  top:0rem;
+  margin:8rem 1rem;
+  left:0rem;
+  position: absolute;
+}
+
+.h1Title {
+  letter-spacing: 1rem;
+  position: relative;
+  color: #f25f4c;
+  white-space: pre;
+  .line {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 200%;
+    display: block;
+    background-color:#6eeaf2;
+    transition-delay: 1s;
+    bottom: calc(50% - 1px);
+    animation: line 5000ms infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+    transform-origin: left;
+    transform: translateX(0) scaleX(0);
+    // animation-iteration-count: infinite;
+  }
+
+  .char {
+    display: inline-block;
+    position: relative;
+    animation-duration: 2000ms;
+    animation-fill-mode: forwards;
+    animation-name: kern;
+    animation-delay: calc(var(--char-index) * 5ms);
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+    opacity: 0;
+    // animation-iteration-count: infinite;
+  }
+}
+
+@keyframes line {
+  45% {
+    transform: translateX(0) scaleX(0);
+  }
+  70% {
+    transform: translateX(0) scaleX(0.8);
+  }
+  100% {
+    transform: translateX(100%) scaleX(0);
+  }
+}
+@keyframes kern {
+  0%,
+  70% {
+    transform: translateX(calc((var(--char-index)) * 40px));
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    animation-timing-function: none;
+  }
+}
+//TITULO HEADER
+
+
+/* BODY HTML SCROLLBAR */
+html,
+body, html {
+  overflow-x: hidden;
+  height: unset;
+  font-family: monospace;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #C3F8FF;
+}
+
+/*FIN BODY HTML SCROLLBAR */
+.collapse {
+  background-color: transparent !important;
+}
+
+/* NAVBAR */
+.dropdown-menu.show {
+  background-color: black;
+  box-shadow: #ffffff30 0px 0px 15px;
+}
+
+.navbar-nav .nav-link {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #6eeaf2
+}
+.navbar-nav .nav-link.active {
+  color: #6eeaf2 !important;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 1rem !important
+}
+
+.dropdown-toggle {
+  margin-top: .5rem;
+  font-size: 1.3rem !important
+}
+
+.dropdown-menu {
+  margin-top: 3rem !important;
+}
+
+.dropdown-item {
+  color: white !important;
+  font-size: 1.5rem;
+  margin: 1rem 0rem;
+}
+
+.dropdown-item:hover {
+  color: black !important
+}
+
+.divNavbar {
+  flex: 6;
+  align-items: center;
+  display: flex;
+}
+@media (max-width:990px) {
+  .collapseLenguaje {
+    background: rgb(0, 0, 0, .9) !important;
+    backdrop-Filter: blur(2px);
+    padding: 1rem 3rem !important;
+    margin-Top: 1.09rem;
+  }
+}
+
+/* FIN NAVBAR */
+
+/* SECCION HEADER */
+.sectionHeader {
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 10%;
+  background-image: url("../public/compu.jpg");
+  background-color: #0000006d;
+  height: fit-content;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding-bottom: 2%;
+  position: relative;
+  background-blend-mode: color-dodge;
+}
+
+.hedear1 {
+  display: inline-block;
+  justify-content: center;
+  margin-top: 12rem;
+
+}
+
+.header {
+  padding: 1%;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  letter-spacing: .7rem;
+  flex-direction: column;
+}
+.headerImage {
+  animation-name: headerImg;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-top: -2px;
+  filter: drop-shadow(0px 0px 10px #ffffff90)
+}
+
+@keyframes headerImg {
+  0% {
+    transform: translate(0, 0px);
+  }
+
+  50% {
+    transform: translate(0, 10px);
+  }
+
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+
+/*     SOBRE NOSOTROS    */
+.collapse {
+  background-color: white;
+  padding: 0;
+}
+
+.cardTransition {
+  transition: transform .4s;
+}
+
+.card {
+  border-radius: 2rem;
+  width: 20rem;
+  margin: 1rem;
+}
+
+.cardTransition:hover {
+  transform: scale(1.05);
+}
+
+/* FIN SOBRE NOSOTROS */
+
+/* MEDIA */
+@media (max-width:280px) {
+  .header img {
+    width: 10rem !important;
+    height: unset;
+  }
+  .cardHeader {
+    align-items: flex-start !important;
+  }
+
+  .cardHeader .card {
+    width: 10rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .aboutUsSection {
+    margin: 1rem;
+  }
+
+  .sectionServicios .card {
+    width: 15rem !important;
+  }
+
+  .cardBody {
+    margin-top: 3.5rem !important;
+    height: max-content !important;
+    backdrop-filter: blur(1px) !important;
+  }
+
+  #contacto .contactContainer {
+    width: 16rem !important;
+  }
+
+  #contacto img {
+    height: 2rem;
+    margin-top: 1rem;
+  }
+
+  .contactContainer input {
+    width: 14rem;
+  }
+
+  .message {
+    width: 14rem;
+  }
+
+  #contacto {
+    padding: 1rem !important;
+  }
+}
+
+@media (max-width:550px) {
+  .contactContainer {
+    justify-content: center;
+    width: 20rem !important;
+    padding: 1rem !important;
+    margin-top: 1rem !important;
+  }
+  main {
+    width: 60vw;
+    margin:5rem 0rem;
+  }
+  .h1Title {
+    letter-spacing: .2rem;
+    padding: 1rem !important;
+    font-size: 1.2rem;
+    white-space: pre
+  }
+.line{
+  width: 200% !important;
+}
+  #contacto {
+    padding-top: 2rem !important;
+  }
+
+  .cardHeader .card {
+    width: 20rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .sectionServicios {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .noticias {
+    display: block !important;
+  }
+
+  .noticias .card {
+    width: 22rem !important;
+  }
+
+  .footer {
+    padding-bottom: 0rem;
+  }
+
+  .footerDiv {
+    margin-top: 0em !important;
+    padding: 0%;
+  }
+}
+
+@media (max-width:970px) {
+  .sectionServicios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer {
+    padding-bottom: 0rem;
+  }
+
+  .footerDiv {
+    margin-top: 0em !important;
+    padding: 0%;
+  }
+}
+
+.backgroundAmplio {
+  background-color: black;
+  background-image: url('../public/gradient.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: .7rem;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+/* SECCION SERVICIOS */
+
+
+/*  */
+.sectionServicios .card {
+  width: 18rem;
+  padding: 0px;
+  border: none;
+  box-shadow: rgba(255, 255, 255, .5) 0px 0px 20px;
+}
+
+/* BLOG NOTICIAS  */
+.noticias {
+  display: flex;
+}
+
+.noticias .card {
+  border: 1px solid #00000050;
+  width: 30rem;
+  border-radius: .5rem;
+  height: 15rem;
+  margin: 2rem;
+  background-color: white
+}
+
+.noticias h3 {
+  background-color: rgb(255, 255, 255);
+  border-radius: 2px;
+  padding: 0 10px;
+}
+
+.noticias h6 {
+  color: #00000090
+}
+
+#contacto img {
+  filter: drop-shadow(#fff 0px 0px 2px);
+}
+
+/* SECCION FOOTER */
+.footer {
+  position: absolute;
+  bottom: 0;
+  height: 5em;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  display: flex;
+  position: relative;
+  padding-bottom: 5%
+}
+
+.footer p {
+  padding-top: 2rem;
+}
+
+.content-wrap {
+  padding-bottom: 0em;
+}
+
+/* SECCION FOOTER */

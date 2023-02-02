@@ -43,9 +43,10 @@ export const News = () => {
     ]
 
 
-  return (
+  return (   
+    <>
+    <h1 style={{ padding: '1rem', marginBottom:'2rem', borderBottom: '1px solid black',color:'black'}}> Noticias</h1>
     <section id='news' style={{ borderRadius: '10px', background: '#000', boxShadow: '#ffffff58 0 0 20px', marginTop: '3rem', padding: '10px' }}>
-      <h1 style={{ padding: '1rem', borderBottom: '1px solid #fff', color: '#fff' }}> Noticias</h1>
       <Container fluid className='noticias' >
         <Row xl={3}>
           {data.map(({ date, description, image, name }) => (
@@ -64,5 +65,6 @@ export const News = () => {
         </Row>
       </Container>
     </section>
+    </>
   )
 }

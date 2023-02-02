@@ -1,8 +1,7 @@
-import '../styles/globals.css'
+import '../styles/globals.scss'
 import "bootstrap/dist/css/bootstrap.css"
 import '../styles/Slider.css'
 import { SSRProvider } from 'react-bootstrap'
-import NavbarApp  from '../components/NavbarApp';
 import { appWithTranslation } from 'next-i18next'
 
 function App({ Component, pageProps }) {

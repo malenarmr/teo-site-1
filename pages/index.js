@@ -4,7 +4,7 @@ import Portfolio from '../components/Portfolio'
 import { Layout } from '../components/Layout'
 import ContactForm from '../components/ContactForm.js'
 import { News } from '../components/News'
-import phone from '../public/compucolores1.jpg'
+import phone from '../public/contactUs2.jpg'
 import { withTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useRouter } from 'next/router'
@@ -27,11 +27,11 @@ function Home({ t }) {
           <Header />
           <div className='backgroundAmplio'>
             <Portfolio />
-            <AboutUs />
+            <AboutUs/>
             <Services />
             <News />
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', padding: '2%', backgroundImage: `url(${phone.src})`, border: '10px, solid white', backgroundAttachment: 'scroll', backgroundPosition: '0', backgroundSize: 'cover', }}>
+          <div style={{ display: 'flex', flexDirection: 'column', padding: '2%', backgroundImage: `url(${phone.src})`, border: '10px, solid white', backgroundPosition: '0', backgroundSize:'cover', }}>
             <ContactForm />
           </div>
           <ContactButton />
