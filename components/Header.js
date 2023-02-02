@@ -19,15 +19,14 @@ export default function Header(){
                     </div>
                     <div >
                         <Card className='cardHeader' style={{
-                            backdropFilter: 'blur(0)', backgroundColor: 'rgba(0,0,0,.8)', border:' 1px solid #6eeaf2',
-                             width: '36em', height: 'fit-content', padding: '0px'
-                        }}>
+                            backdropFilter: 'blur(0)', backgroundColor: 'rgba(0,0,0,.8)',
+                             width: '36em', height: 'fit-content', padding: '0px'}}>
                             <Card.Header style={{ borderBottom: '1px solid #ffffff90', display: 'flex', justifyContent: 'center', padding: '20px' }}>
                                 <Image className='headerImage'
                                     src={teoLogo.src}
                                     width={70} height={50} />
                             </Card.Header>
-                            <Card.Body className='cardBody' style={{ color: '#fff', textAlign: 'justify', fontFamily: 'Montserrat' }}>
+                            <Card.Body className='cardBody' style={{ color: '#fff', textAlign: 'justify'}}>
                                 <p>{t('description')}</p>
                             </Card.Body>
                         </Card>

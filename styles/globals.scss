@@ -1,62 +1,9 @@
-//  TITULO HEADER
-@import url('https://fonts.googleapis.com/css?family=Cairo');
-.title {
-  font-family: "Cairo";
-  text-align: center;
-  color: #FFF;
-  display: flex;
-  flex-direction: column;
-  top: 5rem;
-  left: 2rem;
-  position: absolute;
-  align-items: center;
-  justify-content: center;
-  height: fit-content;
-  letter-spacing: 1px;
-  line-height:2;
-  white-space: pre;
-}
-
-.h1Title{
-  background-image: url('../public/smoke.gif');
-  background-size: cover;
-  background-position: center;
-  color: transparent;
-  -moz-background-clip: text;
-  -webkit-background-clip: text;
-  text-transform: uppercase;
-  font-size: 4rem;
-  transition: 1s ease-in-out;
-  font-weight: bold;
-}
-/* styling my button */
-
-.white-mode {
-  text-decoration: none;
-  padding: 7px 10px;
-  background-color: #122;
-  border-radius: 3px;
-  color: #FFF;
-  transition: 1s ease-in-out;
-  position: absolute;
-  left: 15px;
-  bottom: 15px;
-  font-family: "Montserrat";
-}
-
-.white-mode:hover {
-  background-color: #FFF;
-  color: #122;
-}
-//TITULO HEADER
-
-
 /* BODY HTML SCROLLBAR */
 html,
 body, html {
   overflow-x: hidden;
   height: unset;
-  font-family: monospace;
+  font-family: 'cairo';
 }
 
 * {
@@ -86,13 +33,14 @@ body, html {
 
 /* NAVBAR */
 .dropdown-menu.show {
-  background-color: black;
-  box-shadow: #ffffff30 0px 0px 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+ border: .8px solid rgba(255, 255, 255, 0.40);
+  box-shadow: #ffffff40 0px 0px 15px;
 }
 
 .navbar-nav .nav-link {
   color: white;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 
@@ -107,7 +55,7 @@ body, html {
 
 .dropdown-toggle {
   margin-top: .5rem;
-  font-size: 1.3rem !important
+  font-size: 1rem !important
 }
 
 .dropdown-menu {
@@ -116,8 +64,9 @@ body, html {
 
 .dropdown-item {
   color: white !important;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin: 1rem 0rem;
+ text-align: justify;
 }
 
 .dropdown-item:hover {
@@ -141,6 +90,53 @@ body, html {
 /* FIN NAVBAR */
 
 /* SECCION HEADER */
+//  TITULO HEADER
+@import url('https://fonts.googleapis.com/css?family=Cairo');
+.title {
+  font-family: 'Kanit', sans-serif;
+  text-align: center;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  top: 6rem;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  letter-spacing: 2rem;
+  white-space: pre;
+}
+
+.h1Title{
+  background-image: url('../public/pastelolas.gif');
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  transition: 1s ease-in-out;
+  font-weight:900;
+}
+/* styling my button */
+
+.white-mode {
+  text-decoration: none;
+  padding: 7px 10px;
+  background-color: #122;
+  border-radius: 3px;
+  color: #FFF;
+  transition: 1s ease-in-out;
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  font-family: "Montserrat";
+}
+
+.white-mode:hover {
+  background-color: #FFF;
+  color: #122;
+}
+//TITULO HEADER
 .sectionHeader {
   background-size: cover;
   background-attachment: fixed;

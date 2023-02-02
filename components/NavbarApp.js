@@ -9,10 +9,9 @@ import { useState } from 'react';
 
 export default function NavbarApp() {
   const { t } = useTranslation('navbar')
+  
   const router = useRouter();
-
   const path = router.pathname.split("/")[0];
-
   const [selectedLanguage, setSelectedLanguage] = useState(router.locale);
   const handleLocaleChange = (locale) => {
     setSelectedLanguage(locale);
@@ -26,7 +25,7 @@ export default function NavbarApp() {
   return (
     <Navbar expand="lg" fixed="top"
       style={{
-        zIndex: '10', background: 'rgb(0, 0, 0, .7)', backdropFilter: 'blur(5px)', height: '6rem'
+        zIndex: '10', background: 'rgb(0, 0, 0, .8)', backdropFilter: 'blur(5px)', height: '6rem', fontSize:'1rem'
       }}>
       <Container>
         <div className='divNavbar'>
@@ -39,21 +38,21 @@ export default function NavbarApp() {
               alt="teo logo"
             />
           </Navbar.Brand>
-          <Navbar.Brand className='Brand' style={{ color: 'white', fontSize: '1.8rem' }} href="/">
+          <Navbar.Brand className='Brand' style={{ color: 'white', fontSize: '1.5rem' }} href="/">
             {t('home')}
           </Navbar.Brand>
         </div>
         <Dropdown drop='start' style={{ margin: '1rem' }}>
           <Dropdown.Toggle
-            style={{ background: 'transparent', border: 'none', margin: '0', padding: '0' }}>
-            {selectedLanguage === "es" ? "Español" : "English"}
+            style={{background: 'transparent', border: 'none', margin: '0', padding: '0' }}>
+            {selectedLanguage === "es" ? "Language" : "Idioma"}
           </Dropdown.Toggle>
           <Dropdown.Menu>
             <Dropdown.Item onClick={() => handleLocaleChange("es")}>
-              Español
+              Español🇪🇸
             </Dropdown.Item>
             <Dropdown.Item onClick={() => handleLocaleChange("en")}>
-              English
+              English🇬🇧
             </Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>

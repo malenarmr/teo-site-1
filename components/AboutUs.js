@@ -24,7 +24,7 @@ function ContextAwareToggle({ children, eventKey, callback }) {
       <button
         type="button"
         style={{
-          backgroundColor: accordionCollapse ? '#ffff' : 'black', color: accordionCollapse ? 'black' : 'white', borderRadius: '10px', height: '2rem', width: 'fit-content', padding: '0rem .4rem', alignItems: 'flex-end', display: 'flex',
+          backgroundColor: accordionCollapse ? '#ffff' : 'black', color: accordionCollapse ? 'black' : 'white', borderRadius: '7px', height: 'fit-content', width: 'fit-content', padding:'.3rem',
           border: accordionCollapse ? '1px solid black' : 'none'
         }}
         onClick={decoratedOnClick}
@@ -74,26 +74,26 @@ export default function AboutUs() {
           </h1>
       </div>
       <section className='aboutUsSection' >
-        <Accordion defaultActiveKey={[{}]}>
+        <Accordion >
             <Container fluid>
             <Row>
             {data.map(({ name, description, image, id }) => (
               <Col key={name} style={{justifyContent:'center',display:'flex'}}>
                 <Card className='cardTransition' style={{height:'fit-content', boxShadow:'#ffffff90 10px 10px 30px'}}>
-                  <Card.Header >
-                    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                      <h1>{name}</h1>
+                  <Card.Header>
+                    <div style={{ display: 'flex', justifyContent: 'space-between'}}>
+                      <h1 style={{fontSize:'2rem'}} >{name}</h1>
                       <Image
                         src={image}
                         width={30} height={30} />
                     </div>
                     <ContextAwareToggle eventKey={id} >
-                      <h6>{t('less')}</h6>
-                      <h6>{t('more')}</h6>
+                      <h6 style={{fontSize:'.7rem', margin:'0'}}>{t('less')}</h6>
+                      <h6 style={{fontSize:'.7rem', margin:'0'}}>{t('more')}</h6>
                     </ContextAwareToggle>
                   </Card.Header>
                   <Accordion.Collapse className='accordioCollapse' eventKey={id}>
-                    <Card.Body style={{background:'white'}}>{description}</Card.Body>
+                    <Card.Body style={{background:'white', fontSize:'.8rem'}}>{description}</Card.Body>
                   </Accordion.Collapse>
                 </Card>
               </Col>
