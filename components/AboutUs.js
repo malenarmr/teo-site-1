@@ -76,10 +76,10 @@ export default function AboutUs() {
       <section className='aboutUsSection' >
         <Accordion >
             <Container fluid>
-            <Row>
+            <Row xxl={3} style={{justifyContent:'center',display:'flex'}}>
             {data.map(({ name, description, image, id }) => (
-              <Col key={name} style={{justifyContent:'center',display:'flex'}}>
-                <Card className='cardTransition' style={{height:'fit-content', boxShadow:'#ffffff90 10px 10px 30px'}}>
+              <Col key={name} style={{justifyContent:'center',display:'flex', width:'fit-content'}}>
+                <Card className='cardTransition' style={{height:'fit-content',width:'18rem',margin:'1rem .5rem', boxShadow:'#ffffff90 10px 10px 30px'}}>
                   <Card.Header>
                     <div style={{ display: 'flex', justifyContent: 'space-between'}}>
                       <h1 style={{fontSize:'2rem'}} >{name}</h1>

@@ -33,7 +33,7 @@ body, html {
 
 /* NAVBAR */
 .dropdown-menu.show {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: #000;
  border: .8px solid rgba(255, 255, 255, 0.40);
   box-shadow: #ffffff40 0px 0px 15px;
 }
@@ -103,19 +103,23 @@ body, html {
   align-items: center;
   justify-content: center;
   height: fit-content;
-  letter-spacing: 2rem;
-  white-space: pre;
 }
 
 .h1Title{
-  background-image: url('../public/pastelolas.gif');
+  background-image: url('../public/nube.gif');
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
   color: transparent;
   -moz-background-clip: text;
   -webkit-background-clip: text;
   text-transform: uppercase;
-  font-size: 2.5rem;
+  font-size: 3rem;
+  letter-spacing: 1.5rem;
+  white-space: pre;
   transition: 1s ease-in-out;
   font-weight:900;
+  font-family: 'Rubik';
 }
 /* styling my button */
 
@@ -129,7 +133,6 @@ body, html {
   position: absolute;
   left: 15px;
   bottom: 15px;
-  font-family: "Montserrat";
 }
 
 .white-mode:hover {
@@ -281,7 +284,7 @@ body, html {
     margin:5rem 0rem;
   }
   .h1Title {
-    letter-spacing: .2rem;
+    letter-spacing: .3rem !important;
     padding: 1rem !important;
     font-size: 1.2rem;
     white-space: pre
@@ -322,6 +325,9 @@ body, html {
 }
 
 @media (max-width:970px) {
+  .h1Title{
+    letter-spacing: .5rem;
+  }
   .sectionServicios {
     display: flex;
     flex-direction: column;
@@ -419,5 +425,5 @@ body, html {
 .contactButton:hover{
   color:#6eeaf2 !important;
   border-color: #6eeaf2 !important;
-  background-color: rgba(255, 255, 255, 0.136)!important;
+  background-color: black!important;
 }

@@ -43,10 +43,10 @@ export default function Services () {
             <h1 style={{ padding: '1rem', borderBottom: '1px solid black', color: 'black' }}> Servicios</h1>
             <div className='sectionServicios'>
                 <Container fluid>
-                    <Row>
+                <Row xxl={3} style={{justifyContent:'center',display:'flex'}}>
                         {data.map(({ name, description, image }) => (
-                            <Col key={name} style={{ justifyContent: 'center', display: 'flex' }}>
-                                <Card className='cardTransition'style={{height:'28rem'}} >
+                            <Col key={name} style={{ justifyContent: 'center', display: 'flex', width:'fit-content' }}>
+                                <Card className='cardTransition'style={{height:'28rem',width:'18rem',margin:'1rem .5rem',}} >
                                     <Card.Img src={image} style={{ opacity: '.8', height:'100%', objectFit:'cover' }} />
                                     <Card.ImgOverlay >
                                         <Card.Header style={{ background: ' #ffffff60' }}>
