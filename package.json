@@ -22,7 +22,8 @@
     "react-dom": "18.2.0",
     "react-i18next": "^12.1.4",
     "react-type-animation": "^2.1.2",
-    "swiper": "^8.4.6"
+    "swiper": "^8.4.6",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "sass": "^1.57.1"
