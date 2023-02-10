@@ -108,7 +108,7 @@ body, html {
 .h1Title{
   background-image: url('../public/nube.gif');
   background-repeat: repeat;
-  background-size: cover;
+  background-size: 50%;
   background-position: center;
   color: transparent;
   -moz-background-clip: text;
@@ -371,6 +371,7 @@ body, html {
 }
 
 /* BLOG NOTICIAS  */
+
 .noticias {
   display: flex;
 }
@@ -427,3 +428,126 @@ body, html {
   border-color: #6eeaf2 !important;
   background-color: black!important;
 }
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+// Variables
+$regal-blue: #034378;
+$san-juan: #2d4e68;
+$bermuda: #77d7b9;
+$white: #fff;
+$black: #000;
+$open-sans: 'Open Sans',
+sans-serif;
+// clear-fix mixin
+@mixin cf {
+  &::before,
+  &::after {
+    content: '';
+    display: table;
+  }
+  &::after {
+    clear: both;
+  }
+}
+
+.aNews {
+  text-decoration: none;
+}
+
+.h1News {
+  font-family: $open-sans;
+  font-weight: 300;
+}
+
+.rowNews {
+  max-width: 900px;
+  margin: 50px auto 0;
+}
+
+// Base styles
+.cardNews {
+  float: left;
+  padding: 0rem !important;
+  width: 50%;
+  .wrapperNews {
+    background-color: $white;
+    min-height: 540px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 19px 38px rgba($black, 0.3), 0 15px 12px rgba($black, 0.2);
+    &:hover {
+      .dataNews {
+        transform: translateY(0);
+      }
+      .textNews {
+        height: auto;
+        margin: 0;
+      }
+    }
+  }
+  .dataNews {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: translateY(calc(70px + 1em));
+    transition: transform 0.3s;
+    .content {
+      padding: 1em;
+      position: relative;
+      z-index: 1;
+    }
+  }
+  .author {
+    font-size: 12px;
+  }
+  .titleNews {
+    margin-top: 10px;
+  }
+  .textNews {
+    height: 70px;
+    margin: 0;
+  }
+}
+
+// First example styles
+.example-1 {
+  .dateNews {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $bermuda;
+    color: $white;
+    padding: 0.8em;
+    .spanNews {
+      display: block;
+      text-align: center;
+    }
+    .day {
+      font-weight: 700;
+      font-size: 24px;
+      text-shadow: 2px 3px 2px rgba($black, 0.18);
+    }
+    .month {
+      text-transform: uppercase;
+    }
+    .month,
+    .year {
+      font-size: 12px;
+    }
+  }
+  .content {
+    background-color: $white;
+    box-shadow: 0 5px 30px 10px rgba($black, 0.3);
+  }
+  .titleNews {
+    .aNews {
+      color: lighten($black, 50%);
+    }
+  }
+    .spanNews{
+      top: 10px;
+    }
+  }
+
+

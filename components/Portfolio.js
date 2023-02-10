@@ -31,7 +31,7 @@ export default function Portfolio() {
     <>
      <h1 style={{ padding: '1rem', marginBottom:'2rem', borderBottom: '1px solid black'}}>
           Portfolio</h1>
-      <div id="portfolio" className="portfolio" style={{ borderRadius: '15px', background: '#000', boxShadow: '#ffffff50 0 0 20px', padding: '2% 0%' }}>
+      <div id="portfolio" className="portfolio" style={{backdropFilter: 'blur(5px)', height:'100%', padding:'1rem 0rem', border:'2px solid #ffffff90', borderRadius:'10px', marginTop:'1rem', boxShadow:'#ffffff90 0px 0px 20px' }}>
         <Swiper
         slidesPerView={1.5}
         spaceBetween={30}

@@ -5,7 +5,6 @@ import ContactForm from '../components/ContactForm.js'
 import { News } from '../components/News'
 import { withTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { useRouter } from 'next/router'
 import Header from '../components/Header'
 import Services from '../components/Services'
 import AboutUs from '../components/AboutUs'
@@ -13,7 +12,7 @@ import ContactButton from '../components/ContactButton'
 
 
 function Home({ t }) {
-  const router = useRouter()
+
   return (
     <>
       <Head>
@@ -27,12 +26,12 @@ function Home({ t }) {
           <Header />
           <div className='backgroundAmplio'>
             <Portfolio />
-            <AboutUs/>
+            <AboutUs />
             <Services />
             <News />
-            <div style={{backdropFilter: 'blur(5px)', height:'100%', padding:'1rem', border:'2px solid #ffffff90', borderRadius:'10px', marginTop:'1rem', boxShadow:'#00000090 0px 0px 10px' }}>
-          <ContactForm />
-          </div>
+            <div style={{ backdropFilter: 'blur(5px)', height: '100%', padding: '1rem', border: '2px solid #ffffff90', borderRadius: '10px', marginTop: '1rem', boxShadow: '#000 0px 0px 10px' }}>
+              <ContactForm />
+            </div>
           </div>
           <ContactButton />
         </Layout>
