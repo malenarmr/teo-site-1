@@ -10,7 +10,7 @@ export default function Header() {
             <Container fluid className='sectionHeader'>
                 <div className="title">
                     <h1 className='h1Title'>-{t('title')}-</h1>
-                    <h1 style={{ fontSize: '1rem', letterSpacing: '.2rem' }} className='h1Title'>
+                    <h1 className="h1Title2 h1Title" style={{ fontSize: '1rem', letterSpacing: '.2rem' }}>
                         {t('web-name')} - {t('eCommerce-name')} - {t('ux-name')} - {t('maintenance-name')} 
                     </h1>
                 </div>

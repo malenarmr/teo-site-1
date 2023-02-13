@@ -44,7 +44,7 @@ export default function ContactForm() {
     };
 
     return (
-        <div id="contact">
+        <div id="contact" style={{padding:'1rem'}}>
             <div className="container contactContainer mt-0" style={{ borderRadius: '7px', color: 'black', width: '30rem', background: '#ffffff90', boxShadow: '#00000090 0px 0px 20px', padding: '1%' }}>
                 <h2 className="mb-3" style={{ display: 'flex', justifyContent: 'center' }}>
                 {t('contact')}

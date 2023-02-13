@@ -29,51 +29,58 @@ export const News = () => {
     <>
       <h1 style={{ padding: '1rem', marginBottom: '2rem', borderBottom: '1px solid black', color: 'black' }}> Noticias</h1>
       <section id='news' style={{ borderRadius: '10px', background: '#000', boxShadow: '#ffffff58 0 0 20px', marginTop: '3rem', padding: '10px' }}>
-        {
-          !loading && resultados.map(({ id, attributes: { title, body, date } }) => {
-            const imagenFilter = resultadosImg.data.filter(img => img.id === id);
-            return (
-              <>
-                <Row className='rowNews'>
-                  {imagenFilter.map(({ url, id }) => (
-                    <Col>
-                    <Card className="example-1 cardNews"
-                      key={id}
-                     >
-                      <Container className="wrapperNews" style={{
-                        backgroundImage: `url(http://localhost:1337${url})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        backgroundRepeat: 'no-repeat'
-                      }}>
-                        <Col className="dateNews">
-                          <span className="spanNews day">12</span>
-                          <span className="spanNews month">Aug</span>
-                          <span className="spanNews year">2016</span>
-                        </Col>
-                        <Col className="dataNews">
-                          <div className="content">
-                            <span className="author spanNews">Teo-Coop</span>
-                            <h1 className="titleNews h1News">
-                              <a className="aNews" href="#">
-                               {title}
-                              </a>
-                            </h1>
-                            <p className="textNews">
-                              {body}
-                            </p>
-                          </div>
-                        </Col>
-                      </Container>
-                    </Card>
-                    </Col>
-                  ))
-                  }
-                </Row>
-              </>
-            )
-          })}
-      </section>
+          <Container fluid >
+          <Row style={{ display: 'flex', width: 'fit-content' }}>
+            {
+              !loading && resultados.map(({ id, attributes: { title, body, date } }) => {
+                const imagenFilter = resultadosImg.data.filter(img => img.id === id);
+                const parsedDate = new Date(date);
+                const day = parsedDate.getDate();
+                const month = parsedDate.toLocaleString('en-US', { month: 'short' });
+                const year = parsedDate.getFullYear().toString().slice(-2);
+                return (
+                  <>
+
+                    {imagenFilter.map(({ url, id }) => (
+                      <Col style={{ width: 'fit-content', display:'flex', justifyContent:'center' }}
+                        key={id}>
+                          <Card className="example-1 cardNews" style={{
+                            backgroundImage: `url(http://localhost:1337${url})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                            backgroundRepeat: 'no-repeat'
+                          }}
+                          >
+                            <Container className="wrapperNews" >
+                              <Col className="dateNews">
+                                <span className="spanNews day">{day}</span>
+                                <span className="spanNews month">{month}</span>
+                                <span className="spanNews year">{year}</span>
+                              </Col>
+                              <Col className="dataNews">
+                                <div className="content">
+                                  <span className="author spanNews">Teo-Coop</span>
+                                  <h1 className="titleNews h1News">
+                                    <a className="aNews" href="#">
+                                      {title}
+                                    </a>
+                                  </h1>
+                                  <p className="textNews">
+                                    {body}
+                                  </p>
+                                </div>
+                              </Col>
+                            </Container>
+                          </Card>
+                      </Col>
+                    ))
+                    }
+                  </>
+                )
+              })}
+        </Row>
+      </Container>
+    </section>
     </>
   )
 }

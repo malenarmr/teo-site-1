@@ -221,13 +221,21 @@ body, html {
 /* FIN SOBRE NOSOTROS */
 
 /* MEDIA */
-@media (max-width:280px) {
+@media (max-width:380px) {
   .header img {
     width: 10rem !important;
     height: unset;
   }
-  .cardHeader {
-    align-items: flex-start !important;
+  .h1Title {
+    letter-spacing: .3rem !important;
+    padding: 0rem !important;
+    font-size: 1rem !important;
+    white-space: pre
+  }
+  .h1Title2{
+    font-weight: bold !important;
+    margin-top: -2rem !important;
+    white-space: normal !important;
   }
 
   .cardHeader .card {
@@ -249,11 +257,38 @@ body, html {
     height: max-content !important;
     backdrop-filter: blur(1px) !important;
   }
-
-  #contacto .contactContainer {
-    width: 16rem !important;
+  .cardNews{
+    height: 36rem !important;
+    width: 15rem !important;
   }
 
+  .wrapperNews{
+    height: 34rem;
+    &:hover {
+      .titleNews  {
+        padding-bottom: 3rem !important;
+      }
+    }
+  }
+  .titleNews a {
+    font-size: 1.5rem !important;
+  }
+  .dataNews {
+    max-height: fit-content;
+    margin-top: 1rem;
+  }
+  #contact{
+    padding: 0% !important;
+  }
+  #contact .contactContainer{
+  width: fit-content!important;
+}
+.contactContainer{
+  padding: 10% !important;
+  display: flex;
+  margin-left: 1rem;
+  flex-direction: column;
+}
   #contacto img {
     height: 2rem;
     margin-top: 1rem;
@@ -266,10 +301,6 @@ body, html {
   .message {
     width: 14rem;
   }
-
-  #contacto {
-    padding: 1rem !important;
-  }
 }
 
 @media (max-width:550px) {
@@ -277,7 +308,6 @@ body, html {
     justify-content: center;
     width: 20rem !important;
     padding: 1rem !important;
-    margin-top: 1rem !important;
   }
   main {
     width: 60vw;
@@ -288,6 +318,12 @@ body, html {
     padding: 1rem !important;
     font-size: 1.2rem;
     white-space: pre
+  }
+  .h1Title2{
+    font-size: .8rem !important;
+    font-weight: 400;
+    margin-top: -1rem;
+    letter-spacing: 0.1rem !important;
   }
 .line{
   width: 200% !important;
@@ -372,28 +408,6 @@ body, html {
 
 /* BLOG NOTICIAS  */
 
-.noticias {
-  display: flex;
-}
-
-.noticias .card {
-  border: 1px solid #00000050;
-  width: 30rem;
-  border-radius: .5rem;
-  height: 15rem;
-  margin: 2rem;
-  background-color: white
-}
-
-.noticias h3 {
-  background-color: rgb(255, 255, 255);
-  border-radius: 2px;
-  padding: 0 10px;
-}
-
-.noticias h6 {
-  color: #00000090
-}
 #contact{
   margin-top: 2rem !important;
 }
@@ -434,7 +448,7 @@ body, html {
 // Variables
 $regal-blue: #034378;
 $san-juan: #2d4e68;
-$bermuda: #77d7b9;
+$bermuda: #6ee9f2;
 $white: #fff;
 $black: #000;
 $open-sans: 'Open Sans',
@@ -454,36 +468,30 @@ sans-serif;
 .aNews {
   text-decoration: none;
 }
-
 .h1News {
   font-family: $open-sans;
   font-weight: 300;
 }
 
-.rowNews {
-  max-width: 900px;
-  margin: 50px auto 0;
-}
 
 // Base styles
 .cardNews {
-  float: left;
-  padding: 0rem !important;
-  width: 50%;
+  width: 20rem;
+  height: 30rem !important;
+  border-radius: 2px !important;
   .wrapperNews {
-    background-color: $white;
-    min-height: 540px;
+    height: 29.9rem;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 19px 38px rgba($black, 0.3), 0 15px 12px rgba($black, 0.2);
     &:hover {
       .dataNews {
         transform: translateY(0);
       }
       .textNews {
-        height: auto;
+        height: fit-content;
         margin: 0;
       }
+     
     }
   }
   .dataNews {
@@ -502,11 +510,13 @@ sans-serif;
     font-size: 12px;
   }
   .titleNews {
-    margin-top: 10px;
+    margin: 10px;
+    white-space:pre
   }
   .textNews {
     height: 70px;
     margin: 0;
+    color: $black,
   }
 }
 
@@ -538,11 +548,13 @@ sans-serif;
   }
   .content {
     background-color: $white;
+    backdrop-filter: blur(6px);
     box-shadow: 0 5px 30px 10px rgba($black, 0.3);
   }
   .titleNews {
     .aNews {
-      color: lighten($black, 50%);
+      color: lighten($black, 40%);
+      font-size: 2rem;
     }
   }
     .spanNews{
