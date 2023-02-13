@@ -34,6 +34,7 @@ export const News = () => {
             {
               !loading && resultados.map(({ id, attributes: { title, body, date } }) => {
                 const imagenFilter = resultadosImg.data.filter(img => img.id === id);
+               
                 const parsedDate = new Date(date);
                 const day = parsedDate.getDate();
                 const month = parsedDate.toLocaleString('en-US', { month: 'short' });
