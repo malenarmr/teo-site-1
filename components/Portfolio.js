@@ -15,17 +15,11 @@ import { Card } from "react-bootstrap";
 export default function Portfolio() {
   const [loading, setLoading] = useState(true);
   const [resultados, setResultados] = useState([]);
-  const [resultadosImg, setResultadosImg] = useState([]);
 
   useEffect(() => {
     axios.get('http://localhost:1337/api/portfolios')
       .then(response => {
         setResultados(response.data.data);
-        setLoading(false);
-      })
-    axios.get('http://localhost:1337/api/upload/files/')
-      .then(response => {
-        setResultadosImg(response);
         setLoading(false);
       })
       .catch(error => {

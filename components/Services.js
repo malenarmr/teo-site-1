@@ -54,8 +54,7 @@ export default function Services () {
                                                 {name}
                                             </Card.Title>
                                         </Card.Header>
-                                        <Card.Body className='cardBody' style={{
-                                            blackFilter: 'blur(0)', height: '11rem', marginTop: '10rem', backdropFilter: 'blur(3px)', backgroundColor: 'rgba(255,255, 255,.5)', boxShadow: '#00000070 0px 0px 10px', borderRadius: '2%',
+                                        <Card.Body className='cardBody' style={{height: '11rem', marginTop: '10rem', backdropFilter: 'blur(1px)', backgroundColor: 'rgba(255,255, 255,.7)', boxShadow: '#00000070 0px 0px 10px', borderRadius: '2%',
                                             height: '11rem'
                                         }}>
                                             {description}

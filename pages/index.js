@@ -29,7 +29,7 @@ function Home({ t }) {
             <AboutUs />
             <Services />
             <News />
-            <div style={{ backdropFilter: 'blur(5px)', height: '100%', padding: '1rem', border: '2px solid #ffffff90', borderRadius: '10px', marginTop: '1rem', boxShadow: '#000 0px 0px 10px' }}>
+            <div style={{background:'#ffffff30', backdropFilter: 'blur(5px)', height: '100%', padding: '1rem', border: '2px solid #ffffff90', borderRadius: '10px', marginTop: '1rem', boxShadow: '#00000090 0px 0px 10px' }}>
               <ContactForm />
             </div>
           </div>
