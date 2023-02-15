@@ -32,21 +32,17 @@ export const News = () => {
           <Container fluid >
           <Row style={{ display: 'flex', width: 'fit-content' }}>
             {
-              !loading && resultados.map(({ id, attributes: { title, body, date } }) => {
-                const imagenFilter = resultadosImg.data.filter(img => img.id === id);
-               
+              !loading && resultados.map(({ id, attributes: { title, body, date, imageUrl } }) => { 
                 const parsedDate = new Date(date);
                 const day = parsedDate.getDate();
                 const month = parsedDate.toLocaleString('en-US', { month: 'short' });
                 const year = parsedDate.getFullYear().toString().slice(-2);
                 return (
                   <>
-
-                    {imagenFilter.map(({ url, id }) => (
                       <Col style={{ width: 'fit-content', display:'flex', justifyContent:'center' }}
-                        key={id}>
+                        key={title}>
                           <Card className="example-1 cardNews" style={{
-                            backgroundImage: `url(http://localhost:1337${url})`,
+                            backgroundImage: `url(http://localhost:1337/${imageUrl})`,
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
                             backgroundRepeat: 'no-repeat'
@@ -74,8 +70,7 @@ export const News = () => {
                             </Container>
                           </Card>
                       </Col>
-                    ))
-                    }
+                 
                   </>
                 )
               })}

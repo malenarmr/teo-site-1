@@ -34,7 +34,6 @@ export default function Portfolio() {
       });
   }, []);
 
-  const imagenFilter = !loading && resultadosImg.data.filter(img => img.alternativeText == "portfolio");
 
   return (
     <>
@@ -61,13 +60,13 @@ export default function Portfolio() {
             duration: 900,
           }}
         >
-          {!loading && imagenFilter.map(({ url, id }) => {
-            console.log(url, '2fgf');
+          {!loading && resultados.map(({id, attributes:{ url, imageUrl, title, description} }) => {
+            {console.log(resultados)}
             return (
-              <SwiperSlide key={id}>
+              <SwiperSlide key={url}>
                 <Card
                 style={{
-                  backgroundImage: `url(http://localhost:1337${url})`,
+                  backgroundImage: `url(http://localhost:1337/${imageUrl})`,
                   backgroundSize:'100%',
                   backgroundPosition: 'center',
                   backgroundRepeat: 'no-repeat',
