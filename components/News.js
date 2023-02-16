@@ -21,19 +21,21 @@ export const News = () => {
   return (
     <>
       {resultados.length > 0 ? (
-        <>
-          <h1 style={{ padding: '1rem', marginBottom: '2rem', borderBottom: '1px solid black', color: 'black' }}> Noticias</h1>
-          <section id='news' style={{ borderRadius: '10px', background: '#000', boxShadow: '#ffffff58 0 0 20px', marginTop: '3rem', padding: '10px' }}>
+        <div className='section'>
+          <h1 className='titleSeccion'> Noticias</h1>
+          <section id='news' style={{ borderRadius: '10px', marginTop: '3rem', padding: '10px' }}>
             <Container fluid>
               <Row style={{ display: 'flex', width: 'fit-content' }}>
-                {!loading && resultados.map(({ id, attributes: { title, body, date, imageUrl } }) => { 
+                {!loading && resultados.map(({ id, attributes: { title, body, date, imageUrl } }) => {
+                  const keyDinamic = `${id}${title}`
                   const parsedDate = new Date(date);
                   const day = parsedDate.getDate();
                   const month = parsedDate.toLocaleString('en-US', { month: 'short' });
                   const year = parsedDate.getFullYear().toString().slice(-2);
                   return (
                     <>
-                      <Col style={{ width: 'fit-content', display:'flex', justifyContent:'center' }} key={title}>
+                    <div key={keyDinamic}>
+                      <Col style={{ width: 'fit-content', display: 'flex', justifyContent: 'center' }}>
                         <Card className="example-1 cardNews" style={{
                           backgroundImage: `url(http://localhost:1337/${imageUrl})`,
                           backgroundSize: 'cover',
@@ -62,18 +64,19 @@ export const News = () => {
                           </Container>
                         </Card>
                       </Col>
+                      </div>
                     </>
                   )
                 })}
               </Row>
             </Container>
           </section>
-        </>
-       ) : (
+        </div>
+      ) : (
 
-        <h1 style={{ padding: '1rem', marginBottom: '2rem', borderBottom: '1px solid black', color: 'black', textAlign:'center' }}>
-           Sin resultados temporalmente</h1>
-        )}
+        <h1 style={{ padding: '1rem', marginBottom: '2rem', borderBottom: '1px solid black', color: 'black', textAlign: 'center' }}>
+          Sin resultados temporalmente</h1>
+      )}
     </>
   );
 }  

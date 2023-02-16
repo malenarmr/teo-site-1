@@ -24,7 +24,7 @@ function ContextAwareToggle({ children, eventKey, callback }) {
       <button
         type="button"
         style={{
-          backgroundColor: accordionCollapse ? '#ffff' : 'black', color: accordionCollapse ? 'black' : 'white', borderRadius: '7px', height: 'fit-content', width: 'fit-content', padding: '.3rem',
+          backgroundColor: accordionCollapse ? 'white' : '#6eeaf2', borderRadius: '7px',height: 'fit-content', width: 'fit-content', padding: '.3rem',
           border: accordionCollapse ? '1px solid black' : 'none'
         }}
         onClick={decoratedOnClick}
@@ -67,19 +67,19 @@ export default function AboutUs() {
   ]
 
   return (
-    <div style={{ margin: '1rem' }}>
+    <div className='section'>
       <div id='aboutUs'>
-        <h1 style={{ padding: '1rem', borderBottom: '1px solid black', color: 'black' }}>
+        <h1 className='titleSeccion'>
           {t('title')}
         </h1>
       </div>
       <section className='aboutUsSection' >
         <Accordion >
           <Container fluid>
-            <Row xxl={3} style={{ justifyContent: 'center', display: 'flex' }}>
+            <Row xxl={6} style={{ justifyContent: 'center', display: 'flex', marginTop:'4rem'}}>
               {data.map(({ name, description, image, id }) => (
                 <Col key={name} style={{ justifyContent: 'center', display: 'flex', width: 'fit-content' }}>
-                  <Card className='cardTransition' style={{ height: 'fit-content', width: '18rem', margin: '1rem .5rem', boxShadow: '#ffffff90 10px 10px 30px' }}>
+                  <Card className='cardTransition' style={{ height: 'fit-content' }}>
                     <Card.Header>
                       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                         <h1 style={{ fontSize: '2rem' }} >{name}</h1>

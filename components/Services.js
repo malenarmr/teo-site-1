@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card, Container, Col, Row } from 'react-bootstrap'
 import diseñoWeb from '../public/desingWeb1.jpg'
-import diseñoUX from '../public/ux2.jpg'
+import diseñoUX from '../public/ux3.jpg'
 import eCommerce from '../public/shopping5.jpg'
 import mantenimiento from '../public/mant11.jpg'
 import { useTranslation } from 'next-i18next'
@@ -39,14 +39,15 @@ export default function Services () {
 
 
     return (
-        <div id='services' style={{ margin: '1rem' }}>
-            <h1 style={{ padding: '1rem', borderBottom: '1px solid black', color: 'black' }}> Servicios</h1>
+        <div id='services'className='section'>
+            <h1 className='titleSeccion'> Servicios</h1>
             <div className='sectionServicios'>
                 <Container fluid>
-                <Row xxl={3} style={{justifyContent:'center',display:'flex'}}>
+                <Row xxl={12} style={{justifyContent:'center',display:'flex', marginTop:'3rem'}}>
                         {data.map(({ name, description, image }) => (
-                            <Col key={name} style={{ justifyContent: 'center', display: 'flex', width:'fit-content' }}>
-                                <Card className='cardTransition'style={{height:'28rem',width:'18rem',margin:'1rem .5rem',}} >
+                            <Col
+                             key={name} style={{justifyContent: 'center', display: 'flex', width:'fit-content' }}>
+                                <Card className='cardTransition'>
                                     <Card.Img src={image} style={{ opacity: '.8', height:'100%', objectFit:'cover' }} />
                                     <Card.ImgOverlay >
                                         <Card.Header style={{ background: ' #ffffff60' }}>

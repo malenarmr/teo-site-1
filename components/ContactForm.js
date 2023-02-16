@@ -44,8 +44,9 @@ export default function ContactForm() {
     };
 
     return (
-        <div id="contact" style={{padding:'1rem'}}>
-            <div className="container contactContainer mt-0" style={{ borderRadius: '7px', color: 'black', width: '30rem', background: '#ffffff90', boxShadow: '#00000090 0px 0px 20px', padding: '1%' }}>
+        <div id="contact">
+            <div className="container contactContainer mt-0" 
+            style={{ borderRadius: '7px', color: 'black', width: '30rem', backdropFilter: 'blur(10px)',border:'1px solid #ffffff90', boxShadow: '#ffffff90 0px 0px 20px', padding: '1%', color:'white', fontFamily:'rubik' }}>
                 <h2 className="mb-3" style={{ display: 'flex', justifyContent: 'center' }}>
                 {t('contact')}
                 </h2>
@@ -60,7 +61,6 @@ export default function ContactForm() {
                             className="form-control"
                             type="text"
                             name="name"
-                            placeholder={t('your-name')}
                             value={formData.name}
                             onChange={handleChange}
                         />
@@ -75,7 +75,6 @@ export default function ContactForm() {
                             className="form-control"
                             type="email"
                             name="email"
-                            placeholder={t('your-email')}
                             value={formData.email}
                             onChange={handleChange}
                         />
@@ -86,12 +85,11 @@ export default function ContactForm() {
                             style={{ textTransform: 'uppercase' }}
                             required
                             name="message"
-                            placeholder={t('your-message')}
                             value={formData.message}
                             onChange={handleChange}
                             className="form-control" type="text" />
                     </div>
-                    <button style={{ alignItems: 'center', display: 'flex' }}
+                    <button style={{ alignItems: 'center', display: 'flex', backgroundColor:'#00000090', border:'1px solid #fff', color:'white'}}
                         className="btn btn-outline-dark btn-lg" type="submit" value="Send"                >
                         {buttonText}
                         <img src={send.src}
