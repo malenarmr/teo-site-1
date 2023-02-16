@@ -39,8 +39,11 @@ export default function Services () {
 
 
     return (
-        <div id='services'className='section'>
+        <div className='section'>
+        <div id='services'>
             <h1 className='titleSeccion'> Servicios</h1>
+            </div>
+
             <div className='sectionServicios'>
                 <Container fluid>
                 <Row xxl={12} style={{justifyContent:'center',display:'flex', marginTop:'3rem'}}>

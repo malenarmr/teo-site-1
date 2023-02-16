@@ -22,10 +22,12 @@ export const News = () => {
     <>
       {resultados.length > 0 ? (
         <div className='section'>
+          <div id='news'>
           <h1 className='titleSeccion'> Noticias</h1>
-          <section id='news' style={{ borderRadius: '10px', marginTop: '3rem', padding: '10px' }}>
-            <Container fluid>
-              <Row style={{ display: 'flex', width: 'fit-content' }}>
+          </div>
+          <section  style={{ borderRadius: '10px', marginTop: '3rem', padding: '10px'}}>
+            <Container fluid style={{ display:'flex', justifyContent:'center', alignItems:'center' }}>
+              <Row style={{ display: 'flex', width: 'fit-content'}}>
                 {!loading && resultados.map(({ id, attributes: { title, body, date, imageUrl } }) => {
                   const keyDinamic = `${id}${title}`
                   const parsedDate = new Date(date);

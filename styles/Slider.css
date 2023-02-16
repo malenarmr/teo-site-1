@@ -1,5 +1,6 @@
 
 .swiper-slide {
+  margin-top: 4rem;
   padding: .5%;
   border-radius: 10px;
   text-align: center;
@@ -59,7 +60,7 @@ padding: 0 !important;
 }
 @media (max-width:550px) {
   .swiper-slide .card{
-    height: 8rem;
+    height: 8rem !important;
     margin: .3rem !important
   }
 }

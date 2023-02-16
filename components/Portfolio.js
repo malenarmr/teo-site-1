@@ -27,10 +27,11 @@ export default function Portfolio() {
 
   return (
     <>
-     
-      <div id="portfolio" className="portfolio" style={{ backdropFilter: 'blur(5px)', height: '100%', padding: '1rem 0rem', border: '1px solid white', borderRadius: '10px', marginTop: '1rem', boxShadow: '#ffffff90 0px 0px 20px' }}>
-      <h1 className='titleSeccion'>
-        Portfolio</h1>
+      <div className="section" >
+        <div id="portfolio">
+          <h1 className='titleSeccion'>
+            Portfolio</h1>
+        </div>
         <Swiper
           slidesPerView={1.5}
           spaceBetween={30}
@@ -51,17 +52,17 @@ export default function Portfolio() {
             duration: 900,
           }}
         >
-          {!loading && resultados.map(({id, attributes:{ url, imageUrl, title, description} }) => {
-            {console.log(resultados)}
+          {!loading && resultados.map(({ id, attributes: { url, imageUrl, title, description } }) => {
+            { console.log(resultados) }
             return (
               <SwiperSlide key={id}>
                 <Card
-                style={{
-                  backgroundImage: `url(http://localhost:1337/${imageUrl})`,
-                  backgroundSize:'100%',
-                  backgroundPosition: 'center',
-                  backgroundRepeat: 'no-repeat',
-                }}>
+                  style={{
+                    backgroundImage: `url(http://localhost:1337/${imageUrl})`,
+                    backgroundSize: '100%',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
+                  }}>
                 </Card>
               </SwiperSlide>
             )

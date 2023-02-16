@@ -24,7 +24,7 @@ export default function NavbarApp() {
 
   return (
     <Navbar expand="lg" fixed="top"
-      style={{
+      style={{ fontFamily:'rubik',
         zIndex: '10', background: 'rgb(0, 0, 0, .8)', backdropFilter: 'blur(5px)', height: '6rem', fontSize:'1rem'
       }}>
       <Container>
@@ -44,7 +44,7 @@ export default function NavbarApp() {
         </div>
         <Dropdown drop='start' style={{ margin: '1rem' }}>
           <Dropdown.Toggle
-            style={{background: 'transparent', border: 'none', margin: '0', padding: '0' }}>
+            style={{background: 'transparent', border: 'none', margin: '0', padding: '0', fontFamily:'rubik' }}>
             {selectedLanguage === "es" ? "Language" : "Idioma"}
           </Dropdown.Toggle>
           <Dropdown.Menu>
