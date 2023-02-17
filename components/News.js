@@ -38,7 +38,7 @@ export const News = () => {
                     <>
                     <div key={keyDinamic}>
                       <Col style={{ width: 'fit-content', display: 'flex', justifyContent: 'center' }}>
-                        <Card className="example-1 cardNews" style={{
+                        <Card className="example-1 cardNews cardTransition" style={{
                           backgroundImage: `url(http://localhost:1337/${imageUrl})`,
                           backgroundSize: 'cover',
                           backgroundPosition: 'center',
@@ -75,9 +75,10 @@ export const News = () => {
           </section>
         </div>
       ) : (
-
-        <h1 style={{ padding: '1rem', marginBottom: '2rem', borderBottom: '1px solid black', color: 'black', textAlign: 'center' }}>
+        <div className='section' id='news'>
+        <h1 className='titleSeccion' style={{textAlign:'center', whiteSpace:'pre', width:'fit-content', padding:'0 1.5rem'}}>
           Sin resultados temporalmente</h1>
+          </div>
       )}
     </>
   );

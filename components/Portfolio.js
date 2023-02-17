@@ -5,7 +5,7 @@ import "swiper/css/navigation";
 import { Autoplay, EffectCreative, Navigation, Pagination } from "swiper";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Card } from "react-bootstrap";
+import { Card, Image } from "react-bootstrap";
 
 
 export default function Portfolio() {
@@ -56,13 +56,9 @@ export default function Portfolio() {
             { console.log(resultados) }
             return (
               <SwiperSlide key={id}>
-                <Card
-                  style={{
-                    backgroundImage: `url(http://localhost:1337/${imageUrl})`,
-                    backgroundSize: '100%',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                  }}>
+                <Card>
+                    <Image src={`http://localhost:1337/${imageUrl}`}
+                    height='100%' width='100%'/>
                 </Card>
               </SwiperSlide>
             )

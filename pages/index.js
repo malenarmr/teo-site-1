@@ -9,8 +9,6 @@ import Header from '../components/Header'
 import Services from '../components/Services'
 import AboutUs from '../components/AboutUs'
 import ContactButton from '../components/ContactButton'
-
-
 function Home({ t }) {
 
   return (

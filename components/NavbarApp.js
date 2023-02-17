@@ -44,7 +44,7 @@ export default function NavbarApp() {
         </div>
         <Dropdown drop='start' style={{ margin: '1rem' }}>
           <Dropdown.Toggle
-            style={{background: 'transparent', border: 'none', margin: '0', padding: '0', fontFamily:'rubik' }}>
+            style={{background: 'transparent', border: 'none', margin: '0', padding: '0', fontFamily:'rubik ' }}>
             {selectedLanguage === "es" ? "Language" : "Idioma"}
           </Dropdown.Toggle>
           <Dropdown.Menu>

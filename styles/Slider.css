@@ -1,7 +1,5 @@
-
 .swiper-slide {
   margin-top: 4rem;
-  padding: .5%;
   border-radius: 10px;
   text-align: center;
   font-size: 18px;
@@ -28,9 +26,11 @@
   0% {
     background-position: 0% 100%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 100%;
   }
@@ -39,9 +39,8 @@
 .swiper-slide .card {
   display: block;
   width: 60rem !important;
-  padding:1rem;
   height: 30rem !important;
-  object-fit: cover;
+  overflow: hidden;
   border: 2px solid black;
 }
 
@@ -49,18 +48,41 @@
   margin-left: auto;
   margin-right: auto;
 }
-.swiper-slide{
-padding: 0 !important;
+
+.swiper-slide {
+  padding: 0 !important;
 }
+
+@media (max-width:1100px) {
+  .swiper-slide {
+    width: 40rem !important;
+  }
+  .swiper-slide .card {
+    height: 20rem !important;
+    width: 40rem !important;
+  }
+}
+
 @media (max-width:990px) {
-  .swiper-slide .card{
-    height: 15rem;
+  .swiper-slide {
+    width: 20rem !important;
+  }
+
+  .swiper-slide .card {
+    height: 10rem !important;
+    width: 20rem !important;
     margin: .8rem !important
   }
 }
+
 @media (max-width:550px) {
-  .swiper-slide .card{
+  .swiper-slide {
+    width: 16rem !important;
+  }
+
+  .swiper-slide .card {
     height: 8rem !important;
+    width: 16rem !important;
     margin: .3rem !important
   }
 }

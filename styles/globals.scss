@@ -8,7 +8,6 @@ html {
   height: unset;
   font-family: "rubik" !important;
 }
-
 * {
   padding: 0;
   margin: 0;
@@ -39,7 +38,7 @@ html {
   width: 18rem !important;
   height: fit-content !important;
   margin: 1rem;
-  box-shadow: #ffffff60 10px 10px 30px
+  box-shadow: #ffffff80 0px 0px 30px
 }
 
 .cardTransition:hover {
@@ -128,7 +127,7 @@ align-items: center;
   color: black !important;
 }
 .collapse {
-  background-color: transparent;
+  background: transparent;  
   padding: 0;
 }
 
@@ -162,7 +161,7 @@ align-items: center;
   justify-content: center;
   align-items: center;
   display: flex;
-  padding-bottom: 2%;
+  padding: 4% 0 ;
   position: relative;
   background-blend-mode: color-dodge;
 }
@@ -185,6 +184,15 @@ align-items: center;
 }
 .cardHeader {
   width: 36em !important;
+  color:white;
+  backdrop-filter: blur(5px);
+  background-color:  rgba(0,0,0,.8) !important
+}
+.cardAbout {
+  width: 36em !important;
+  color:white;
+  backdrop-filter: blur(5px);
+  background-color:  rgba(0,0,0,.8) !important
 }
 .headerImage {
   animation-name: headerImg;
@@ -208,7 +216,6 @@ align-items: center;
     transform: translate(0, -0px);
   }
 }
-
 // FIN HEADER SECCION
 
 .backgroundAmplio {
@@ -389,7 +396,7 @@ $open-sans: "Open Sans", sans-serif;
 }
 
 .footer p {
-  padding-top: 2rem;
+  padding: 2rem;
 }
 
 .content-wrap {
@@ -403,6 +410,14 @@ $open-sans: "Open Sans", sans-serif;
   .header img {
     width: 10rem !important;
     height: unset;
+  }
+.sectionHeader {
+  padding-top: 3rem;
+}
+
+  .cardAbout .card-body{
+    height: fit-content !important;
+
   }
   .cardHeader .card {
     width: 10rem !important;
@@ -469,6 +484,9 @@ $open-sans: "Open Sans", sans-serif;
     justify-content: center;
     width: 20rem !important;
     padding: 1rem !important;
+  }
+  .cardAbout .card-body{
+    height: fit-content !important;
   }
   main {
     width: 60vw;

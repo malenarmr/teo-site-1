@@ -15,9 +15,7 @@ export default function Header() {
                         />
                     </div>
                     <div >
-                        <Card className='cardHeader' style={{
-                            backdropFilter: 'blur(0)', backgroundColor: 'rgba(0,0,0,.8)',
-                        }}>
+                        <Card className='cardHeader'>
                             <Card.Header style={{ borderBottom: '1px solid #ffffff90', display: 'flex', justifyContent: 'center', padding: '20px' }}>
                                 <Image className='headerImage'
                                     src={teoLogo.src}
