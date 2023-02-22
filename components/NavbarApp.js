@@ -19,7 +19,6 @@ export default function NavbarApp() {
       route: router.pathname,
       query: router.query
   }, router.asPath, { locale });
-    console.log(router, 'router');
   };
 
   return (

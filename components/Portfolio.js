@@ -53,7 +53,6 @@ export default function Portfolio() {
           }}
         >
           {!loading && resultados.map(({ id, attributes: { url, imageUrl, title, description } }) => {
-            { console.log(resultados) }
             return (
               <SwiperSlide key={id}>
                 <Card>

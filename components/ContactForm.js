@@ -33,7 +33,6 @@ export default function ContactForm() {
             )
             .then(
                 (result) => {
-                    console.log(result.text);
                     setFormData({ name: "", email: "", message: "" });
                     setButtonText(`${t('sent')}`);
                 },

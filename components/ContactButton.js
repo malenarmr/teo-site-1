@@ -12,11 +12,17 @@ export default function ContactButton() {
     useEffect(() => {
         const handleScroll = () => {
             const { scrollY, innerHeight } = window;
-            const { offsetHeight } = document.body;
-            const isBottom = scrollY + innerHeight >= offsetHeight;
-
+            let height = 3500;
+            if (window.innerWidth <= 420) {
+              height = 5000;
+            } else if (window.innerWidth <= 920){
+                height = 4700;
+            }
+            const isBottom = scrollY + innerHeight >= height;
             setIsScrolledToBottom(isBottom);
         };
+
+
 
         window.addEventListener('scroll', handleScroll);
 
@@ -41,7 +47,7 @@ export default function ContactButton() {
                         height: '3rem',
                         width: '8rem',
                         margin: '2rem',
-                        bottom: '1rem',
+                        bottom: '0rem',
                         right: '0',
                         position: 'fixed',
                         background: '#00000080',
@@ -53,8 +59,8 @@ export default function ContactButton() {
                 >
                     {isScrolledToBottom ? (
                         <span className='contactButtonImage'>
-                        <Image src={arrow} alt='arrow' height={50}/>
-                      </span>
+                            <Image src={arrow} alt='arrow' height={50} />
+                        </span>
                     ) : (
                         t('contact')
                     )}
@@ -70,20 +76,20 @@ const styles = {
         backgroundColor: '#00000090',
         display: 'flex',
         justifyContent: 'center',
-        borderColor:'white'
+        borderColor: 'white'
     },
     contactButtonScrolled: {
-        backgroundColor:'transparent',
-        border:'none',
-        borderRadius:'50%',
-        width:'4rem',
-        height:'4rem',
-        bottom:'5rem'
+        backgroundColor: 'transparent',
+        border: 'none',
+        borderRadius: '50%',
+        width: '4rem',
+        height: '4rem',
+        bottom: '0rem'
     },
     contactButtonImage: {
         display: 'inline-block',
         height: '1.5rem',
         width: '1.5rem',
         margin: '0 0.5rem',
-      }
+    }
 };

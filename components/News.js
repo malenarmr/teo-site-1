@@ -6,7 +6,6 @@ import axios from 'axios'
 export const News = () => {
   const [loading, setLoading] = useState(true);
   const [resultados, setResultados] = useState([]);
-
   useEffect(() => {
     axios.get('http://localhost:1337/api/news-posts')
       .then(response => {
@@ -35,7 +34,6 @@ export const News = () => {
                   const month = parsedDate.toLocaleString('en-US', { month: 'short' });
                   const year = parsedDate.getFullYear().toString().slice(-2);
                   return (
-                    <>
                     <div key={keyDinamic}>
                       <Col style={{ width: 'fit-content', display: 'flex', justifyContent: 'center' }}>
                         <Card className="example-1 cardNews cardTransition" style={{
@@ -67,7 +65,6 @@ export const News = () => {
                         </Card>
                       </Col>
                       </div>
-                    </>
                   )
                 })}
               </Row>
