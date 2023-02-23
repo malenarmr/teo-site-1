@@ -8,23 +8,20 @@ export default function Header() {
     return (
         <>
             <Container fluid className='sectionHeader'>
-                <div className='hedear1'>
-                    <div className='header' style={{ margin: '3rem 0rem', }}>
+                <div className='header1'>
                         <Image src={teoCoop.src}
                             height={200}
                         />
-                    </div>
-                    <div >
-                        <Card className='cardHeader'>
-                            <Card.Header style={{ borderBottom: '1px solid #ffffff90', display: 'flex', justifyContent: 'center', padding: '20px' }}>
-                                <Image className='headerImage'
-                                    src={teoLogo.src}
-                                    width={70} height={50} />
-                            </Card.Header>
-                            <Card.Body className='cardBody' style={{ color: '#fff', textAlign: 'justify' }}>
-                                <p>{t('description')}</p>
-                            </Card.Body>
-                        </Card>
+                        <Image className='headerImage'
+                            src={teoLogo.src}
+                            width={290} height={200} />
+                </div>
+                <div className='titleHeader'>
+                    <div className='btn-shine'>
+                        <p className='titleGde' style={{ fontSize: '2.5rem' }}>
+                            {t('title')}</p>
+                        <p className='titleC' style={{ fontSize: '1.2rem' }}>
+                            {t('eCommerce-name')} - {t('web-name')} - {t('ux-name')} - {t('maintenance-name')}</p>
                     </div>
                 </div>
             </Container>

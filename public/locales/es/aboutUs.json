@@ -1,6 +1,7 @@
 {   "title": "Sobre nosotrxs",
     "mission-name": "Misión",
-    "mission-description": "Somos una cooperativa de trabajo con el objetivo brindar un producto atractivo y acorde a tus necesidades. Diseñamos y desarrollamos sitios web y aplicaciones para el proyecto que tengas en mente, tanto para grandes instituciones o empresas, hasta pequeñas páginas personales o profesionales", 
+    "description" : "Somos una cooperativa de trabajo con el objetivo brindar un producto atractivo y acorde a tus necesidades. Diseñamos y desarrollamos sitios web y aplicaciones para el proyecto que tengas en mente, tanto para grandes instituciones o empresas, hasta pequeñas páginas personales o profesionales.",
+    "mission-description": "Brindar soluciones y herramientas para profesionales y emprendedores, que quieran insertarse en el mundo digital o ya se encuentren dentro.", 
     "vision-name": "Visión",
     "vision-description": "Teo-Coop será una cooperativa que brindará servicios a medida y escalables sin importar el lugar en donde se encuentre el cliente, siempre basándose en sus valores éticos.",
     "values-name": "Valores",

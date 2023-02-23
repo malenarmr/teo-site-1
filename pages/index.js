@@ -23,8 +23,9 @@ function Home({ t }) {
         <Layout>
           <Header />
           <div className='backgroundAmplio'>
+          <AboutUs />
             <Portfolio />
-            <AboutUs />
+            
             <Services />
             <News />
             <div style={{background:'#00000030', backdropFilter: 'blur(5px)', height: '100%', padding: '1rem', border: '1px solid #ffffff90', borderRadius: '10px', marginTop: '1rem', boxShadow: '#ffffff90 0px 0px 10px' }}>

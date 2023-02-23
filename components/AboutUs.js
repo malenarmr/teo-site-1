@@ -9,8 +9,7 @@ import { useTranslation } from 'next-i18next'
 
 export default function AboutUs() {
 
-  const { t } = useTranslation('aboutUs')
-
+  const { t } = useTranslation('aboutUs', 'commmon')
   const data = [
     {
       "name": `${t('mission-name')}`,
@@ -47,20 +46,26 @@ export default function AboutUs() {
         </h1>
       </div>
       <div className='aboutUsSection' >
-        <Container fluid>
-          <Row  style={{ justifyContent: 'center', display: 'flex', marginTop: '4rem' }}>
+        <Container fluid  style={{padding:'0'}}>
+          <Row className='rowDescription' style={{justifyContent: 'center', margin: '3rem' }}>
+            <div className='description'
+             style={{backdropFilter: 'blur(2px)', color:'white', width:'100%',padding:'2% 5%', borderRadius:'5px', textAlign:'center', border:'.5px solid white',fontSize:'1.5rem'}}>
+                {t('description')}
+            </div>
+          </Row>
+          <Row style={{ justifyContent: 'center', display: 'flex', marginTop: '1rem' }}>
             {data.map(({ name, description, image, id }) => (
               <Col key={name} style={{ justifyContent: 'center', display: 'flex', width: 'fit-content' }}>
                 <Card className='cardAbout cardTransition'>
                   <Card.Header >
-                    <div style={{ display: 'flex', justifyContent:'space-between', overflow:'hidden' }}>
-                      <h1 style={{ fontSize: '2rem'}} >{name}</h1>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', overflow: 'hidden' }}>
+                      <h1 style={{ fontSize: '2rem' }} >{name}</h1>
                       <Image
                         src={image}
                         width={30} height={30} />
                     </div>
                   </Card.Header>
-                  <Card.Body style={{ fontSize: '.8rem', height:'7rem' }}>
+                  <Card.Body style={{ fontSize: '1rem', height: '7rem' }}>
                     {description}</Card.Body>
                 </Card>
               </Col>
