@@ -46,8 +46,8 @@ export default function AboutUs() {
         </h1>
       </div>
       <div className='aboutUsSection' >
-        <Container fluid  style={{padding:'0'}}>
-          <Row className='rowDescription' style={{justifyContent: 'center', margin: '3rem' }}>
+        <Container fluid  style={{padding:'0rem', overflow:'hidden'}}>
+          <Row className='rowDescription'style={{marginTop:'2rem'}}>
             <div className='description'
              style={{backdropFilter: 'blur(2px)', color:'white', width:'100%',padding:'2% 5%', borderRadius:'5px', textAlign:'center', border:'.5px solid white',fontSize:'1.5rem'}}>
                 {t('description')}
@@ -55,7 +55,7 @@ export default function AboutUs() {
           </Row>
           <Row style={{ justifyContent: 'center', display: 'flex', marginTop: '1rem' }}>
             {data.map(({ name, description, image, id }) => (
-              <Col key={name} style={{ justifyContent: 'center', display: 'flex', width: 'fit-content' }}>
+              <Col key={name} style={{ justifyContent: 'center', display: 'flex', width: 'fit-content', margin:'0' }}>
                 <Card className='cardAbout cardTransition'>
                   <Card.Header >
                     <div style={{ display: 'flex', justifyContent: 'space-between', overflow: 'hidden' }}>

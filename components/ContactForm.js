@@ -1,4 +1,4 @@
-import { useState} from "react"
+import { useState } from "react"
 import igLogo from '../public/igLogo.png';
 import fbLogo from '../public/fbLogo.png';
 import inLogo from '../public/inLogo.png'
@@ -44,32 +44,31 @@ export default function ContactForm() {
 
     return (
         <div id="contact">
-            <div className="container contactContainer mt-0" 
-            style={{ borderRadius: '7px', color: 'black', width: '30rem', backdropFilter: 'blur(10px)',border:'1px solid #ffffff90', boxShadow: '#ffffff90 0px 0px 20px', padding: '1%', color:'white', fontFamily:'rubik' }}>
+            <div className="container contactContainer mt-0"
+                style={{ borderRadius: '7px', color: 'black', width: '30rem',backgroundColor:'#00000040', backdropFilter: 'blur(10px)', boxShadow: '#ffffff40 0px 0px 20px', padding: '1%', color: 'white', fontFamily: 'rubik' }}>
                 <h2 className="mb-3" style={{ display: 'flex', justifyContent: 'center' }}>
-                {t('contact')}
+                    {t('contact')}
                 </h2>
                 <form onSubmit={handleSubmit}>
                     <div className="mb-3">
                         <label className="form-label" htmlFor="name">
                             {t('name')}
                         </label>
-                        <input
-                            style={{ textTransform: 'uppercase' }}
-                            required
-                            className="form-control"
-                            type="text"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
-                        />
-                    </div>
+                        <div>
+                            <input
+                                required
+                                className="form-control"
+                                type="text"
+                                name="name"
+                                value={formData.name}
+                                onChange={handleChange}
+                            />
+                        </div></div>
                     <div className="mb-3">
                         <label className="form-label" htmlFor="email" type="email">
                             Email
                         </label>
                         <input
-                            style={{ textTransform: 'uppercase' }}
                             required
                             className="form-control"
                             type="email"
@@ -81,29 +80,33 @@ export default function ContactForm() {
                     <div className="message mb-3 ">
                         <label className="form-label">  {t('message')}</label>
                         <textarea
-                            style={{ textTransform: 'uppercase' }}
                             required
                             name="message"
                             value={formData.message}
                             onChange={handleChange}
                             className="form-control" type="text" />
                     </div>
-                    <button style={{ alignItems: 'center', display: 'flex', backgroundColor:'#00000090', border:'1px solid #fff', color:'white'}}
-                        className="btn btn-outline-dark btn-lg" type="submit" value="Send"                >
-                        {buttonText}
-                        <img src={send.src}
-                            style={{ marginLeft: '10px' }} height={20} width={20} />
-                    </button>
+                    <div className="row" style={{ marginRight: '1%', display: 'flex', justifyContent: 'flex-end' }}>
+                        <button style={{ width: 'fit-content', alignItems: 'center', display: 'flex', backgroundColor: '#00000090', border: '1px solid #fff', color: 'white' }}
+                            className="btn btn-outline-dark btn-lg" type="submit" value="Send"                >
+                            {buttonText}
+                            <img src={send.src}
+                                style={{ marginLeft: '10px' }} height={20} width={20} />
+                        </button>
+                    </div>
                 </form>
             </div>
-            <div className="divContactImage" style={{ justifyContent: 'center', marginTop: '2%', marginBottom: '0', gap: '2rem', display: 'flex' }}>
-                <Link href='https://www.facebook.com/TeoCooperativa'>
-                    <img src={fbLogo.src} height={60} /></Link>
-                <Link href='https://www.linkedin.com/company/teo-coop/?original_referer=https%3A%2F%2Fteocoop.site%2F'>
-                    <img src={inLogo.src} height={60} /></Link>
+            <div className="divContactImage" style={{ justifyContent: 'center', margin: '2%', gap: '2rem', display: 'flex' }}>
+                <Link
+                    href='https://www.facebook.com/TeoCooperativa'>
+                    <img src={fbLogo.src} height={60} width={60} /></Link>
+                <Link
+                    href='https://www.linkedin.com/company/teo-coop/?original_referer=https%3A%2F%2Fteocoop.site%2F'>
+                    <img src={inLogo.src} height={60} width={60} /></Link>
                 <Link href='https://www.instagram.com/teo.coop/'>
-                    <img src={igLogo.src} height={60} /></Link>
+                    <img src={igLogo.src} height={60} width={60} /></Link>
             </div>
+
         </div>
     )
 };

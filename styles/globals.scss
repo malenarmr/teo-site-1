@@ -37,9 +37,11 @@ html {
   width: 18rem !important;
   height: fit-content !important;
   margin: 1rem;
-  box-shadow: #ffffff80 0px 0px 30px;
+  box-shadow: #000 0px 0px 30px;
 }
-
+.card:hover {
+  box-shadow: white 0px 0px 10px;
+}
 .cardTransition:hover {
   transform: scale(1.05);
 }
@@ -140,10 +142,10 @@ html {
     background: rgb(0, 0, 0, 0.8) !important;
     padding: 1rem 3rem !important;
     backdrop-filter: blur(5px) !important;
-    margin:1.7rem 0 !important
+    margin: 1.7rem 0 !important;
   }
-  .navbar-nav{
-   display: block !important;
+  .navbar-nav {
+    display: block !important;
   }
 }
 
@@ -176,16 +178,15 @@ html {
   position: absolute;
   justify-content: center;
   background-color: #00000030;
-  box-shadow: #ffffff20 0px 0px 20px;
-  border: 0.5px solid #ffffff50;
+  border-top: 1px solid #ffffff50;
   backdrop-filter: blur(2px);
   display: flex;
 }
 
 .btn-shine {
   width: fit-content !important;
-  color: #ffffff;
-  background: linear-gradient(to right, #ef7ba7 0, #eee8aa 10%, #ef7ba7 20%);
+  color: #23d5ab;
+  background: linear-gradient(to right, #ef7ba7 0, #23d5ab 10%, #ef7ba7 20%);
   background-position: 0;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -265,7 +266,6 @@ html {
   width: 18rem;
   padding: 0px;
   border: none;
-  box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 20px;
 }
 
 // CARDS DE NOTICIAS
@@ -399,19 +399,70 @@ $open-sans: "Open Sans", sans-serif;
   height: 50px;
 }
 
-#contacto img {
-  filter: drop-shadow(#fff 0px 0px 2px);
+.divContactImage img {
+  filter: drop-shadow(rgb(255, 255, 255) 0px 0px 5px) !important;
 }
+.divContactImage img:hover {
+  transform: scale(1.2);
+}
+
 .contactButton {
   display: flex !important;
   justify-content: center !important;
   background-color: none !important;
   align-items: center !important;
+  background: transparent;
+  color: #3bd9d9;
+  font-weight: 100 !important;
+  font-family: "rubik" !important;
+  font-size: 24px;
+  text-transform: uppercase;
+  padding: 16px 36px;
+  border: 2px solid #6eeaf2;
+  border-radius: 32px;
+  transform: translate(0);
+  overflow: hidden;
+  cursor: pointer;
 }
+
 .contactButton:hover {
+  background-color: black !important;
   color: #6eeaf2 !important;
   border-color: #6eeaf2 !important;
-  background-color: black !important;
+}
+.contactButton::before {
+  content: "";
+  position: absolute;
+  background: #3bd9d9;
+  width: 8px;
+  top: 0;
+  bottom: 0;
+  left: -32px;
+  transform: rotate(-16deg);
+  filter: blur(6px);
+}
+.contactButton:hover::before {
+  left: calc(100% + 32px);
+  transition: 0.75s;
+}
+
+input,
+textarea {
+  background-color: transparent !important;
+  color: white !important;
+  border: none !important;
+  border-bottom: 1px solid white !important;
+  border-radius: 0px !important;
+}
+textarea:focus {
+  border: 1.5px solid #6eeaf2 !important;
+  box-shadow: none !important;
+  border-radius: 5px !important;
+}
+input:focus {
+  border: 1.5px solid #6eeaf2 !important;
+  box-shadow: none !important;
+  border-radius: 5px !important;
 }
 // FIN CONTACTO SECCION
 
