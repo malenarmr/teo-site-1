@@ -39,9 +39,6 @@ html {
   margin: 1rem;
   box-shadow: #000 0px 0px 30px;
 }
-.card:hover {
-  box-shadow: white 0px 0px 10px;
-}
 .cardTransition:hover {
   transform: scale(1.05);
 }
@@ -156,9 +153,8 @@ html {
 .sectionHeader {
   background-size: cover;
   background-attachment: fixed;
-  background-position: 10%;
   background-image: url("../public/compu.jpg");
-  background-color: #0000006d;
+  background-color: #00000080;
   min-height: 100vh;
   justify-content: center;
   align-items: center;
@@ -186,7 +182,7 @@ html {
 .btn-shine {
   width: fit-content !important;
   color: #23d5ab;
-  background: linear-gradient(to right, #ef7ba7 0, #23d5ab 10%, #ef7ba7 20%);
+  background: linear-gradient(to right, #6eeaf2 0, #ef7ba7 10%, #6eeaf2 20%);
   background-position: 0;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -400,7 +396,7 @@ $open-sans: "Open Sans", sans-serif;
 }
 
 .divContactImage img {
-  filter: drop-shadow(rgb(255, 255, 255) 0px 0px 5px) !important;
+  filter: drop-shadow( #6eeaf2 0px 0px 5px) !important;
 }
 .divContactImage img:hover {
   transform: scale(1.2);
@@ -455,12 +451,12 @@ textarea {
   border-radius: 0px !important;
 }
 textarea:focus {
-  border: 1.5px solid #6eeaf2 !important;
+  border: 1.5px solid #ef7ba7 !important;
   box-shadow: none !important;
   border-radius: 5px !important;
 }
 input:focus {
-  border: 1.5px solid #6eeaf2 !important;
+  border: 1.5px solid #ef7ba7 !important;
   box-shadow: none !important;
   border-radius: 5px !important;
 }

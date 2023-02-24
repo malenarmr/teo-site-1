@@ -1,6 +1,6 @@
 import teoCoop from '../public/teo-coop.png';
 import { Container, Image, Card } from 'react-bootstrap';
-import teoLogo from '../public/teo-logo.png';
+import nube from '../public/teo-logo.png';
 import { useTranslation } from 'next-i18next'
 
 export default function Header() {
@@ -8,13 +8,13 @@ export default function Header() {
     return (
         <>
             <Container fluid className='sectionHeader'>
+            
                 <div className='header1'>
-                        <Image src={teoCoop.src}
-                            height={200}
-                        />
+                <Image src={teoCoop.src} 
+                            height={150} />
                         <Image className='headerImage'
-                            src={teoLogo.src}
-                            width={290} height={200} />
+                            src={nube.src}
+                            width={250} height={170} />
                 </div>
                 <div className='titleHeader'>
                     <div className='btn-shine'>

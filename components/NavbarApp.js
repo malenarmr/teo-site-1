@@ -9,7 +9,6 @@ import { useState } from 'react';
 
 export default function NavbarApp() {
   const { t } = useTranslation('navbar')
-  
   const router = useRouter();
   const path = router.pathname.split("/")[0];
   const [selectedLanguage, setSelectedLanguage] = useState(router.locale);
@@ -18,13 +17,14 @@ export default function NavbarApp() {
     router.push({
       route: router.pathname,
       query: router.query
-  }, router.asPath, { locale });
+    }, router.asPath, { locale });
   };
 
   return (
     <Navbar expand="lg" fixed="top"
-      style={{ fontFamily:'rubik',
-        zIndex: '10', background: 'rgb(0, 0, 0, .8)', backdropFilter: 'blur(5px)', height: '6rem', fontSize:'1rem'
+      style={{
+        fontFamily: 'rubik',
+        zIndex: '10', background: 'rgb(0, 0, 0, .8)', backdropFilter: 'blur(5px)', height: '6rem', fontSize: '1rem'
       }}>
       <Container>
         <div className='divNavbar'>
@@ -41,33 +41,35 @@ export default function NavbarApp() {
             {t('home')}
           </Navbar.Brand>
         </div>
-        <Dropdown drop='start' style={{ margin: '1rem' }}>
-          <Dropdown.Toggle
-            style={{background: 'transparent', border: 'none', margin: '0', padding: '0', fontFamily:'rubik ' }}>
-            {selectedLanguage === "es" ? "Language" : "Idioma"}
-          </Dropdown.Toggle>
-          <Dropdown.Menu>
-            <Dropdown.Item onClick={() => handleLocaleChange("es")}>
-              Español🇪🇸
-            </Dropdown.Item>
-            <Dropdown.Item onClick={() => handleLocaleChange("en")}>
-              English🇬🇧
-            </Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
-        <Navbar.Toggle className='navbarColor' aria-controls="basic-navbar-nav" style={{ background: 'white' }} />
-        <Navbar.Collapse className='collapseLenguaje' id="basic-navbar-nav">
-          <div style={{ display: 'flex', flex: 6, alignItems: 'center' }}>
-            <Nav className="me-auto" style={{ gap: '2rem' }}>
-              <Nav.Link href="#portfolio">Portfolio</Nav.Link>
-              <Nav.Link href="#aboutUs">{t('about-us')}</Nav.Link>
-              <Nav.Link href="#services">{t('services')}</Nav.Link>
-              <Nav.Link href="#news">{t('news')}</Nav.Link>
-              <Nav.Link href="#contact">{t('contact')}</Nav.Link>
-            </Nav>
-          </div>
-        </Navbar.Collapse>
-
+        <div style={{ display: 'flex' }}>
+          <Dropdown drop='start' style={{ margin: '1rem' }}>
+            <Dropdown.Toggle
+              style={{ background: 'transparent', border: 'none', margin: '0', padding: '0', fontFamily: 'rubik ' }}>
+              {selectedLanguage === "es" ? "Language" : "Idioma"}
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item onClick={() => handleLocaleChange("es")}>
+                Español🇪🇸
+              </Dropdown.Item>
+              <Dropdown.Item onClick={() => handleLocaleChange("en")}>
+                English🇬🇧
+              </Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+          <Navbar.Toggle
+            className='navbarColor' aria-controls="basic-navbar-nav" style={{ background: 'white' }} />
+          <Navbar.Collapse className='collapseLenguaje' id="basic-navbar-nav">
+            <div style={{ display: 'flex', flex: 6, alignItems: 'center' }}>
+              <Nav className="me-auto" style={{ gap: '2rem' }}>
+                <Nav.Link href="#aboutUs">{t('about-us')}</Nav.Link>
+                <Nav.Link href="#portfolio">Portfolio</Nav.Link>
+                <Nav.Link href="#services">{t('services')}</Nav.Link>
+                <Nav.Link href="#news">{t('news')}</Nav.Link>
+                <Nav.Link href="#contact">{t('contact')}</Nav.Link>
+              </Nav>
+            </div>
+          </Navbar.Collapse>
+        </div>
       </Container>
     </Navbar>
   );
