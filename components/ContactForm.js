@@ -6,9 +6,6 @@ import Link from "next/link";
 import send from '../public/share.png';
 import emailjs from '@emailjs/browser';
 import { useTranslation } from 'next-i18next'
-import instagram from '../public/instagram.png'
-import facebook from '../public/facebook.png'
-import linkedin from '../public/linkedin.png'
 
 
 export default function ContactForm() {
